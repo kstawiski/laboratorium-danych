@@ -277,7 +277,7 @@ with tabs[3]:
             selected_docs = st.multiselect("Dokumenty", documents, default=documents[:1], key="selected_docs")
             if selected_docs:
                 preview = st.selectbox("Podgląd dokumentu", selected_docs, key="preview_doc")
-                st.text_area("Dokument syntetyczny", (path / "dokumenty" / preview).read_text(encoding="utf-8"), height=220, disabled=True, key="doc_preview_text")
+                st.text_area("Dokument syntetyczny", (path / "dokumenty" / preview).read_text(encoding="utf-8"), height=220, disabled=True, key=f"doc_preview_text:{preview}")
             prompt = st.text_area("Polecenie ekstrakcji (możesz edytować)", extraction_prompt(path), height=200, key="extraction_prompt")
             all_selected = st.checkbox("Wszystkie wybrane dokumenty", value=True, key="extract_all")
             if st.button("Uruchom ekstrakcję", disabled=not selected_docs, key="extraction_run"):

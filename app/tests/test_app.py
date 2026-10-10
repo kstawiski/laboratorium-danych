@@ -122,3 +122,18 @@ def test_incompatible_data_dir_shows_warning_and_uses_fixture(monkeypatch, tmp_p
     assert any('Nie można odczytać pakietu DATA_DIR' in item.value for item in at.warning)
     assert any('fixture' in item.value for item in at.warning)
     assert len(at.multiselect(key='selected_docs').options) == 2
+
+
+def test_document_preview_follows_selected_document(fixture_dir):
+    at = start()
+    at.multiselect(key='selected_docs').set_value(['DOK-01.txt', 'DOK-02.txt']).run()
+    def shown():
+        return next(t.value for t in at.text_area if t.label == 'Dokument syntetyczny')
+    texts = {n: (fixture_dir / 'dokumenty' / n).read_text(encoding='utf-8') for n in ('DOK-01.txt', 'DOK-02.txt')}
+    assert texts['DOK-01.txt'] != texts['DOK-02.txt']
+    assert shown() == texts['DOK-01.txt']
+    at.selectbox(key='preview_doc').select('DOK-02.txt').run()
+    assert not at.exception
+    assert shown() == texts['DOK-02.txt']
+    at.selectbox(key='preview_doc').select('DOK-01.txt').run()
+    assert shown() == texts['DOK-01.txt']
