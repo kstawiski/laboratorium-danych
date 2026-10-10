@@ -137,3 +137,41 @@ def test_document_preview_follows_selected_document(fixture_dir):
     assert shown() == texts['DOK-02.txt']
     at.selectbox(key='preview_doc').select('DOK-01.txt').run()
     assert shown() == texts['DOK-01.txt']
+
+
+def test_comparison_uses_ai_range_and_ignores_kept_values(monkeypatch, fixture_dir):
+    def mock(config, messages, requested_schema, **kwargs):
+        batch = json.loads(messages[-1]['content'])['wiersze']
+        found = [{'patient_id': 'PR-001', 'zmienna': 'rt_dose_gy', 'wartosc': 780, 'problem': 'Dawka >100 Gy',
+                  'powaga': 'krytyczne', 'sugerowane_dzialanie': 'zapytanie'}] if any(r['patient_id'] == 'PR-001' for r in batch) else []
+        return SimpleNamespace(value={'podejrzenia': found}, tokens=10, elapsed=.1, cached=False, json_mode='mock')
+    monkeypatch.setattr(lab.llm, 'call_model', mock)
+    key = read_table(fixture_dir / 'klucz_bledow.csv')
+    in_range = int((pd.to_numeric(key['wiersz_excel']) - 1).between(1, 3).sum())
+    assert 0 < in_range < len(key)
+    at = start()
+    at.number_input(key='clinical_last').set_value(3).run()
+    at.button(key='clinical_run').click().run()
+    assert at.session_state['clinical_range'] == (1, 3)
+    at.text_area(key='findings_paste').set_value(
+        'patient_id;zmienna;problem;decyzja\nPR-001;rt_dose_gy;780 Gy;zapytanie do ośrodka\n'
+        'PR-002;psa_dx_ng_ml;dziwne PSA;pozostaw bez zmiany\nPR-019;sex;spoza zakresu;napraw wg słownika').run()
+    at.button(key='findings_load').click().run()
+    at.button(key='key_reveal').click().run()
+    assert not at.exception
+    metrics = next(d.value for d in at.dataframe if 'źródło' in d.value.columns).set_index('źródło')
+    assert {int(v) for v in metrics['wszystkie błędy']} == {in_range}
+    assert int(metrics.loc['AI', 'wykryte']) == 1 and int(metrics.loc['Grupa', 'wykryte']) == 1
+    assert int(metrics.loc['Grupa', 'fałszywe alarmy']) == 0
+    kept = next(d.value for d in at.dataframe if 'ocena decyzji „pozostaw bez zmiany”' in d.value.columns)
+    assert kept['patient_id'].tolist() == ['PR-002']
+
+
+def test_default_extraction_prompt_can_be_restored():
+    at = start()
+    default = at.text_area(key='extraction_prompt').value
+    at.text_area(key='extraction_prompt').set_value(default + '\nDodatkowa zasada.').run()
+    assert at.text_area(key='extraction_prompt').value.endswith('Dodatkowa zasada.')
+    at.button(key='extraction_prompt_reset').click().run()
+    assert not at.exception
+    assert at.text_area(key='extraction_prompt').value == default

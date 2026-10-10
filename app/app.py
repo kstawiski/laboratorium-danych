@@ -11,7 +11,7 @@ from lab.data import (read_table, dictionary, excel_bytes, csv_bytes, document_z
                       scenario, registry_file, conversion_factors)
 from lab.analysis import describe, missing_codes, numeric_series, outliers, eda_payload, normalize_id
 from lab.rules import Rule, package_rules, run_rules, validate_rule, RESULT_COLUMNS
-from lab.scoring import compare_findings, compare_extraction
+from lab.scoring import compare_findings, compare_extraction, restrict_to_rows, split_kept, pair_set
 from lab.llm import call_model, ModelError
 from lab.prompts import TEXT_SCHEMA, RULE_SCHEMA, rule_messages, DEFAULT_CLINICAL_ROWS
 from lab.jobs import extraction_job, clinical_jobs
@@ -279,6 +279,8 @@ with tabs[3]:
                 preview = st.selectbox("Podgląd dokumentu", selected_docs, key="preview_doc")
                 st.text_area("Dokument syntetyczny", (path / "dokumenty" / preview).read_text(encoding="utf-8"), height=220, disabled=True, key=f"doc_preview_text:{preview}")
             prompt = st.text_area("Polecenie ekstrakcji (możesz edytować)", extraction_prompt(path), height=200, key="extraction_prompt")
+            st.button("Przywróć domyślne polecenie", key="extraction_prompt_reset",
+                      on_click=lambda: st.session_state.update(extraction_prompt=extraction_prompt(path)))
             all_selected = st.checkbox("Wszystkie wybrane dokumenty", value=True, key="extract_all")
             if st.button("Uruchom ekstrakcję", disabled=not selected_docs, key="extraction_run"):
                 results, failures = {}, []
@@ -354,6 +356,7 @@ with tabs[4]:
                 progress.progress((i+1)/total)
             st.session_state.clinical_results = pd.DataFrame(findings, columns=["patient_id", "zmienna", "wartosc", "problem", "powaga", "sugerowane_dzialanie"])
             st.session_state.clinical_failures = failed
+            st.session_state.clinical_range = (int(first), int(last))
     for failure in st.session_state.get("clinical_failures", []): st.warning(failure)
     if "clinical_results" in st.session_state:
         show_df(st.session_state.clinical_results, hide_index=True, width="stretch")
@@ -388,13 +391,42 @@ with tabs[5]:
             if key.empty:
                 st.info("Klucz błędów nie jest jeszcze dostępny.")
             else:
+                group = st.session_state.get("group_findings", pd.DataFrame(columns=FINDING_COLUMNS))
+                group_flags, group_kept = split_kept(group)
                 sources = {"Reguły": st.session_state.get("rule_results", pd.DataFrame(columns=RESULT_COLUMNS)),
                            "AI": st.session_state.get("clinical_results", pd.DataFrame(columns=["patient_id", "zmienna"])),
-                           "Grupa": st.session_state.get("group_findings", pd.DataFrame(columns=FINDING_COLUMNS))}
-                metrics, caught, false = compare_findings(key, sources, optional_table("pulapki_nie_bledy.csv"))
+                           "Grupa": group_flags}
+                traps = optional_table("pulapki_nie_bledy.csv")
+                ai_range = st.session_state.get("clinical_range")
+                default = ai_range or (1, len(frame))
+                st.write("Zakres porównania: te same wiersze dla klucza, reguł, AI i grupy. Domyślnie to zakres, który grupa oceniła w zakładce AI.")
+                c1, c2 = st.columns(2)
+                first = int(c1.number_input("Porównaj od wiersza", 1, len(frame), default[0], key=f"compare_first:{default}"))
+                last = int(c2.number_input("do wiersza", 1, len(frame), default[1], key=f"compare_last:{default}"))
+                if first > last:
+                    first, last = last, first
+                key_in, sources_in, traps_in = restrict_to_rows(key, sources, traps, frame, first, last)
+                metrics, caught, false = compare_findings(key_in, sources_in, traps_in)
                 show_df(metrics, hide_index=True, width="stretch")
-                st.caption("Dopasowanie: znormalizowany patient_id + pojedyncza zmienna. Powtórzone zgłoszenia tej samej pary liczymy raz. Czułość: wykryte wpisy klucza / wszystkie wpisy; precyzja: trafne pary / zgłoszone pary. Brak zgłoszeń = precyzja nieokreślona. Wynik AI dotyczy wybranego zakresu, a mianownik czułości obejmuje cały klucz.")
-                st.caption("Duplikat ID może dopasować więcej niż jeden wpis klucza; ten wynik nie rozstrzyga, którego wiersza dotyczy zgłoszenie.")
+                st.caption(f"Wiersze {first}–{last}: {len(key_in)} błędów z klucza. Dopasowanie: znormalizowany patient_id + pojedyncza zmienna. Powtórzone zgłoszenia tej samej pary liczymy raz. Czułość: wykryte wpisy klucza / wpisy klucza w zakresie; precyzja: trafne pary / zgłoszone pary. Brak zgłoszeń = precyzja nieokreślona.")
+                if ai_range is None:
+                    st.caption("AI nie oceniało jeszcze wierszy w tej sesji, więc jego wynik jest pusty.")
+                elif (first, last) != ai_range:
+                    st.warning(f"AI oceniało tylko wiersze {ai_range[0]}–{ai_range[1]}. Poza tym zakresem jego wynik nie jest porównywalny z regułami i grupą.")
+                st.caption("Duplikat ID może dopasować więcej niż jeden wpis klucza; ten wynik nie rozstrzyga, którego wiersza dotyczy zgłoszenie. Kontrola duplikatów wymaga całego rejestru (wiersze 1–" + str(len(frame)) + ").")
+                if not group_kept.empty:
+                    kept = restrict_to_rows(key, {"Grupa": group_kept}, traps, frame, first, last)[1]["Grupa"]
+                    trap_pairs = pair_set(traps_in) if traps_in is not None and not traps_in.empty else set()
+                    key_pairs = pair_set(key_in) if not key_in.empty else set()
+                    rows = []
+                    for identifier, variable in sorted(pair_set(kept)):
+                        verdict = ("poprawnie: rzadka, ale prawdziwa wartość" if (identifier, variable) in trap_pairs
+                                   else "błąd: to wpis z klucza błędów" if (identifier, variable) in key_pairs
+                                   else "brak w kluczu (wartość poprawna)")
+                        rows.append({"patient_id": identifier, "zmienna": variable, "ocena decyzji „pozostaw bez zmiany”": verdict})
+                    st.subheader("Wartości pozostawione bez zmiany")
+                    st.caption("Te wpisy karty nie są liczone jako zgłoszenia błędów.")
+                    show_df(pd.DataFrame(rows, columns=["patient_id", "zmienna", "ocena decyzji „pozostaw bez zmiany”"]), hide_index=True, width="stretch")
                 chart = metrics.melt(id_vars=["źródło"], value_vars=["czułość %", "precyzja %"], var_name="miara", value_name="%")
                 st.plotly_chart(px.bar(chart, x="źródło", y="%", color="miara", barmode="group", range_y=[0,100], template="plotly_white"), width="stretch")
                 st.subheader("Co złapał kto")

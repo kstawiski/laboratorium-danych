@@ -36,6 +36,46 @@ def compare_findings(key: pd.DataFrame, sources: dict[str, pd.DataFrame], traps:
     return pd.DataFrame(metrics), detail, pd.DataFrame(false_alarms, columns=["źródło", "patient_id", "zmienna", "pułapka (poprawna wartość)"])
 
 
+def keep_decision(value) -> bool:
+    """Decyzja „pozostaw bez zmiany”: grupa sprawdziła wartość i uznała ją za poprawną."""
+    text = str(value or "").strip().lower().replace("_", " ")
+    return text.startswith("pozostaw") or text.startswith("bez zmian")
+
+
+def split_kept(findings: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Zgłoszenia błędów oraz wartości pozostawione bez zmiany (te nie są alarmem)."""
+    if findings.empty or "decyzja" not in findings:
+        return findings, findings.iloc[0:0]
+    mask = findings["decyzja"].map(keep_decision)
+    return findings[~mask], findings[mask]
+
+
+def restrict_to_rows(key: pd.DataFrame, sources: dict[str, pd.DataFrame], traps: pd.DataFrame | None,
+                     registry: pd.DataFrame, first: int, last: int):
+    """Klucz, pułapki i zgłoszenia tylko dla wierszy danych first..last (1 = pierwszy wiersz danych).
+
+    Klucz i pułapki mają numer wiersza Excela (nagłówek = wiersz 1). Zgłoszenia mają tylko
+    patient_id, więc należą do zakresu, gdy ten identyfikator występuje w wybranych wierszach.
+    """
+    if "patient_id" not in registry:
+        return key, sources, traps
+    ids = {normalize_id(v) for v in registry.iloc[first - 1:last]["patient_id"]}
+
+    def by_row(table):
+        if table is None or table.empty or "wiersz_excel" not in table:
+            return table
+        row = pd.to_numeric(table["wiersz_excel"], errors="coerce") - 1
+        return table[(row >= first) & (row <= last)]
+
+    def by_id(table):
+        if table.empty:
+            return table
+        id_col = "patient_id" if "patient_id" in table else "patient_id_w_pliku"
+        return table[table[id_col].map(lambda v: normalize_id(v) in ids)]
+
+    return by_row(key), {label: by_id(frame) for label, frame in sources.items()}, by_row(traps)
+
+
 def null_value(value) -> bool:
     return is_missing(value, {"", "null", "nan", "none"})
 

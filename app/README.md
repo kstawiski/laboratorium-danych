@@ -2,7 +2,7 @@
 
 Polska aplikacja Streamlit do zajęć z higieny danych dla lekarzy. Pozwala obejrzeć rejestr, uruchomić reguły, wyodrębnić dane z dokumentów przez model lokalny oraz porównać zgłoszenia grupy i AI z kluczem. Scenariusz, słownik, reguły i polecenie ekstrakcji pochodzą z pakietu danych. Dołączony mały zestaw próbny dotyczy PROSTATA-RT.
 
-**Wszystkie dołączone dane są w pełni syntetyczne. Nie wklejaj ani nie wgrywaj prawdziwych danych pacjentów do demonstracji.** Ewentualne użycie prawdziwych danych wymaga wyłącznie modelu lokalnego, zgody instytucji i odrębnej oceny organizacji przetwarzania. Aplikacja jest narzędziem dydaktycznym, nie wyrobem medycznym. Wynik AI wymaga sprawdzenia źródła; rzadka wartość sama w sobie nie oznacza błędu.
+**Wszystkie dołączone dane są w pełni syntetyczne. Nie wklejaj ani nie wgrywaj prawdziwych danych pacjentów do demonstracji.** Ewentualne użycie prawdziwych danych wymaga środowiska zatwierdzonego przez instytucję, jej zgody i odrębnej oceny organizacji przetwarzania; rekomendujemy model lokalny. Aplikacja jest narzędziem dydaktycznym, nie wyrobem medycznym. Wynik AI wymaga sprawdzenia źródła; rzadka wartość sama w sobie nie oznacza błędu.
 
 ## Lokalnie w 3 krokach — Windows, macOS, Linux
 

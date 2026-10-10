@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from openpyxl import Workbook
-from openpyxl.styles import Font, PatternFill
+from openpyxl.styles import Alignment, Font, PatternFill
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "dane"
 SEED = 20261011
@@ -50,7 +50,12 @@ def csv_write(frame, path, *, dirty=False):
                               encoding="utf-8-sig" if dirty else "utf-8", lineterminator="\n")
 
 
-def xlsx_write(frame, path, sheet="dane"):
+# Słownik czyta się w Excelu: szerokie kolumny z regułą i uwagami, tekst zawijany.
+DICTIONARY_WIDTHS = {"zmienna": 22, "etykieta": 28, "typ": 14, "jednostka": 11, "dozwolone_wartosci": 24,
+                     "zakres_min": 10, "zakres_max": 10, "kod_braku": 24, "regula_walidacyjna": 60, "uwagi": 44}
+
+
+def xlsx_write(frame, path, sheet="dane", widths=None):
     wb = Workbook()
     wb.properties.creator = "Generator syntetyczny PROSTATA-RT"
     wb.properties.created = wb.properties.modified = datetime(2026, 10, 10, 0, 0, 0)
@@ -66,7 +71,11 @@ def xlsx_write(frame, path, sheet="dane"):
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = ws.dimensions
     for col in ws.columns:
-        ws.column_dimensions[col[0].column_letter].width = min(52, max(16, len(str(col[0].value)) + 2))
+        name = str(col[0].value)
+        ws.column_dimensions[col[0].column_letter].width = widths[name] if widths and name in widths else min(52, max(16, len(name) + 2))
+        if widths:
+            for cell in col[1:]:
+                cell.alignment = Alignment(wrap_text=True, vertical="top")
     buffer = io.BytesIO()
     wb.save(buffer)
     # Stałe znaczniki czasu kontenera ZIP: identyczny XLSX również na poziomie bajtów.
@@ -779,7 +788,7 @@ def generate():
     clean=make_clean(layout);dictionary=make_dictionary();dirty,key=make_dirty(clean,layout)
     csv_write(clean,DATA/'rejestr_czysty.csv');csv_write(dirty,DATA/'rejestr_brudny.csv',dirty=True)
     xlsx_write(dirty,DATA/'rejestr_brudny.xlsx')
-    csv_write(dictionary,DATA/'slownik_danych.csv');xlsx_write(dictionary,DATA/'slownik_danych.xlsx','slownik')
+    csv_write(dictionary,DATA/'slownik_danych.csv');xlsx_write(dictionary,DATA/'slownik_danych.xlsx','slownik',DICTIONARY_WIDTHS)
     csv_write(key,DATA/'klucz_bledow.csv');xlsx_write(key,DATA/'klucz_bledow.xlsx','klucz')
     traps=make_traps(clean,layout)
     csv_write(traps,DATA/'pulapki_nie_bledy.csv')

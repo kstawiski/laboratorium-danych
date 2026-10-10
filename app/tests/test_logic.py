@@ -174,3 +174,32 @@ def test_metadata_fallback_for_bounds_and_id(tmp_path):
     spec = definitions.set_index('zmienna').loc['marker']
     assert float(spec['zakres_min']) == 1 and float(spec['zakres_max']) == 5
     assert id_constraints(definitions,metadata) == {'pattern':'ZZ-[0-9]{2}','min':10,'max':20}
+
+
+def test_restrict_to_rows_uses_same_rows_for_key_and_sources():
+    from lab.scoring import restrict_to_rows
+    registry = pd.DataFrame({'patient_id': ['PR-001', 'pr 002', 'PR-003', 'PR-001']})
+    key = pd.DataFrame({'patient_id_w_pliku': ['PR-001', 'pr 002', 'PR-003', 'PR-001'], 'wiersz_excel': [2, 3, 4, 5],
+                        'zmienna': ['a', 'b', 'c', 'd']})
+    traps = pd.DataFrame({'patient_id': ['PR-003'], 'wiersz_excel': [4], 'zmienna': ['x']})
+    sources = {'AI': pd.DataFrame({'patient_id': ['PR-002', 'PR-003'], 'zmienna': ['b', 'c']}),
+               'Grupa': pd.DataFrame({'patient_id': ['PR-001', 'PR-003'], 'zmienna': ['a', 'x']})}
+    key_in, sources_in, traps_in = restrict_to_rows(key, sources, traps, registry, 1, 2)
+    assert key_in['wiersz_excel'].tolist() == [2, 3]
+    assert sources_in['AI']['patient_id'].tolist() == ['PR-002']
+    assert sources_in['Grupa']['patient_id'].tolist() == ['PR-001']
+    assert traps_in.empty
+    metrics, _, _ = compare_findings(key_in, sources_in, traps_in)
+    assert metrics.set_index('źródło').loc['AI', 'wszystkie błędy'] == 2
+    # Rejestr bez patient_id: bez zawężania.
+    same = restrict_to_rows(key, sources, traps, pd.DataFrame({'x': [1]}), 1, 1)
+    assert len(same[0]) == 4 and len(same[1]['AI']) == 2
+
+
+@pytest.mark.parametrize('decision,kept', [('pozostaw bez zmiany', True), ('pozostaw_bez_zmiany', True), ('Bez zmian', True),
+                                           ('zapytanie do ośrodka', False), ('', False), (None, False)])
+def test_keep_decision_is_not_an_alarm(decision, kept):
+    from lab.scoring import split_kept
+    card = pd.DataFrame({'patient_id': ['PR-058'], 'zmienna': ['rt_dose_gy'], 'decyzja': [decision]})
+    flags, left = split_kept(card)
+    assert len(left) == int(kept) and len(flags) == int(not kept)

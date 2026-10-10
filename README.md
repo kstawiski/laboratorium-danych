@@ -8,7 +8,7 @@ Repozytorium zawiera:
 - `exercises/` — w pełni syntetyczny pakiet ćwiczeniowy PROSTATA-RT (120 mężczyzn z rakiem gruczołu krokowego leczonych radioterapią, 56 celowo wstrzykniętych błędów, 5 rzadkich, ale poprawnych wartości, 60 syntetycznych dokumentów do ekstrakcji z kluczem) wraz z deterministycznym generatorem i testami: [exercises/README_dane.md](exercises/README_dane.md).
 - `materialy/` — instrukcja ćwiczeń dla uczestników i instrukcja uruchomienia modelu Ornith-1.5-9B na własnym komputerze.
 
-**Wszystkie dane są syntetyczne.** Imiona i nazwiska są fikcyjne, a numery w formacie PESEL mają celowo błędną cyfrę kontrolną. Nie wgrywaj do aplikacji prawdziwych danych pacjentów. Prawdziwe dane wolno przetwarzać wyłącznie modelem lokalnym, za zgodą instytucji. Aplikacja jest narzędziem dydaktycznym, a nie wyrobem medycznym.
+**Wszystkie dane są syntetyczne.** Imiona i nazwiska są fikcyjne, a numery w formacie PESEL mają celowo błędną cyfrę kontrolną. Nie wgrywaj do aplikacji prawdziwych danych pacjentów. Prawdziwe dane przetwarzaj tylko w środowisku zatwierdzonym przez instytucję, z wymaganymi zabezpieczeniami; na zajęciach rekomendujemy model lokalny. Aplikacja jest narzędziem dydaktycznym, a nie wyrobem medycznym.
 
 ## Szybki start (lokalnie)
 

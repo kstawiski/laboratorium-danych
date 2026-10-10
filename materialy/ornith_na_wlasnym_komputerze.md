@@ -44,6 +44,6 @@ Na komputerach Apple z procesorami M1–M4 można użyć wersji w formacie MLX, 
 ---
 
 ## Zasady bezpiecznej pracy z danymi medycznymi
-1. **Prawdziwe dane tylko lokalnie:** Prawdziwe dane pacjentów przetwarzaj modelem lokalnym, na sprzęcie i zasadach zatwierdzonych przez instytucję. Nie wklejaj ich do publicznych czatów ani usług w chmurze.
+1. **Prawdziwe dane tylko w zatwierdzonym środowisku:** Prawdziwe dane pacjentów przetwarzaj tylko w środowisku zatwierdzonym przez instytucję, na właściwej podstawie i z wymaganymi zabezpieczeniami. Na zajęciach rekomendujemy model lokalny. Nie wklejaj ich do niezatwierdzonych publicznych czatów ani usług w chmurze.
 2. **Zgoda instytucji:** Praca na rzeczywistych danych pacjentów wymaga zgody instytucji, a gdy dotyczy to badania naukowego, także spełnienia wymagań komisji bioetycznej i inspektora ochrony danych.
 3. **Bezwzględna weryfikacja wyników:** Odpowiedzi i zestawienia generowane przez sztuczną inteligencję zawsze podlegają krytycznej ocenie lekarza. Modele językowe mogą generować błędy, halucynacje lub pomijać istotne szczegóły kliniczne. Model AI stanowi wyłącznie narzędzie wspomagające, a odpowiedzialność za decyzje medyczne spoczywa na człowieku.
