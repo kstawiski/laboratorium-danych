@@ -158,3 +158,306 @@ DOK-20.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, n
 DOK-20.txt,adt_months,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
 DOK-20.txt,bcr_phoenix,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
 DOK-20.txt,psa_nadir_ng_ml,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-21.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-21.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-21.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-21.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-21.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-21.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-21.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-22.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-22.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-22.txt,adt,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-22.txt,adt_months,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-22.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-22.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-22.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-22.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-22.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-23.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-23.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-23.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-23.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-23.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-23.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-23.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-24.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-24.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-24.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-24.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-24.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-24.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-24.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-25.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-25.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-25.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-25.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-25.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-25.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-25.txt,smoking,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-26.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-26.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-26.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-26.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-26.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-26.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-26.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-27.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-27.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-27.txt,hemoglobin_g_dl,jednostka,"Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-27.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-27.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-27.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-27.txt,creatinine_mg_dl,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-28.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-28.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-28.txt,adt,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-28.txt,adt_months,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-28.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-28.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-28.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-28.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-28.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-29.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-29.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-29.txt,adt,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-29.txt,adt_months,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-29.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-29.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-29.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-29.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-29.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-30.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-30.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-30.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl."
+DOK-30.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-30.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-30.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-30.txt,hemoglobin_g_dl,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-31.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-31.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-31.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-31.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-31.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-31.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-31.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-32.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-32.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-32.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-32.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-32.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-32.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-32.txt,diabetes,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-33.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-33.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-33.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-33.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-33.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-33.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-33.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-33.txt,gu_toxicity_max,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-34.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-34.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-34.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-34.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-34.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-34.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-34.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-35.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-35.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-35.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-35.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-35.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-35.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-35.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-36.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-36.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-36.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-36.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-36.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-36.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-36.txt,hypertension,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-37.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-37.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-37.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-37.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-37.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-37.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-37.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-38.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-38.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-38.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-38.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-38.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-38.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-38.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-38.txt,adt_months,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-39.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-39.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-39.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-39.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-39.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-39.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-39.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-39.txt,gi_toxicity_max,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-40.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-40.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-40.txt,adt,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-40.txt,adt_months,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-40.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-40.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-40.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-40.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-40.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-41.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-41.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-41.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-41.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-41.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-41.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-41.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-42.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-42.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-42.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-42.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-42.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-42.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-42.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-43.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-43.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-43.txt,creatinine_mg_dl,jednostka,"Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-43.txt,hemoglobin_g_dl,jednostka,"Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-43.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-43.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-43.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-44.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-44.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-44.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-44.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-44.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-44.txt,creatinine_mg_dl,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-44.txt,hemoglobin_g_dl,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-45.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-45.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-45.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-45.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-45.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-45.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-45.txt,birth_date,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-46.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-46.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-46.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-46.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-46.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-46.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-46.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-47.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-47.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-47.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-47.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-47.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-47.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-47.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-48.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-48.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-48.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-48.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-48.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-48.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-48.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-49.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-49.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-49.txt,adt,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-49.txt,adt_months,negacja,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-49.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-49.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-49.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-49.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-49.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-50.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-50.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-50.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-50.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-50.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-50.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-50.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-50.txt,bcr_phoenix,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-50.txt,psa_nadir_ng_ml,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-51.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-51.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-51.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-51.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-51.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-51.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-51.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-51.txt,adt_months,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-52.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-52.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-52.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-52.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-52.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-52.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-52.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-53.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-53.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-53.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-53.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-53.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-53.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-53.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-54.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-54.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-54.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-54.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-54.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-54.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-54.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-54.txt,isup_grade,sprzecznosc,"Gleason 3+4 i ISUP 3 bez rozstrzygającego aneksu. Przyjęto null, nie samodzielną korektę."
+DOK-55.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-55.txt,isup_grade,sprzecznosc,Przyjąć ISUP 3 z potwierdzonego aneksu; nie pierwszy wynik 2.
+DOK-55.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-55.txt,creatinine_mg_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-55.txt,hemoglobin_g_dl,jednostka,Kreatynina w mg/dl. Hb w g/dl.
+DOK-55.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-55.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-55.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-56.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-56.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-56.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-56.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-56.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-56.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-56.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-56.txt,bcr_phoenix,oznaczalnosc,"PSA <0,01 bez wartości punktowej; PSA i Phoenix=null."
+DOK-56.txt,psa_last_ng_ml,oznaczalnosc,"PSA <0,01 bez wartości punktowej; PSA i Phoenix=null."
+DOK-57.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-57.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-57.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-57.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-57.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-57.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-57.txt,birth_date,sprzecznosc,Dwie daty urodzenia bez potwierdzonej korekty; PESEL nie stanowi źródła.
+DOK-58.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-58.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-58.txt,creatinine_mg_dl,jednostka,"Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-58.txt,hemoglobin_g_dl,jednostka,"Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-58.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-58.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-58.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-59.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-59.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-59.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-59.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-59.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-59.txt,diabetes,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-59.txt,hypertension,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-60.txt,birth_date,data,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-60.txt,rt_start_date,data,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-60.txt,creatinine_mg_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-60.txt,hemoglobin_g_dl,jednostka,"Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-60.txt,diabetes,negacja,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-60.txt,hypertension,negacja,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-60.txt,smoking,negacja,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-60.txt,adt_months,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-60.txt,bcr_phoenix,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.
+DOK-60.txt,psa_nadir_ng_ml,brak,Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.

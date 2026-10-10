@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Leszek Fikcyjny-32; kod rejestru: PR-072. PESEL fikcyjny, błędna cyfra kontrolna: 55070323114.
+Ur. 1955.07.03.
+Wywiad i kwalifikacja
+Chory zgłosił się z wynikami biopsji systematycznej prostaty. W wywiadzie internistycznym nie odnotowano informacji o cukrzycy; pozostałe obciążenia udokumentowano na podstawie karty informacyjnej lekarza POZ. Uzupełnienie danych po radioterapii dopisano po weryfikacji dokumentacji ambulatoryjnej.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Rozpoznanie ca prostatae z biopsji z 2021-06-09. PSA przy rozpoznaniu: 14,01 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 05.11.2021.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Z wydruku laboratorium: kreatynina 80,4 µmol/l; Hb 12,74 g/dl.
+Testosteron 1,096 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 20/01/2025.
+Najniższe PSA po RT (nadir): 0,36 ng/ml.
+Ostatnie PSA: 1,07 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

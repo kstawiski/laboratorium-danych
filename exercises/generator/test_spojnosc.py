@@ -206,7 +206,7 @@ def test_pesel_w_kazdym_artefakcie_ma_bledna_kontrolna():
             for number in re.findall(r'(?<!\d)\d{11}(?!\d)',text):
                 assert sum(int(a)*b for a,b in zip(number,[1,3,7,9,1,3,7,9,1,3,1]))%10!=0,(path,number)
                 found.add(number)
-    assert len(found)==23
+    assert len(found)==63
 
 
 def test_pulapki_nie_wyzwalaja_zadnego_alarmu(clean,dirty,dictionary):
@@ -393,13 +393,52 @@ def test_dokument_z_kluczem_i_dowodami(index,clean):
         assert e.fragment in text and e.wartosc_klucza==gold[e.zmienna]
 
 
+@pytest.mark.parametrize('index',range(21,61))
+def test_nowe_dokumenty_z_kluczem_i_dowodami(index,clean):
+    document=f'DOK-{index:02d}.txt';text=(DATA/'dokumenty'/document).read_text(encoding='utf-8')
+    assert 150<=len(text.split())<=400
+    assert 'OŚRODEK FIKCYJNY' in text and f'Fikcyjny-{index:02d}' in text
+    gold=csv('ekstrakcja_klucz.csv').set_index('dokument').loc[document]
+    assert gold.patient_id==f'PR-{40+index:03d}'
+    source=clean.set_index('patient_id',drop=False).loc[gold.patient_id]
+    facts=extract_document_facts(text)
+    for v in EXTRACT:
+        if gold[v]=='':
+            assert facts[v] is None,(document,v,facts[v])
+        else:
+            assert gold[v]==source[v],(document,v,gold[v],source[v])
+            if isinstance(facts[v],(int,float)):
+                assert facts[v]==pytest.approx(float(gold[v]),abs=.005),(document,v)
+            else:
+                assert facts[v]==gold[v],(document,v)
+    evidence=csv('ekstrakcja_dowody.csv');evidence=evidence[evidence.dokument==document]
+    assert set(evidence.zmienna)=={v for v in EXTRACT if gold[v]!=''}
+    for e in evidence.itertuples():
+        assert e.fragment in text and e.wartosc_klucza==gold[e.zmienna]
+
+
+def test_sha256_nienaruszone_sprzed_a4():
+    sha_file=ROOT.parent/'plan'/'sha256_przed_A4.txt'
+    assert sha_file.is_file(),f"Brak pliku sum kontrolnych: {sha_file}"
+    lines=[line.strip() for line in sha_file.read_text(encoding='utf-8').splitlines() if line.strip()]
+    base=ROOT.parent
+    for line in lines:
+        expected_sha,rel_path=line.split()
+        target=base/rel_path
+        assert target.is_file(),f"Brak pliku bazowego: {rel_path}"
+        actual_sha=hashlib.sha256(target.read_bytes()).hexdigest()
+        assert actual_sha==expected_sha,(
+            f"Naruszenie sumy kontrolnej sprzed A4 dla {rel_path}: oczekiwano {expected_sha}, otrzymano {actual_sha}"
+        )
+
+
 def test_schemat_braki_i_rozstrzyganie_sprzecznosci():
     expected='patient_id birth_date rt_start_date psa_dx_ng_ml gleason_primary gleason_secondary isup_grade ct_stage cn_stage risk_group rt_technique rt_dose_gy rt_fractions adt adt_months psa_nadir_ng_ml psa_last_ng_ml bcr_phoenix gu_toxicity_max gi_toxicity_max creatinine_mg_dl hemoglobin_g_dl diabetes hypertension smoking'.split()
     assert EXTRACT==expected
     schema=json.loads((DATA/'ekstrakcja_schemat.json').read_text())
     assert schema['required']==expected and list(schema['properties'])==expected and not schema['additionalProperties']
     gold=csv('ekstrakcja_klucz.csv')
-    assert gold.columns.tolist()==['dokument']+expected and len(gold)==20
+    assert gold.columns.tolist()==['dokument']+expected and len(gold)==60
     for row in gold.to_dict('records'):
         for v in EXTRACT:
             value=row[v];spec=schema['properties'][v]
@@ -423,7 +462,7 @@ def test_schemat_braki_i_rozstrzyganie_sprzecznosci():
 
 def test_zip_karta_manifest_i_scenariusz():
     with zipfile.ZipFile(DATA/'dokumenty.zip') as z:
-        assert z.namelist()==[f'DOK-{i:02d}.txt' for i in range(1,21)]
+        assert z.namelist()==[f'DOK-{i:02d}.txt' for i in range(1,61)]
         for name in z.namelist():assert z.read(name)==(DATA/'dokumenty'/name).read_bytes()
     wb=load_workbook(DATA/'karta_znalezisk.xlsx',read_only=True)
     assert list(next(wb.active.iter_rows(values_only=True)))==['patient_id','zmienna','problem','decyzja'];wb.close()

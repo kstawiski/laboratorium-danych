@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Bartłomiej Fikcyjny-22; kod rejestru: PR-062. PESEL fikcyjny, błędna cyfra kontrolna: 37120622118.
+Ur. 06.12.1937.
+Chory leczony w trybie ambulatoryjnym z zastosowaniem fotonów 6 MV. Napromienianie loży stercza prowadzono z codzienną kontrolą ułożenia IGRT. Tolerancja wczesna leczenia była zadowalająca, bez konieczności przerw terapeutycznych. Zalecenia dietetyczne utrzymano do zakończenia obserwacji.
+Pierwsza frakcja RT: 28.10.2022.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 0,92 mg/dl; Hb 12,67 g/dl.
+Testosteron 425,5 ng/dl, pobranie przed leczeniem, bez ADT.
+Rozpoznanie ca prostatae z biopsji z 2022-07-13. PSA przy rozpoznaniu: 8,36 ng/ml.
+Gs 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-10-20.
+Najniższe PSA po RT (nadir): 0,61 ng/ml.
+Ostatnie PSA: 1,22 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

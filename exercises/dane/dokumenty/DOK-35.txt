@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Oskar Fikcyjny-35; kod rejestru: PR-075. PESEL fikcyjny, błędna cyfra kontrolna: 39082823415.
+Ur. 1939-08-28.
+
+Wywiad internistyczny
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nigdy nie palił.
+
+Wstępna kwalifikacja urologiczna chorego z zaawansowanym miejscowo rakiem stercza cN1. Omówiono konieczność napromieniania elektywnego regionalnych węzłów chłonnych oraz długoterminowej deprywacji androgenowej. Niniejszy wyciąg uzupełniono o retrospektywne dane z kontroli biochemicznej.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 09.02.2021. PSA przy rozpoznaniu: 148 ng/ml.
+Gleason 5+4=9.
+ISUP 5.
+Stopień kliniczny: cT2a cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.
+W PET-PSMA bez cech przerzutów odległych; obecne regionalne węzły oceniono jako cN1.
+
+Z wydruku laboratorium: kreatynina 1,28 mg/dl; Hb 14,95 g/dl.
+Testosteron 21,0 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 2021-06-22.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Kontrolne oznaczenie PSA z 19.09.2024.
+Najniższe PSA po RT (nadir): 0,38 ng/ml.
+Ostatnie PSA: 4,27 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G2.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

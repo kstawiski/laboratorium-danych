@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Henryk Fikcyjny-28; kod rejestru: PR-068. PESEL fikcyjny, błędna cyfra kontrolna: 66090822710.
+Ur. 08.09.1966.
+Radykalne napromienianie zrealizowano zgodnie z planem bez przerw technicznych. W trakcie leczenia chory przyjmował profilaktycznie tamsulosynę z dobrą tolerancją. Przed każdą frakcją weryfikowano wypełnienie pęcherza metodą ultrasonograficzną w pracowni teleradioterapii.
+Pierwsza frakcja RT: 30.07.2022.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 0,79 mg/dl; Hb 13,63 g/dl.
+Testosteron 261,8 ng/dl, pobranie przed leczeniem, bez ADT.
+Rozpoznanie ca prostatae z biopsji z 2022-02-23. PSA przy rozpoznaniu: 7,76 ng/ml.
+Gs 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-06-18.
+Najniższe PSA po RT (nadir): 0,6 ng/ml.
+Ostatnie PSA: 1,08 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

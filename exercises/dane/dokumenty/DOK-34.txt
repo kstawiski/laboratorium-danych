@@ -1,0 +1,26 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Nikodem Fikcyjny-34; kod rejestru: PR-074. PESEL fikcyjny, błędna cyfra kontrolna: 57071823310.
+Ur. 18.07.1957.
+Napromienianie zrealizowano techniką dynamiczną IMRT na przyspieszaczu liniowym z wielolistkowym kolimatorem. Weryfikację izocentrum prowadzono systemem wizualizacji portalowej i CBCT. Pacjent stosował się ściśle do zaleceń dotyczących reżimu płynowego przed zabiegiem.
+Pierwsza frakcja RT: 11.11.2021.
+Technika IMRT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 1,28 mg/dl; Hb 13,86 g/dl.
+Testosteron 32,4 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 2021-08-27. PSA przy rozpoznaniu: 43,32 ng/ml.
+Gs 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-02-14.
+Najniższe PSA po RT (nadir): 0,12 ng/ml.
+Ostatnie PSA: 0,63 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

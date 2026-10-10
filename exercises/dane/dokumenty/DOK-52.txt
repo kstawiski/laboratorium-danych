@@ -1,0 +1,26 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Mariusz Fikcyjny-52; kod rejestru: PR-092. PESEL fikcyjny, błędna cyfra kontrolna: 39092125112.
+Ur. 21.09.1939.
+Napromienianie zrealizowano techniką IMRT. Weryfikację ułożenia przeprowadzano systematycznie zgodnie z wewnętrzną procedurą zapewnienia jakości. Chory zgłaszał przejściowe parcia naglące, które ustąpiły po leczeniu spasmolitycznym.
+Pierwsza frakcja RT: 23.11.2021.
+Technika IMRT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 1,06 mg/dl; Hb 12,65 g/dl.
+Testosteron 30,2 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 2021-06-23. PSA przy rozpoznaniu: 8,98 ng/ml.
+Gs 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-02-21.
+Najniższe PSA po RT (nadir): 0,42 ng/ml.
+Ostatnie PSA: 3,24 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

@@ -1,0 +1,33 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Jacek Fikcyjny-49; kod rejestru: PR-089. PESEL fikcyjny, błędna cyfra kontrolna: 62111224815.
+Ur. 1962-11-12.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 11.12.2021. PSA przy rozpoznaniu: 10,96 ng/ml.
+Gs 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 01/05/2022.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+
+Radykalna teleradioterapia VMAT ukończona w zaplanowanym czasie. Wypis zawiera podsumowanie dawki pochłoniętej w obszarze tarczowym oraz parametry ochrony pęcherza i odbytnicy. Badania kontrolne zalecono co 3 miesiące.
+
+Wyniki laboratoryjne: kreatynina 1,20 mg/dl; Hb 13,81 g/dl.
+Testosteron 281,7 ng/dl, pobranie przed leczeniem, bez ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nadal pali papierosy.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 2025.04.11.
+Najniższe PSA po RT (nadir): 0,28 ng/ml.
+Ostatnie PSA: 1,35 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

@@ -6,3 +6,4 @@ app/logs/
 app/cache/
 *.key
 .env
+.pytest_tmp/

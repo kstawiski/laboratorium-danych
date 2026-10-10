@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Wojciech Fikcyjny-40; kod rejestru: PR-080. PESEL fikcyjny, błędna cyfra kontrolna: 54082323918.
+Ur. 23.08.1954.
+Zakończono kurs radioterapii radykalnej gruczołu krokowego. Parametry geometryczne i dozymetryczne planu leczenia zweryfikowano przed rozpoczęciem pierwszej frakcji. Chory tolerował zabiegi bez powikłań wymagających hospitalizacji.
+Pierwsza frakcja RT: 21.07.2022.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 1,01 mg/dl; Hb 12,24 g/dl.
+Testosteron 345,0 ng/dl, pobranie przed leczeniem, bez ADT.
+Rozpoznanie ca prostatae z biopsji z 2022-03-18. PSA przy rozpoznaniu: 19,94 ng/ml.
+Gs 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-08-23.
+Najniższe PSA po RT (nadir): 0,49 ng/ml.
+Ostatnie PSA: 0,87 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G2.
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

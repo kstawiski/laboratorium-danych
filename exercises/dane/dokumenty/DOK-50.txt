@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Kamil Fikcyjny-50; kod rejestru: PR-090. PESEL fikcyjny, błędna cyfra kontrolna: 32040324915.
+Ur. 03.04.1932.
+Wywiad i kwalifikacja
+Kwalifikacja do radioterapii. W dostarczonym wyciągu ambulatoryjnym brakuje jednoznacznego zapisu nadiru PSA po leczeniu, co uniemożliwia ocenę kryterium Phoenix w tej notatce. Pozostałe dane kliniczne przepisano z oryginału.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 05/01/2021. PSA przy rozpoznaniu: 7,37 ng/ml.
+Gleason 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 2021.04.03.
+Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Z wydruku laboratorium: kreatynina 114,9 µmol/l; Hb 7,46 mmol/l.
+Testosteron 0,524 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 2025-03-11.
+Ostatnie PSA: 0,81 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

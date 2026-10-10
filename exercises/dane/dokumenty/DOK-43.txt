@@ -1,0 +1,34 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Czesław Fikcyjny-43; kod rejestru: PR-083. PESEL fikcyjny, błędna cyfra kontrolna: 52010524211.
+Ur. 05/01/1952.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 2021.07.11. PSA przy rozpoznaniu: 7,49 ng/ml.
+Gs 4+4=8.
+ISUP 4.
+Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 2021-12-13.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Teleradioterapia wiązkami fotonowymi o modulowanej intensywności zrealizowana planowo. W trakcie procedury prowadzono codzienną weryfikację pozycji narządów na aparacie terapeutycznym. Wyniki badań laboratoryjnych z dnia przyjęcia dołączono do wypisu.
+
+Wyniki laboratoryjne: kreatynina 0,98 mg/dl; Hb 9,33 mmol/l.
+Testosteron 23,9 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nadal pali papierosy.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 17.02.2025.
+Najniższe PSA po RT (nadir): 0,29 ng/ml.
+Ostatnie PSA: 1,06 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

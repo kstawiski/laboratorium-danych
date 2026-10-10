@@ -1,0 +1,32 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Zenon Fikcyjny-59; kod rejestru: PR-099. PESEL fikcyjny, błędna cyfra kontrolna: 62121725812.
+Ur. 17/12/1962.
+
+Wywiad internistyczny
+Nigdy nie palił.
+
+Wizyta urologiczna kwalifikacyjna. Wywiad internistyczny w przekazanym odpisie nie zawierał informacji o cukrzycy ani nadciśnieniu tętniczym. Dołączono uzupełnienie z poradni teleradioterapii dotyczące późniejszej kontroli biochemicznej.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 2020.12.24. PSA przy rozpoznaniu: 20,13 ng/ml.
+Gleason 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 82,2 µmol/l; Hb 8,61 mmol/l.
+Testosteron 1,016 nmol/l, oznaczenie w trzecim miesiącu ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 2021-06-13.
+Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Kontrolne oznaczenie PSA z 21.05.2024.
+Najniższe PSA po RT (nadir): 0,22 ng/ml.
+Ostatnie PSA: 4,42 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

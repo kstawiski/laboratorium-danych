@@ -1,0 +1,32 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Edward Fikcyjny-25; kod rejestru: PR-065. PESEL fikcyjny, błędna cyfra kontrolna: 46102222415.
+Ur. 1946-10-22.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 24.06.2022. PSA przy rozpoznaniu: 4,91 ng/ml.
+Gs 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 20/12/2022.
+Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Plan leczenia zrealizowano techniką intensywnej modulacji wiązki IMRT. Rozkład dawek w narządach krytycznych spełniał protokołowe kryteria QUANTEC dla pęcherza moczowego i przedniej ściany odbytnicy. Wypis zawiera parametry dawki na stercz; wywiad dotyczący palenia tytoniu nie został w tej karcie odnotowany.
+
+Wyniki laboratoryjne: kreatynina 1,14 mg/dl; Hb 13,20 g/dl.
+Testosteron 10,6 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 2026.02.26.
+Najniższe PSA po RT (nadir): 0,17 ng/ml.
+Ostatnie PSA: 0,38 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G2.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

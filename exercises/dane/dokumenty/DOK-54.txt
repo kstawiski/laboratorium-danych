@@ -1,0 +1,26 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Patryk Fikcyjny-54; kod rejestru: PR-094. PESEL fikcyjny, błędna cyfra kontrolna: 66070825315.
+Ur. 08.07.1966.
+LAB.
+Badania uzupełniające: kreatynina 137,0 µmol/l; Hb 8,81 mmol/l.
+Testosteron 14,0 ng/dl, oznaczenie w trzecim miesiącu ADT.
+KONTROLA
+Kontrolne oznaczenie PSA z 2025-01-27.
+Najniższe PSA po RT (nadir): 0,09 ng/ml.
+Ostatnie PSA: 1,02 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Kontrola onkologiczna. W dokumentacji histopatologicznej stwierdzono rozbieżność opisową wzorców architektonicznych i sumarycznego stopnia ISUP bez dołączonego aneksu korygującego. Pozostałe dane dotyczące leczenia pozostają jednoznaczne.
+Rozpoznanie ca prostatae z biopsji z 11/06/2021. PSA przy rozpoznaniu: 12,86 ng/ml.
+Wynik biopsji: Gs 3+4=7.
+Opis wzorców wskazuje 3+4=7, lecz w podsumowaniu wpisano ISUP 3. Sprzeczność nierozstrzygnięta, brak aneksu; ISUP pozostaje nieustalone.
+Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT / ADT
+Początek napromieniania: 2021.10.30.
+Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Aleksander Fikcyjny-41; kod rejestru: PR-081. PESEL fikcyjny, błędna cyfra kontrolna: 48010224015.
+Ur. 1948-01-02.
+
+Wywiad internistyczny
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nigdy nie palił.
+
+Wizyta kwalifikacyjna w poradni urologicznej. Pacjent z rakiem stercza grupy wysokiego ryzyka zakwalifikowany do napromieniania IMRT z równoczesną hormonoterapią. Poniżej zamieszczono zestawienie badań wyjściowych oraz wyciąg z późniejszej obserwacji ambulatoryjnej.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 12.05.2021. PSA przy rozpoznaniu: 8,38 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 1,18 mg/dl; Hb 12,05 g/dl.
+Testosteron 24,9 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 2021-07-23.
+Technika IMRT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Kontrolne oznaczenie PSA z 30.10.2024.
+Najniższe PSA po RT (nadir): 0,2 ng/ml.
+Ostatnie PSA: 0,36 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

@@ -1,0 +1,26 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Paweł Fikcyjny-36; kod rejestru: PR-076. PESEL fikcyjny, błędna cyfra kontrolna: 36022723510.
+Ur. 1936.02.27.
+LAB.
+Badania uzupełniające: kreatynina 82,2 µmol/l; Hb 14,12 g/dl.
+Testosteron 19,2 ng/dl, oznaczenie w trzecim miesiącu ADT.
+KONTROLA
+Kontrolne oznaczenie PSA z 06/09/2024.
+Najniższe PSA po RT (nadir): 0,4 ng/ml.
+Ostatnie PSA: 1,22 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Wizyta kontrolna po radioterapii VMAT. W wywiadzie ogólnoustrojowym brak jednoznacznej adnotacji dotyczącej nadciśnienia tętniczego; pomiary ciśnienia w gabinecie pozostawały prawidłowe. Wykonano ocenę wskaźników laboratoryjnych oraz aktualnego stężenia PSA w surowicy.
+Rozpoznanie ca prostatae z biopsji z 2021-06-26. PSA przy rozpoznaniu: 5,55 ng/ml.
+Wynik biopsji: Gs 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT / ADT
+Początek napromieniania: 10.10.2021.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+DM t.2, leczona doustnie.
+Nigdy nie palił.
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

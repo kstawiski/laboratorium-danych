@@ -1,0 +1,33 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Tomasz Fikcyjny-57; kod rejestru: PR-097. PESEL fikcyjny, błędna cyfra kontrolna: 55091425619.
+Ur. na stronie 1: 14.09.1955; na stronie 2: 13.09.1956. Brak potwierdzenia daty urodzenia.
+
+1. PSA i tolerancja
+Kontrolne oznaczenie PSA z 2025.06.25.
+Najniższe PSA po RT (nadir): 0,39 ng/ml.
+Ostatnie PSA: 1,3 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.
+
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+
+Wizyta kontrolna po radioterapii. W dostarczonych kopiach dokumentów z ośrodka zewnętrznego odnotowano rozbieżność daty urodzenia pacjenta na kolejnych stronach. Przebieg teleradioterapii i monitorowania PSA udokumentowano precyzyjnie.
+
+2. Dane rozpoznania
+Rozpoznanie ca prostatae z biopsji z 16.03.2022. PSA przy rozpoznaniu: 11,14 ng/ml.
+Wynik biopsji: Gs 5+4=9.
+ISUP 5.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+3. Przebyte leczenie
+Początek napromieniania: 16/08/2022.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Badania uzupełniające: kreatynina 98,1 µmol/l; Hb 14,99 g/dl.
+Testosteron 20,7 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

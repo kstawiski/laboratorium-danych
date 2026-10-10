@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Napoleon Fikcyjny-53; kod rejestru: PR-093. PESEL fikcyjny, błędna cyfra kontrolna: 38101425210.
+Ur. 1938-10-14.
+
+Wywiad internistyczny
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+
+Konsultacja urologiczna chorego po biopsji fuzyjnej. Wyniki histopatologiczne i obrazowe omówiono szczegółowo. Karta zawiera uzupełnienie z późniejszego przebiegu leczenia radykalnego i obserwacji stężenia PSA w surowicy.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 29.01.2022. PSA przy rozpoznaniu: 10,74 ng/ml.
+Gleason 4+4=8.
+ISUP 4.
+Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 76,9 µmol/l; Hb 12,36 g/dl.
+Testosteron 1,071 nmol/l, oznaczenie w trzecim miesiącu ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 08/07/2022.
+Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Kontrolne oznaczenie PSA z 2025.07.22.
+Najniższe PSA po RT (nadir): 0,005 ng/ml.
+Ostatnie PSA: 0,58 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G1.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

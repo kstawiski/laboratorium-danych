@@ -5,7 +5,7 @@ Materiały do zajęć „Przygotowanie i higiena danych, systemy data capture i 
 Repozytorium zawiera:
 
 - `app/` — aplikację Streamlit „Laboratorium danych”: EDA (eksploracyjna analiza danych), reguły walidacyjne, ekstrakcja danych z dokumentów przez lokalny model językowy, ocena wiarygodności klinicznej przez model i porównanie zgłoszeń człowieka, reguł i AI z kluczem. Instrukcja uruchomienia: [app/README.md](app/README.md).
-- `exercises/` — w pełni syntetyczny pakiet ćwiczeniowy PROSTATA-RT (120 mężczyzn z rakiem gruczołu krokowego leczonych radioterapią, 56 celowo wstrzykniętych błędów, 5 rzadkich, ale poprawnych wartości, 20 syntetycznych dokumentów do ekstrakcji z kluczem) wraz z deterministycznym generatorem i testami: [exercises/README_dane.md](exercises/README_dane.md).
+- `exercises/` — w pełni syntetyczny pakiet ćwiczeniowy PROSTATA-RT (120 mężczyzn z rakiem gruczołu krokowego leczonych radioterapią, 56 celowo wstrzykniętych błędów, 5 rzadkich, ale poprawnych wartości, 60 syntetycznych dokumentów do ekstrakcji z kluczem) wraz z deterministycznym generatorem i testami: [exercises/README_dane.md](exercises/README_dane.md).
 - `materialy/` — instrukcja ćwiczeń dla uczestników i instrukcja uruchomienia modelu Ornith-1.5-9B na własnym komputerze.
 
 **Wszystkie dane są syntetyczne.** Imiona i nazwiska są fikcyjne, a numery w formacie PESEL mają celowo błędną cyfrę kontrolną. Nie wgrywaj do aplikacji prawdziwych danych pacjentów. Prawdziwe dane wolno przetwarzać wyłącznie modelem lokalnym, za zgodą instytucji. Aplikacja jest narzędziem dydaktycznym, a nie wyrobem medycznym.

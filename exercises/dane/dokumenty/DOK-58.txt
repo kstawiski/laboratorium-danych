@@ -1,0 +1,27 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Wacław Fikcyjny-58; kod rejestru: PR-098. PESEL fikcyjny, błędna cyfra kontrolna: 37060425712.
+Ur. 04.06.1937.
+Karta leczenia promieniami fotonowymi. Wiek orientacyjny podany na skierowaniu różnił się od daty urodzenia ustalonej na podstawie dowodu tożsamości. Napromienianie zrealizowano zgodnie z protokołem planowania 3D/IMRT.
+Na skierowaniu wiek 89 lat — wpis niezgodny z potwierdzoną datą urodzenia, nie używać go do jej korekty.
+Pierwsza frakcja RT: 2022.02.02.
+Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 0,98 mg/dl; Hb 8,0 mmol/l.
+Testosteron 23,2 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 21/10/2021. PSA przy rozpoznaniu: 7,68 ng/ml.
+Gs 4+4=8.
+ISUP 4.
+Stopień kliniczny: cT2c cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.
+W PET-PSMA bez cech przerzutów odległych; obecne regionalne węzły oceniono jako cN1.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-03-18.
+Najniższe PSA po RT (nadir): 0,36 ng/ml.
+Ostatnie PSA: 1,06 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

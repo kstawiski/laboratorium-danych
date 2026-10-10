@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Damian Fikcyjny-44; kod rejestru: PR-084. PESEL fikcyjny, błędna cyfra kontrolna: 43092524314.
+Ur. 1943.09.25.
+Wywiad i kwalifikacja
+Wizyta kwalifikacyjna urologa onkologa. Ze względu na brak dostępu do bieżących wyników laboratoryjnych (kreatynina, morfologia) zalecono ich pilne uzupełnienie w poradni rejonowej. Wpis uzupełniono o retrospektywne dane dotyczące radioterapii i monitorowania PSA.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 2021-11-24. PSA przy rozpoznaniu: 7,32 ng/ml.
+Gleason 5+5=10.
+ISUP 5.
+Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 13.05.2022.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Testosteron 1,061 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 03/05/2025.
+Najniższe PSA po RT (nadir): 0,32 ng/ml.
+Ostatnie PSA: 3,34 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

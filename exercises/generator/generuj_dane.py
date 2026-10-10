@@ -477,16 +477,76 @@ def make_documents(clean):
         'W kopiach dokumentów występują sprzeczne oznaczenia ISUP. Nie dołączono aneksu ani wyniku ponownej oceny preparatów. Zgłoszono potrzebę wyjaśnienia rozbieżności u źródła. Pozostałe jawnie podane dane można przepisać, lecz nie należy samodzielnie nadawać rozstrzygającego stopnia ISUP na podstawie domniemanej hierarchii źródeł.',
         'Dostarczony wynik PSA zawiera jedynie określenie poniżej granicy oznaczalności. Nie zamieniono go na zero, ponieważ nie jest to wynik punktowy. Brak porównywalnego pomiaru wpływa na możliwość obliczenia zmiennej Phoenix. W pozostałym zakresie oddzielono dane opisane wprost od informacji nieobecnych w karcie.',
         'Na dwóch stronach kopii wpisano różne daty urodzenia. Nie ma dokumentu wskazującego, który zapis poprawiono. Numer PESEL jest fikcyjny i nie służy do odtwarzania daty. Rozbieżność wymaga uzgodnienia przed uzupełnieniem tej zmiennej; nie przeszkadza w odczytaniu jednoznacznie podanych parametrów leczenia.',
-        'Dokument jest kopią skróconej karty kontroli. Część pól dotyczących nadiru i planowanego czasu ADT nie została przeniesiona. Nie przypisano zera do brakujących informacji. Rozpoznania towarzyszące przepisano tylko z jednoznacznego wywiadu; same nazwy leków nie stanowią wystarczającej podstawy do uzupełnienia wszystkich chorób.'
+        'Dokument jest kopią skróconej karty kontroli. Część pól dotyczących nadiru i planowanego czasu ADT nie została przeniesiona. Nie przypisano zera do brakujących informacji. Rozpoznania towarzyszące przepisano tylko z jednoznacznego wywiadu; same nazwy leków nie stanowią wystarczającej podstawy do uzupełnienia wszystkich chorób.',
+        'Wizyta kontrolna w trakcie długoterminowej hormonoterapii uzupełniającej. Chory zgłasza dobrą tolerancję leczenia, z okresowymi uderzeniami gorąca o łagodnym nasileniu. Przygotowanie pęcherza i odbytnicy w trakcie RT oceniono jako optymalne na podstawie archiwalnych skanów CBCT.',
+        'Chory leczony w trybie ambulatoryjnym z zastosowaniem fotonów 6 MV. Napromienianie loży stercza prowadzono z codzienną kontrolą ułożenia IGRT. Tolerancja wczesna leczenia była zadowalająca, bez konieczności przerw terapeutycznych. Zalecenia dietetyczne utrzymano do zakończenia obserwacji.',
+        'Konsultacja kwalifikacyjna przeprowadzona po wieloparametrycznym rezonansie miednicy i biopsji fuzyjnej. Przedstawiono choremu korzyści oraz ryzyko powikłań leczenia radykalnego. Z uwagi na obecność chorób współistniejących wybrano napromienianie skojarzone z deprywacją androgenową. Dane z obserwacji dopisano po zakończeniu RT.',
+        'Ocena kliniczna w 18. miesiącu po zakończeniu radioterapii. Chory neguje krwiomocz, bóle podbrzusza oraz dolegliwości ze strony dolnego odcinka przewodu pokarmowego. Czynność trzymania moczu zachowana całkowicie. Zalecono utrzymanie umiarkowanej aktywności fizycznej.',
+        'Plan leczenia zrealizowano techniką intensywnej modulacji wiązki IMRT. Rozkład dawek w narządach krytycznych spełniał protokołowe kryteria QUANTEC dla pęcherza moczowego i przedniej ściany odbytnicy. Wypis zawiera parametry dawki na stercz; wywiad dotyczący palenia tytoniu nie został w tej karcie odnotowany.',
+        'Pacjent skierowany z poradni rejonowej z podejrzeniem raka stercza wysokiego ryzyka. Badanie per rectum wykazało asymetrię prawego płata bez ewidentnego naciekania pęczków naczyniowo-nerwowych. Poniżej zamieszczono zestawienie badań biopsyjnych oraz późniejsze wpisy z przebiegu leczenia i kontroli PSA.',
+        'Okresowa kontrola w poradni onkologicznej. Analiza dynamiki stężenia PSA wskazuje na stabilną odpowiedź biochemiczną. Zgłaszany sporadycznie nykturia bez cech przeszkody podpęcherzowej. Z powodu braku świeżego wyniku stężenia kreatyniny zalecono kontrolne badanie laboratoryjne w rejonie.',
+        'Radykalne napromienianie zrealizowano zgodnie z planem bez przerw technicznych. W trakcie leczenia chory przyjmował profilaktycznie tamsulosynę z dobrą tolerancją. Przed każdą frakcją weryfikowano wypełnienie pęcherza metodą ultrasonograficzną w pracowni teleradioterapii.',
+        'Kwalifikacja do radioterapii radykalnej po konsylium wielodyscyplinarnym. Chory poinformowany o możliwości leczenia chirurgicznego, ostatecznie zdecydował o napromienieniu IMRT. W karcie zamieszczono podsumowanie wyjściowych badań obrazowych oraz uzupełniające dane z przebiegu późniejszej obserwacji.',
+        'Wizyta kontrolna po radiochirurgii stereotaktycznej SBRT. Chory bez cech ostrej lub późnej toksyczności popromiennej. Badanie laboratoryjne hemoglobiny nie zostało wykonane w ostatnim kwartale z powodu trudności technicznych w punkcie pobrań. Parametry mikcyjne pozostają w normie.',
+        'Zakończono radykalną radioterapię hipofrakcjonowaną VMAT. Ze względu na wyjściową grupę wysokiego ryzyka włączono analog LHRH w schemacie długoterminowym. W karcie zestawiono parametry fizyczne napromieniania; dane laboratoryjne i daty pobrań odnotowano z oryginalnych załączników.',
+        'Chory zgłosił się z wynikami biopsji systematycznej prostaty. W wywiadzie internistycznym nie odnotowano informacji o cukrzycy; pozostałe obciążenia udokumentowano na podstawie karty informacyjnej lekarza POZ. Uzupełnienie danych po radioterapii dopisano po weryfikacji dokumentacji ambulatoryjnej.',
+        'Wizyta kontrolna po skojarzonym leczeniu radio-hormonalnym. Analiza stężeń PSA potwierdza remisję biochemiczną. Odczyn popromienny ze strony układu pokarmowego oceniono szczegółowo w badaniu podmiotowym; oceny toksyczności moczowo-płciowej GU w tej notatce nie przeprowadzono.',
+        'Napromienianie zrealizowano techniką dynamiczną IMRT na przyspieszaczu liniowym z wielolistkowym kolimatorem. Weryfikację izocentrum prowadzono systemem wizualizacji portalowej i CBCT. Pacjent stosował się ściśle do zaleceń dotyczących reżimu płynowego przed zabiegiem.',
+        'Wstępna kwalifikacja urologiczna chorego z zaawansowanym miejscowo rakiem stercza cN1. Omówiono konieczność napromieniania elektywnego regionalnych węzłów chłonnych oraz długoterminowej deprywacji androgenowej. Niniejszy wyciąg uzupełniono o retrospektywne dane z kontroli biochemicznej.',
+        'Wizyta kontrolna po radioterapii VMAT. W wywiadzie ogólnoustrojowym brak jednoznacznej adnotacji dotyczącej nadciśnienia tętniczego; pomiary ciśnienia w gabinecie pozostawały prawidłowe. Wykonano ocenę wskaźników laboratoryjnych oraz aktualnego stężenia PSA w surowicy.',
+        'Karta leczenia promieniami wysokoenergetycznymi. Zastosowano technikę łukową VMAT z modulacją intensywności dawki. Reakcja popromienna wczesna na poziomie śluzówek pęcherza moczowego miała charakter przejściowy i ustąpiła po krótkim leczeniu objawowym.',
+        'Konsultacja specjalistyczna po rezonansie magnetycznym miednicy mniejszej. W dokumentacji odnotowano wdrożenie hormonoterapii analogiem LHRH, lecz całkowity zaplanowany czas ADT nie został wyspecyfikowany w skierowaniu. Uzupełnienie o wyniki po RT sporządzono na podstawie kartoteki.',
+        'Ocena pooperacyjna i popromienna. W badaniu kontrolnym odnotowano wzrost stężenia PSA powyżej nadiru spełniający kryteria wznowy biochemicznej Phoenix. W dokumentacji oceniono objawy dysuryczne GU; stopnia odczynu żołądkowo-jelitowego GI w badaniu podmiotowym nie sprecyzowano.',
+        'Zakończono kurs radioterapii radykalnej gruczołu krokowego. Parametry geometryczne i dozymetryczne planu leczenia zweryfikowano przed rozpoczęciem pierwszej frakcji. Chory tolerował zabiegi bez powikłań wymagających hospitalizacji.',
+        'Wizyta kwalifikacyjna w poradni urologicznej. Pacjent z rakiem stercza grupy wysokiego ryzyka zakwalifikowany do napromieniania IMRT z równoczesną hormonoterapią. Poniżej zamieszczono zestawienie badań wyjściowych oraz wyciąg z późniejszej obserwacji ambulatoryjnej.',
+        'Rutynowa kontrola po radioterapii radykalnej. Pacjent nie podaje trudności w oddawaniu moczu ani dolegliwości bólowych miednicy. Wyniki badań biochemicznych i hematologicznych przepisano z oryginalnego wydruku szpitalnego.',
+        'Teleradioterapia wiązkami fotonowymi o modulowanej intensywności zrealizowana planowo. W trakcie procedury prowadzono codzienną weryfikację pozycji narządów na aparacie terapeutycznym. Wyniki badań laboratoryjnych z dnia przyjęcia dołączono do wypisu.',
+        'Wizyta kwalifikacyjna urologa onkologa. Ze względu na brak dostępu do bieżących wyników laboratoryjnych (kreatynina, morfologia) zalecono ich pilne uzupełnienie w poradni rejonowej. Wpis uzupełniono o retrospektywne dane dotyczące radioterapii i monitorowania PSA.',
+        'Kontrola onkologiczna po zakończeniu IMRT. W nagłówku wyciągu pominięto dokładną datę urodzenia pacjenta; identyfikację prowadzono na podstawie numeru księgi głównej. Objawy mikcyjne w granicach normy wiekowej.',
+        'Karta leczenia promieniami jonizującymi. Leczenie przeprowadzono zgodnie z indywidualnym planem leczenia. Odczyn popromienny wczesny łagodny, bez konieczności modyfikacji dawki frakcyjnej. Zalecono okresowe kontrole urologiczne i oznaczenia PSA.',
+        'Konsultacja specjalistyczna z omówieniem wyników biopsji gruboigłowej stercza. Przedstawiono choremu założenia napromieniania hipofrakcjonowanego. Zapis uzupełniono o dane z późniejszego leczenia i wizyt kontrolnych po radioterapii.',
+        'Wizyta kontrolna w poradni radioterapii. Odnotowano stabilizację parametrów klinicznych. Wywiad internistyczny zebrano szczegółowo pod kątem chorób metabolicznych i układu krążenia; palenie tytoniu oceniono w wywiadzie.',
+        'Radykalna teleradioterapia VMAT ukończona w zaplanowanym czasie. Wypis zawiera podsumowanie dawki pochłoniętej w obszarze tarczowym oraz parametry ochrony pęcherza i odbytnicy. Badania kontrolne zalecono co 3 miesiące.',
+        'Kwalifikacja do radioterapii. W dostarczonym wyciągu ambulatoryjnym brakuje jednoznacznego zapisu nadiru PSA po leczeniu, co uniemożliwia ocenę kryterium Phoenix w tej notatce. Pozostałe dane kliniczne przepisano z oryginału.',
+        'Kontrola ambulatoryjna po radioterapii skojarzonej z hormonoterapią. Chory kontynuuje leczenie analogiem LHRH; całkowitego zaplanowanego czasu ADT nie określono w aktualnym wpisie. Czynność nerek i parametry czerwonokrwinkowe stabilne.',
+        'Napromienianie zrealizowano techniką IMRT. Weryfikację ułożenia przeprowadzano systematycznie zgodnie z wewnętrzną procedurą zapewnienia jakości. Chory zgłaszał przejściowe parcia naglące, które ustąpiły po leczeniu spasmolitycznym.',
+        'Konsultacja urologiczna chorego po biopsji fuzyjnej. Wyniki histopatologiczne i obrazowe omówiono szczegółowo. Karta zawiera uzupełnienie z późniejszego przebiegu leczenia radykalnego i obserwacji stężenia PSA w surowicy.',
+        'Kontrola onkologiczna. W dokumentacji histopatologicznej stwierdzono rozbieżność opisową wzorców architektonicznych i sumarycznego stopnia ISUP bez dołączonego aneksu korygującego. Pozostałe dane dotyczące leczenia pozostają jednoznaczne.',
+        'Karta informacyjna z radioterapii. Pierwotne oznaczenie histopatologiczne ISUP zostało skorygowane podpisanym aneksem patomorfologicznym, który przyjęto do weryfikacji dawki. Przebieg leczenia był niepowikłany.',
+        'Konsultacja urologiczna z omówieniem odpowiedzi na leczenie. Ostatnie badanie stężenia PSA wykazało wartość poniżej progu oznaczalności metody laboratoryjnej. Zestawienie uzupełniono o dane z zakończonego napromieniania.',
+        'Wizyta kontrolna po radioterapii. W dostarczonych kopiach dokumentów z ośrodka zewnętrznego odnotowano rozbieżność daty urodzenia pacjenta na kolejnych stronach. Przebieg teleradioterapii i monitorowania PSA udokumentowano precyzyjnie.',
+        'Karta leczenia promieniami fotonowymi. Wiek orientacyjny podany na skierowaniu różnił się od daty urodzenia ustalonej na podstawie dowodu tożsamości. Napromienianie zrealizowano zgodnie z protokołem planowania 3D/IMRT.',
+        'Wizyta urologiczna kwalifikacyjna. Wywiad internistyczny w przekazanym odpisie nie zawierał informacji o cukrzycy ani nadciśnieniu tętniczym. Dołączono uzupełnienie z poradni teleradioterapii dotyczące późniejszej kontroli biochemicznej.',
+        'Skrócona karta z wizyty kontrolnej. W dostarczonym fragmencie nie ujęto wartości nadiru PSA ani planowanego czasu trwania hormonoterapii. Oceniono tolerancję leczenia w skali CTCAE oraz aktualne stężenie PSA.'
     ]
     absent={3:['birth_date'],4:['diabetes'],5:['hypertension'],6:['smoking'],7:['creatinine_mg_dl'],
             8:['hemoglobin_g_dl'],9:['psa_nadir_ng_ml','bcr_phoenix'],10:['adt_months'],
             11:['gu_toxicity_max'],14:['gi_toxicity_max'],16:['isup_grade'],
-            17:['psa_last_ng_ml','bcr_phoenix'],18:['birth_date'],19:['psa_nadir_ng_ml','adt_months','bcr_phoenix']}
+            17:['psa_last_ng_ml','bcr_phoenix'],18:['birth_date'],19:['psa_nadir_ng_ml','adt_months','bcr_phoenix'],
+            24:['smoking'], 26:['creatinine_mg_dl'], 29:['hemoglobin_g_dl'], 31:['diabetes'],
+            32:['gu_toxicity_max'], 35:['hypertension'], 37:['adt_months'], 38:['gi_toxicity_max'],
+            43:['creatinine_mg_dl', 'hemoglobin_g_dl'], 44:['birth_date'], 49:['psa_nadir_ng_ml', 'bcr_phoenix'],
+            50:['adt_months'], 53:['isup_grade'], 55:['psa_last_ng_ml', 'bcr_phoenix'],
+            56:['birth_date'], 58:['diabetes', 'hypertension'], 59:['psa_nadir_ng_ml', 'adt_months', 'bcr_phoenix']}
     names=['Anzelm','Bogumił','Cyprian','Dobromir','Erazm','Feliks','Gwidon','Hieronim','Iwo','Jarema',
-           'Kajetan','Lucjan','Mirosław','Norbert','Olgierd','Przemysław','Radomir','Seweryn','Teodor','Witold']
-    for j in range(20):
-        r=clean.iloc[100+j].to_dict(); doc=f'DOK-{j+1:02d}.txt'; missing=set(absent.get(j,[]))
+           'Kajetan','Lucjan','Mirosław','Norbert','Olgierd','Przemysław','Radomir','Seweryn','Teodor','Witold',
+           'Adam', 'Bartłomiej', 'Cezary', 'Dariusz', 'Edward',
+           'Franciszek', 'Grzegorz', 'Henryk', 'Ignacy', 'Jan',
+           'Kazimierz', 'Leszek', 'Marek', 'Nikodem', 'Oskar',
+           'Paweł', 'Robert', 'Stanisław', 'Tadeusz', 'Wojciech',
+           'Aleksander', 'Bogusław', 'Czesław', 'Damian', 'Eugeniusz',
+           'Filip', 'Gerard', 'Hubert', 'Jacek', 'Kamil',
+           'Leon', 'Mariusz', 'Napoleon', 'Patryk', 'Rafał',
+           'Sławomir', 'Tomasz', 'Wacław', 'Zenon', 'Zbigniew']
+    easy_docs = {20, 21, 22, 23, 27, 28, 33, 34, 39, 40, 45, 46, 51}
+    for j in range(60):
+        if j < 20:
+            r=clean.iloc[100+j].to_dict()
+        else:
+            r=clean.iloc[60+(j-20)].to_dict()
+        doc=f'DOK-{j+1:02d}.txt'; missing=set(absent.get(j,[]))
+        is_easy = (j in easy_docs) if j >= 20 else False
+        date_style = (j % 2) if is_easy else j
         answer={v:None if v in missing else r[v] for v in EXTRACT}
         blocks={k:[] for k in ['header','history','pathology','treatment','follow','labs','comorbidity','ending']}
         def add(block,fragment,fields=(),kind='',explanation='Wartość podana wprost.'):
@@ -501,28 +561,32 @@ def make_documents(clean):
         add('header',titles[kind]+'\nPROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ')
         add('header',f"{names[j]} Fikcyjny-{j+1:02d}; kod rejestru: {r['patient_id']}. PESEL fikcyjny, błędna cyfra kontrolna: {invalid_pesel(r['birth_date'],'M',200+j)}.",['patient_id'])
         if 'birth_date' not in missing:
-            add('header',f"Ur. {display_date(r['birth_date'],j)}.",['birth_date'],'data','Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.')
-        elif j==18:
+            add('header',f"Ur. {display_date(r['birth_date'],date_style)}.",['birth_date'],'data','Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.')
+        elif j in {18, 56}:
             other=(date.fromisoformat(r['birth_date'])+timedelta(days=365)).isoformat()
             add('header',f"Ur. na stronie 1: {display_date(r['birth_date'],1)}; na stronie 2: {display_date(other,1)}. Brak potwierdzenia daty urodzenia.")
         add('history',stories[j])
-        if j==13:
+        if j in {13, 57}:
             age=date.fromisoformat(r['rt_start_date']).year-date.fromisoformat(r['birth_date']).year
             add('history',f'Na skierowaniu wiek {age+4} lat — wpis niezgodny z potwierdzoną datą urodzenia, nie używać go do jej korekty.')
-        add('pathology',f"Rozpoznanie ca prostatae z biopsji z {display_date(r['diagnosis_date'],j+1)}. PSA przy rozpoznaniu: {polish_number(r['psa_dx_ng_ml'])} ng/ml.",['psa_dx_ng_ml'])
+        diag_style = (j+1) % 2 if is_easy else (j+1)
+        add('pathology',f"Rozpoznanie ca prostatae z biopsji z {display_date(r['diagnosis_date'],diag_style)}. PSA przy rozpoznaniu: {polish_number(r['psa_dx_ng_ml'])} ng/ml.",['psa_dx_ng_ml'])
         gleason_label=['Gs','Gleason','Wynik biopsji: Gs'][j%3]
         add('pathology',f"{gleason_label} {r['gleason_primary']}+{r['gleason_secondary']}={r['gleason_score']}.",['gleason_primary','gleason_secondary'])
-        if j==15:
-            add('pathology','W karcie przekazanej przez urologa: ISUP 2. Aneks histopatologiczny, podpisany i potwierdzony: ISUP 3; koryguje wcześniejszy zapis.', ['isup_grade'],'sprzecznosc','Przyjąć ISUP 3 z potwierdzonego aneksu; nie pierwszy wynik 2.')
-        elif j==16:
-            add('pathology','Opis wzorców wskazuje 4+3=7, lecz w podsumowaniu wpisano ISUP 2. Sprzeczność nierozstrzygnięta, brak aneksu; ISUP pozostaje nieustalone.')
+        if j in {15, 54}:
+            alt_isup = 2 if r['isup_grade'] != 2 else 1
+            add('pathology',f"W karcie przekazanej przez urologa: ISUP {alt_isup}. Aneks histopatologiczny, podpisany i potwierdzony: ISUP {r['isup_grade']}; koryguje wcześniejszy zapis.", ['isup_grade'],'sprzecznosc',f"Przyjąć ISUP {r['isup_grade']} z potwierdzonego aneksu; nie pierwszy wynik {alt_isup}.")
+        elif j in {16, 53}:
+            alt_isup = 2 if r['isup_grade'] != 2 else 3
+            add('pathology',f"Opis wzorców wskazuje {r['gleason_primary']}+{r['gleason_secondary']}={r['gleason_score']}, lecz w podsumowaniu wpisano ISUP {alt_isup}. Sprzeczność nierozstrzygnięta, brak aneksu; ISUP pozostaje nieustalone.")
         else:
             add('pathology',f"ISUP {r['isup_grade']}.",['isup_grade'])
         group={'niskie':'niskie','posrednie':'pośrednie','wysokie':'wysokie'}[r['risk_group']]
         add('pathology',f"Stopień kliniczny: c{r['ct_stage']} c{r['cn_stage']}. Grupa ryzyka w karcie kwalifikacji: {group}.",['ct_stage','cn_stage','risk_group'])
         add('pathology','W PET-PSMA bez cech przerzutów odległych; obecne regionalne węzły oceniono jako cN1.' if r['cn_stage']=='N1' else 'Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.')
         rt_labels=['Pierwsza frakcja RT','RT rozpoczęto','Początek napromieniania'][j%3]
-        add('treatment',f"{rt_labels}: {display_date(r['rt_start_date'],j+2)}.",['rt_start_date'],'data','Data pierwszej frakcji; nie data rozpoczęcia ADT.')
+        rt_style = (j+2) % 2 if is_easy else (j+2)
+        add('treatment',f"{rt_labels}: {display_date(r['rt_start_date'],rt_style)}.",['rt_start_date'],'data','Data pierwszej frakcji; nie data rozpoczęcia ADT.')
         tech=r['rt_technique']
         add('treatment',f"Technika {tech}"+('/IGRT' if tech!='SBRT' else '')+f"; dawka na prostatę {polish_number(r['rt_dose_gy'])} Gy w {r['rt_fractions']} frakcjach.",['rt_technique','rt_dose_gy','rt_fractions'])
         if r['adt']:
@@ -534,12 +598,13 @@ def make_documents(clean):
             add('treatment',fragment,fields)
         else:
             add('treatment','ADT nie stosowano.'+(' Zaplanowany łączny czas ADT: 0 mies.' if 'adt_months' not in missing else ''),['adt']+(['adt_months'] if 'adt_months' not in missing else []),'negacja','Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.')
-        add('follow',f"Kontrolne oznaczenie PSA z {display_date(r['psa_last_date'],j+3)}.")
+        psa_last_style = (j+3) % 2 if is_easy else (j+3)
+        add('follow',f"Kontrolne oznaczenie PSA z {display_date(r['psa_last_date'],psa_last_style)}.")
         if 'psa_nadir_ng_ml' not in missing:
             add('follow',f"Najniższe PSA po RT (nadir): {polish_number(r['psa_nadir_ng_ml'])} ng/ml.",['psa_nadir_ng_ml'])
         if 'psa_last_ng_ml' not in missing:
             add('follow',f"Ostatnie PSA: {polish_number(r['psa_last_ng_ml'])} ng/ml.",['psa_last_ng_ml'])
-        elif j==17:
+        elif j in {17, 55}:
             add('follow','Ostatnie PSA: <0,01 ng/ml. Laboratorium nie podało wartości punktowej.')
         if 'bcr_phoenix' not in missing:
             # Dowód to oba pomiary; flagi nie dopisujemy, aby ćwiczyć wyprowadzenie definicji.
@@ -555,19 +620,31 @@ def make_documents(clean):
             add('follow','Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.')
         lab=[];labfields=[]; conversion=[]
         if 'creatinine_mg_dl' not in missing:
-            alternate=j%3!=0
-            val=polish_number(r['creatinine_mg_dl']*88.4,1) if alternate else polish_number(r['creatinine_mg_dl'],2)
-            lab.append(f"kreatynina {val} {'µmol/l' if alternate else 'mg/dl'}")
-            labfields.append('creatinine_mg_dl');conversion.append('Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl.' if alternate else 'Kreatynina w mg/dl.')
+            alt_c = (j%3!=0) if not is_easy else False
+            val=polish_number(r['creatinine_mg_dl']*88.4,1) if alt_c else polish_number(r['creatinine_mg_dl'],2)
+            lab.append(f"kreatynina {val} {'µmol/l' if alt_c else 'mg/dl'}")
+            labfields.append('creatinine_mg_dl');conversion.append('Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl.' if alt_c else 'Kreatynina w mg/dl.')
         if 'hemoglobin_g_dl' not in missing:
-            alternate=j%4 in {1,2}
-            val=polish_number(r['hemoglobin_g_dl']*.6206,1) if alternate else polish_number(r['hemoglobin_g_dl'],2)
+            if j < 20:
+                alternate=j%4 in {1,2}
+                val=polish_number(r['hemoglobin_g_dl']*.6206,1) if alternate else polish_number(r['hemoglobin_g_dl'],2)
+            else:
+                hb_val = float(r['hemoglobin_g_dl'])
+                can_mmol1 = abs(round(float(f'{hb_val*0.6206:.1f}')/0.6206, 2) - hb_val) <= 0.005
+                can_mmol2 = abs(round(float(f'{hb_val*0.6206:.2f}')/0.6206, 2) - hb_val) <= 0.005
+                alternate = (not is_easy) and (j % 4 in {1, 2}) and (can_mmol1 or can_mmol2)
+                if alternate:
+                    prec = 1 if can_mmol1 else 2
+                    val = polish_number(hb_val * .6206, prec)
+                else:
+                    val = polish_number(hb_val, 2)
             lab.append(f"Hb {val} {'mmol/l' if alternate else 'g/dl'}")
             labfields.append('hemoglobin_g_dl');conversion.append('Hb: mmol/l ÷0,6206, do 0,01 g/dl.' if alternate else 'Hb w g/dl.')
         if lab:
             add('labs',['Wyniki laboratoryjne: ','Z wydruku laboratorium: ','Badania uzupełniające: '][j%3]+'; '.join(lab)+'.',labfields,'jednostka',' '.join(conversion))
-        testosterone=r['testosterone_ng_dl']/28.84 if j%3==1 else r['testosterone_ng_dl']
-        add('labs',f"Testosteron {polish_number(testosterone,3 if j%3==1 else 1)} {'nmol/l' if j%3==1 else 'ng/dl'}, "+('oznaczenie w trzecim miesiącu ADT.' if r['adt'] else 'pobranie przed leczeniem, bez ADT.'))
+        alt_testo = (j%3==1) if not is_easy else False
+        testosterone=r['testosterone_ng_dl']/28.84 if alt_testo else r['testosterone_ng_dl']
+        add('labs',f"Testosteron {polish_number(testosterone,3 if alt_testo else 1)} {'nmol/l' if alt_testo else 'ng/dl'}, "+('oznaczenie w trzecim miesiącu ADT.' if r['adt'] else 'pobranie przed leczeniem, bez ADT.'))
         if 'diabetes' not in missing:
             add('comorbidity','DM t.2, leczona doustnie.' if r['diabetes'] else 'Nie stwierdzono cukrzycy.', ['diabetes'],'negacja','Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null.')
         if 'hypertension' not in missing:
@@ -581,11 +658,12 @@ def make_documents(clean):
         for v in sorted(missing):
             why='Nieobecna informacja w dostarczonej kopii; nie przypisywać 0.'
             typ='brak'
-            if j==16 and v=='isup_grade':
-                why='Gleason 4+3 i ISUP 2 bez rozstrzygającego aneksu. Przyjęto null, nie samodzielną korektę.';typ='sprzecznosc'
-            if j==18 and v=='birth_date':
+            if j in {16, 53} and v=='isup_grade':
+                alt_isup = 2 if r['isup_grade'] != 2 else 3
+                why=f"Gleason {r['gleason_primary']}+{r['gleason_secondary']} i ISUP {alt_isup} bez rozstrzygającego aneksu. Przyjęto null, nie samodzielną korektę.";typ='sprzecznosc'
+            if j in {18, 56} and v=='birth_date':
                 why='Dwie daty urodzenia bez potwierdzonej korekty; PESEL nie stanowi źródła.';typ='sprzecznosc'
-            if j==17:
+            if j in {17, 55}:
                 why='PSA <0,01 bez wartości punktowej; PSA i Phoenix=null.';typ='oznaczalnosc'
             difficulties.append(dict(dokument=doc,zmienna=v,typ_trudnosci=typ,dlaczego_trudne=why))
         if j%6==0:
@@ -647,7 +725,7 @@ Generator: stały seed {SEED}, biblioteka standardowa, pandas, numpy, openpyxl. 
 - `dane/klucz_bledow.csv` i `.xlsx`: jeden wpis na zmienioną komórkę oraz jeden na dodatkowy rekord; numer wiersza Excel uwzględnia nagłówek.
 - `dane/pulapki_nie_bledy.csv`: pięć prawdziwych, rzadkich wartości.
 - `dane/karta_znalezisk.xlsx`: pusty formularz dla grupy.
-- `dane/dokumenty/DOK-01.txt`…`DOK-20.txt` i `dane/dokumenty.zip`: 20 dokumentów dla PR-101…PR-120, 150–400 słów każdy, trzy rodzaje dokumentacji, sześć układów i odrębne narracje.
+- `dane/dokumenty/DOK-01.txt`…`DOK-60.txt` i `dane/dokumenty.zip`: 60 dokumentów dla PR-061…PR-120, 150–400 słów każdy, trzy rodzaje dokumentacji, sześć układów i odrębne narracje.
 - `dane/ekstrakcja_schemat.json`: 25 pól, brak lub nierozstrzygnięta sprzeczność jako null.
 - `dane/ekstrakcja_prompt.txt`: instrukcja ekstrakcji, jednostki i rozstrzyganie sprzeczności.
 - `dane/ekstrakcja_klucz.csv`, `ekstrakcja_trudnosci.csv`, `ekstrakcja_dowody.csv`: standard odniesienia, trudności i dosłowne fragmenty źródła z zasadą przeliczenia.
@@ -742,7 +820,7 @@ def generate():
              'bledy_na_bloki':{f'{b*20+1}–{(b+1)*20}':block_counts[b] for b in range(6)},'pulapki':traps.to_dict('records'),
              'rekordy_czyste':len(clean),'rekordy_brudne':len(dirty),'zmienne':len(COLUMNS),
              'bledy':len(key),'kategorie':dict(sorted(Counter(key.kategoria).items())),'bcr':int(clean.bcr_phoenix.sum()),'bcr_procent':float(clean.bcr_phoenix.mean()*100),
-             'zgony':int(clean.death.sum()),'dokumenty':20,'naruszenia_regul':len(report),'komorki_zgloszone':len(hits),
+             'zgony':int(clean.death.sum()),'dokumenty':60,'naruszenia_regul':len(report),'komorki_zgloszone':len(hits),
              'bledy_wykryte_regulami':int(coverage.wykryty.sum()),'dodatkowe_komorki_do_wyjasnienia':[{'wiersz_excel':int(r),'zmienna':v} for r,v in sorted(hits-keyed)]}
     (reference/'podsumowanie.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     readme=make_readme(summary)

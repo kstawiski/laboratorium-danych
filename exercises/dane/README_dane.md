@@ -22,7 +22,7 @@ Generator: stały seed 20261011, biblioteka standardowa, pandas, numpy, openpyxl
 - `dane/klucz_bledow.csv` i `.xlsx`: jeden wpis na zmienioną komórkę oraz jeden na dodatkowy rekord; numer wiersza Excel uwzględnia nagłówek.
 - `dane/pulapki_nie_bledy.csv`: pięć prawdziwych, rzadkich wartości.
 - `dane/karta_znalezisk.xlsx`: pusty formularz dla grupy.
-- `dane/dokumenty/DOK-01.txt`…`DOK-20.txt` i `dane/dokumenty.zip`: 20 dokumentów dla PR-101…PR-120, 150–400 słów każdy, trzy rodzaje dokumentacji, sześć układów i odrębne narracje.
+- `dane/dokumenty/DOK-01.txt`…`DOK-60.txt` i `dane/dokumenty.zip`: 60 dokumentów dla PR-061…PR-120, 150–400 słów każdy, trzy rodzaje dokumentacji, sześć układów i odrębne narracje.
 - `dane/ekstrakcja_schemat.json`: 25 pól, brak lub nierozstrzygnięta sprzeczność jako null.
 - `dane/ekstrakcja_prompt.txt`: instrukcja ekstrakcji, jednostki i rozstrzyganie sprzeczności.
 - `dane/ekstrakcja_klucz.csv`, `ekstrakcja_trudnosci.csv`, `ekstrakcja_dowody.csv`: standard odniesienia, trudności i dosłowne fragmenty źródła z zasadą przeliczenia.

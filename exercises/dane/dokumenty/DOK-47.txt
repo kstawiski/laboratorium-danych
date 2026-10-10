@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Gerard Fikcyjny-47; kod rejestru: PR-087. PESEL fikcyjny, błędna cyfra kontrolna: 44022724615.
+Ur. 1944-02-27.
+
+Wywiad internistyczny
+DM t.2, leczona doustnie.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+
+Konsultacja specjalistyczna z omówieniem wyników biopsji gruboigłowej stercza. Przedstawiono choremu założenia napromieniania hipofrakcjonowanego. Zapis uzupełniono o dane z późniejszego leczenia i wizyt kontrolnych po radioterapii.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 11.02.2021. PSA przy rozpoznaniu: 32,98 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 1,22 mg/dl; Hb 12,08 g/dl.
+Testosteron 15,9 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 2021-07-06.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Kontrolne oznaczenie PSA z 11.07.2024.
+Najniższe PSA po RT (nadir): 0,11 ng/ml.
+Ostatnie PSA: 0,92 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G1.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

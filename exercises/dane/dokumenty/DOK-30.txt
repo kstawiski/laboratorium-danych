@@ -1,0 +1,26 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Jan Fikcyjny-30; kod rejestru: PR-070. PESEL fikcyjny, błędna cyfra kontrolna: 52111422917.
+Ur. 14.11.1952.
+LAB.
+Badania uzupełniające: kreatynina 101,7 µmol/l.
+Testosteron 26,0 ng/dl, oznaczenie w trzecim miesiącu ADT.
+KONTROLA
+Kontrolne oznaczenie PSA z 2025-11-28.
+Najniższe PSA po RT (nadir): 0,23 ng/ml.
+Ostatnie PSA: 1,12 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Wizyta kontrolna po radiochirurgii stereotaktycznej SBRT. Chory bez cech ostrej lub późnej toksyczności popromiennej. Badanie laboratoryjne hemoglobiny nie zostało wykonane w ostatnim kwartale z powodu trudności technicznych w punkcie pobrań. Parametry mikcyjne pozostają w normie.
+Rozpoznanie ca prostatae z biopsji z 25/04/2022. PSA przy rozpoznaniu: 7,31 ng/ml.
+Wynik biopsji: Gs 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT / ADT
+Początek napromieniania: 2022.10.10.
+Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

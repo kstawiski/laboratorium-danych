@@ -1,0 +1,27 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Hubert Fikcyjny-48; kod rejestru: PR-088. PESEL fikcyjny, błędna cyfra kontrolna: 51021324715.
+Ur. 1951.02.13.
+LAB.
+Badania uzupełniające: kreatynina 77,8 µmol/l; Hb 15,77 g/dl.
+Testosteron 15,4 ng/dl, oznaczenie w trzecim miesiącu ADT.
+KONTROLA
+Kontrolne oznaczenie PSA z 05/05/2025.
+Najniższe PSA po RT (nadir): 0,3 ng/ml.
+Ostatnie PSA: 0,71 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Wizyta kontrolna w poradni radioterapii. Odnotowano stabilizację parametrów klinicznych. Wywiad internistyczny zebrano szczegółowo pod kątem chorób metabolicznych i układu krążenia; palenie tytoniu oceniono w wywiadzie.
+Rozpoznanie ca prostatae z biopsji z 2022-01-07. PSA przy rozpoznaniu: 11,5 ng/ml.
+Wynik biopsji: Gs 5+4=9.
+ISUP 5.
+Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT / ADT
+Początek napromieniania: 04.07.2022.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+DM t.2, leczona doustnie.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Sławomir Fikcyjny-56; kod rejestru: PR-096. PESEL fikcyjny, błędna cyfra kontrolna: 59021025513.
+Ur. 1959.02.10.
+Wywiad i kwalifikacja
+Konsultacja urologiczna z omówieniem odpowiedzi na leczenie. Ostatnie badanie stężenia PSA wykazało wartość poniżej progu oznaczalności metody laboratoryjnej. Zestawienie uzupełniono o dane z zakończonego napromieniania.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Rozpoznanie ca prostatae z biopsji z 2022-01-22. PSA przy rozpoznaniu: 12,42 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 21.05.2022.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Z wydruku laboratorium: kreatynina 114,9 µmol/l; Hb 13,08 g/dl.
+Testosteron 1,033 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 01/04/2025.
+Najniższe PSA po RT (nadir): 0,34 ng/ml.
+Ostatnie PSA: <0,01 ng/ml. Laboratorium nie podało wartości punktowej.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

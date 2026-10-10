@@ -1,0 +1,26 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Stanisław Fikcyjny-38; kod rejestru: PR-078. PESEL fikcyjny, błędna cyfra kontrolna: 41030223710.
+Ur. 02.03.1941.
+Wywiad i kwalifikacja
+Konsultacja specjalistyczna po rezonansie magnetycznym miednicy mniejszej. W dokumentacji odnotowano wdrożenie hormonoterapii analogiem LHRH, lecz całkowity zaplanowany czas ADT nie został wyspecyfikowany w skierowaniu. Uzupełnienie o wyniki po RT sporządzono na podstawie kartoteki.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 29/07/2021. PSA przy rozpoznaniu: 5,46 ng/ml.
+Gleason 4+5=9.
+ISUP 5.
+Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 2021.10.08.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH.
+Z wydruku laboratorium: kreatynina 74,3 µmol/l; Hb 9,52 mmol/l.
+Testosteron 0,718 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 2024-09-23.
+Najniższe PSA po RT (nadir): 0,08 ng/ml.
+Ostatnie PSA: 0,79 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Franciszek Fikcyjny-26; kod rejestru: PR-066. PESEL fikcyjny, błędna cyfra kontrolna: 52102722510.
+Ur. 27.10.1952.
+Wywiad i kwalifikacja
+Pacjent skierowany z poradni rejonowej z podejrzeniem raka stercza wysokiego ryzyka. Badanie per rectum wykazało asymetrię prawego płata bez ewidentnego naciekania pęczków naczyniowo-nerwowych. Poniżej zamieszczono zestawienie badań biopsyjnych oraz późniejsze wpisy z przebiegu leczenia i kontroli PSA.
+DM t.2, leczona doustnie.
+Nie stwierdzono nadciśnienia tętniczego.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 08/01/2021. PSA przy rozpoznaniu: 27,7 ng/ml.
+Gleason 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 2021.04.17.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Z wydruku laboratorium: kreatynina 69,0 µmol/l; Hb 8,27 mmol/l.
+Testosteron 0,610 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 2024-04-25.
+Najniższe PSA po RT (nadir): 0,29 ng/ml.
+Ostatnie PSA: 0,86 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

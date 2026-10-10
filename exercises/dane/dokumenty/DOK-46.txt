@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Filip Fikcyjny-46; kod rejestru: PR-086. PESEL fikcyjny, błędna cyfra kontrolna: 40050424512.
+Ur. 04.05.1940.
+Karta leczenia promieniami jonizującymi. Leczenie przeprowadzono zgodnie z indywidualnym planem leczenia. Odczyn popromienny wczesny łagodny, bez konieczności modyfikacji dawki frakcyjnej. Zalecono okresowe kontrole urologiczne i oznaczenia PSA.
+Pierwsza frakcja RT: 06.11.2021.
+Technika IMRT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 1,19 mg/dl; Hb 12,66 g/dl.
+Testosteron 20,8 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 2021-07-30. PSA przy rozpoznaniu: 5,8 ng/ml.
+Gs 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT2b cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.
+W PET-PSMA bez cech przerzutów odległych; obecne regionalne węzły oceniono jako cN1.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2025-01-15.
+Najniższe PSA po RT (nadir): 0,32 ng/ml.
+Ostatnie PSA: 0,69 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+DM t.2, leczona doustnie.
+NT w wywiadzie, leczenie przewlekłe.
+Nadal pali papierosy.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

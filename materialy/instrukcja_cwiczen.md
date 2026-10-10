@@ -116,8 +116,7 @@ W tym ćwiczeniu zbadasz, jak lokalny model językowy Ornith radzi sobie z przen
 
 1. Przejdź do zakładki **AI: ekstrakcja z dokumentów**.
 2. Wybierz w polu „Dokumenty” teksty przydzielone Twojej grupie. Przydział zależy od numeru grupy n:
-   - grupy 1–5 wybierają dokumenty: DOK-(n), DOK-(n+5), DOK-(n+10), DOK-(n+15), np. grupa 2: DOK-02, DOK-07, DOK-12, DOK-17,
-   - grupy 6–10 przyjmują numer bazowy n − 5 i wybierają dokumenty według tego samego wzoru.
+   - grupa n (od 1 do 15) wybiera dokumenty DOK-n, DOK-(n+15), DOK-(n+30) i DOK-(n+45), np. grupa 2: DOK-02, DOK-17, DOK-32, DOK-47 (tabela przydziału jest też na slajdzie).
 3. Uruchom ekstrakcję danych za pomocą domyślnego polecenia (promptu) systemowego.
 4. Obejrzyj automatyczne porównanie wyników ekstrakcji z kluczem referencyjnym.
 5. Zidentyfikuj i nazwij typowe błędy popełnione przez model:
@@ -143,7 +142,7 @@ W tym ćwiczeniu ocenisz zdolność modelu AI do wykrywania niespójności w ust
 1. Przejdź do zakładki **AI: wiarygodność kliniczna**.
 2. Uruchom audyt AI dla 20 wierszy rejestru przypisanych do Twojej grupy:
    - grupa n analizuje wiersze od 20·(n−1)+1 do 20·n (wpisz je w polach „Pierwszy rekord” i „Ostatni rekord”),
-   - grupy z numerem powyżej 6 analizują zakresy liczone od początku tabeli.
+   - grupy 7–15 analizują te same zakresy co grupy o numerze mniejszym o 6 lub 12 (np. grupa 8 jak grupa 2: wiersze 21–40).
 3. Przejdź do zakładki **Porównanie z kluczem**, wgraj swój plik `karta_znalezisk.xlsx` i kliknij „Wczytaj znaleziska grupy”.
 4. Aplikacja zestawi ze sobą wyniki trzech metod nadzoru:
    - liczbę błędów znalezionych manualnie przez człowieka,
