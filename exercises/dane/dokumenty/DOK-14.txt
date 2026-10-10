@@ -1,0 +1,27 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Norbert Fikcyjny-14; kod rejestru: PR-114. PESEL fikcyjny, błędna cyfra kontrolna: 43101421319.
+Ur. 14.10.1943.
+Wywiad i kwalifikacja
+W skierowaniu podano wiek orientacyjny. W rozmowie potwierdzono datę urodzenia zapisaną w nagłówku; ten zapis przyjęto do rejestru. Omówiono plan leczenia i kolejność konsultacji. Informacje o późniejszym PSA dołączono z poradni kontrolnej, aby nie traktować ich jako danych dostępnych w dniu kwalifikacji.
+Na skierowaniu wiek 83 lat — wpis niezgodny z potwierdzoną datą urodzenia, nie używać go do jej korekty.
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Rozpoznanie ca prostatae z biopsji z 27/10/2021. PSA przy rozpoznaniu: 16,81 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 2022.02.15.
+Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Z wydruku laboratorium: kreatynina 97,2 µmol/l; Hb 8,0 mmol/l.
+Testosteron 0,843 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 2025-01-31.
+Najniższe PSA po RT (nadir): 0,12 ng/ml.
+Ostatnie PSA: 0,97 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

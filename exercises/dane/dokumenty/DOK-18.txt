@@ -1,0 +1,26 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Seweryn Fikcyjny-18; kod rejestru: PR-118. PESEL fikcyjny, błędna cyfra kontrolna: 62072121718.
+Ur. 21.07.1962.
+LAB.
+Badania uzupełniające: kreatynina 88,4 µmol/l; Hb 9,3 mmol/l.
+Testosteron 32,0 ng/dl, oznaczenie w trzecim miesiącu ADT.
+KONTROLA
+Kontrolne oznaczenie PSA z 2025-11-24.
+Najniższe PSA po RT (nadir): 0,08 ng/ml.
+Ostatnie PSA: <0,01 ng/ml. Laboratorium nie podało wartości punktowej.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.
+Dostarczony wynik PSA zawiera jedynie określenie poniżej granicy oznaczalności. Nie zamieniono go na zero, ponieważ nie jest to wynik punktowy. Brak porównywalnego pomiaru wpływa na możliwość obliczenia zmiennej Phoenix. W pozostałym zakresie oddzielono dane opisane wprost od informacji nieobecnych w karcie.
+Rozpoznanie ca prostatae z biopsji z 06/08/2022. PSA przy rozpoznaniu: 22,01 ng/ml.
+Wynik biopsji: Gs 4+4=8.
+ISUP 4.
+Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT / ADT
+Początek napromieniania: 2022.11.12.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

@@ -1,0 +1,13 @@
+﻿patient_id,sex,birth_date,diagnosis_date,rt_start_date,weight_kg,psa_dx_ng_ml,gleason_primary,gleason_secondary,gleason_score,isup_grade,ct_stage,cn_stage,risk_group,rt_technique,rt_dose_gy,rt_fractions,adt,adt_months,testosterone_ng_dl,psa_nadir_ng_ml,psa_last_ng_ml,psa_last_date,bcr_phoenix,gu_toxicity_max,gi_toxicity_max,creatinine_mg_dl,hemoglobin_g_dl,diabetes,hypertension,smoking,death,death_date,notes
+PR-001,M,1955-04-03,2020-12-01,2021-04-03,78,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-002,M,1955-04-03,2020-12-01,2021-04-03,79,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-003,M,1955-04-03,2020-12-01,2021-04-03,80,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-004,M,1955-04-03,2020-12-01,2021-04-03,81,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-005,M,1955-04-03,2020-12-01,2021-04-03,82,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-006,M,1955-04-03,2020-12-01,2021-04-03,83,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-007,M,1955-04-03,2020-12-01,2021-04-03,84,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-008,M,1932-04-03,2020-12-01,2021-04-03,85,148,3,4,7,2,T2b,N1,wysokie,SBRT,36.25,5,1,24,180,0.2,0.3,2025-04-03,0,3,0,1,13.5,0,1,former,0,,Pierwszy miesiąc ADT; testosteron przed pełnym efektem leczenia.
+PR-009,M,1955-04-03,2020-12-01,2021-04-03,86,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-010,M,1955-04-03,2020-12-01,2021-04-03,87,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-101,M,1955-04-03,2020-12-01,2021-04-03,88,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,
+PR-102,M,1955-04-03,2020-12-01,2021-04-03,89,12,3,4,7,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,20,0.2,0.3,2025-04-03,0,1,0,1,13.5,0,1,former,0,,

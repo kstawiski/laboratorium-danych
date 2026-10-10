@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Dobromir Fikcyjny-04; kod rejestru: PR-104. PESEL fikcyjny, błędna cyfra kontrolna: 38062020318.
+Leczenie wykonano z weryfikacją ułożenia przed każdą frakcją. Korekty pozycji odnotowano w systemie terapeutycznym. Nie stwierdzono konieczności ponownej symulacji z powodu zmiany anatomii. Chory otrzymał wypis z zestawieniem dawki na prostatę; dawki w innych objętościach nie są wartościami tej kolumny rejestru.
+Pierwsza frakcja RT: 04.01.2022.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 0,62 mg/dl; Hb 13,84 g/dl.
+Testosteron 25,2 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 2021-07-11. PSA przy rozpoznaniu: 13,2 ng/ml.
+Gs 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 25/11/2024.
+Najniższe PSA po RT (nadir): 0,29 ng/ml.
+Ostatnie PSA: 0,8 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

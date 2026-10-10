@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Radomir Fikcyjny-17; kod rejestru: PR-117. PESEL fikcyjny, błędna cyfra kontrolna: 42031121618.
+Ur. 1942-03-11.
+
+Wywiad internistyczny
+DM t.2, leczona doustnie.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+
+W kopiach dokumentów występują sprzeczne oznaczenia ISUP. Nie dołączono aneksu ani wyniku ponownej oceny preparatów. Zgłoszono potrzebę wyjaśnienia rozbieżności u źródła. Pozostałe jawnie podane dane można przepisać, lecz nie należy samodzielnie nadawać rozstrzygającego stopnia ISUP na podstawie domniemanej hierarchii źródeł.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 26.05.2022. PSA przy rozpoznaniu: 8,97 ng/ml.
+Gleason 4+3=7.
+Opis wzorców wskazuje 4+3=7, lecz w podsumowaniu wpisano ISUP 2. Sprzeczność nierozstrzygnięta, brak aneksu; ISUP pozostaje nieustalone.
+Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 69,0 µmol/l; Hb 12,64 g/dl.
+Testosteron 13,214 nmol/l, pobranie przed leczeniem, bez ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 03/08/2022.
+Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+
+Kontrolne oznaczenie PSA z 2025.08.28.
+Najniższe PSA po RT (nadir): 0,3 ng/ml.
+Ostatnie PSA: 5,74 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

@@ -1,0 +1,21 @@
+wiersz,patient_id,zmienna,wartosc,regula,typ,powaga
+8,pr 007,patient_id,pr 007,patient_id: Kod pacjenta: PR-001..PR-120; bez numerów osobowych.,format,ostrzezenie
+11,PR-010,notes,Fikcyjny PESEL 55040312340; NT; DM2; metformina,notes: Sekwencja 11 cyfr w ID lub notes wymaga usunięcia identyfikatora osobowego.,format,ostrzezenie
+10,PR-009,weight_kg,nd,"weight_kg: Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9.",format,ostrzezenie
+7,PR-006,psa_last_ng_ml,999,"psa_last_ng_ml: Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9.",format,ostrzezenie
+7,PR-006,hemoglobin_g_dl,-9,"hemoglobin_g_dl: Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9.",format,ostrzezenie
+8,pr 007,sex,male,sex: Płeć: dokładnie M.,format,ostrzezenie
+3,PR-002,psa_dx_ng_ml,-1,psa_dx_ng_ml: PSA przy rozpoznaniu: 0–500 ng/ml; próg kontroli jakości.,zakres,ostrzezenie
+2,PR-001,rt_dose_gy,780,rt_dose_gy: Dawka na prostatę: 1–100 Gy; próg kontroli jakości.,zakres,ostrzezenie
+4,PR-003,creatinine_mg_dl,"88,4",creatinine_mg_dl: Kreatynina: 0.2–15 mg/dl; próg kontroli jakości.,zakres,ostrzezenie
+4,PR-003,creatinine_mg_dl,"88,4","creatinine_mg_dl: Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka.",format,ostrzezenie
+11,PR-010,notes,Fikcyjny PESEL 55040312340; NT; DM2; metformina,notes: Dawka/frakcje w jednej komórce lub skróty chorób i leków w notes: rozdzielić po uzgodnieniu.,format,ostrzezenie
+6,PR-005,psa_last_date,2020-01-01,psa_last_date: Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon.,czas,ostrzezenie
+5,PR-004,gleason_score,8,gleason_score: Suma Gleasona musi odpowiadać sumie obu wzorców.,spójność,ostrzezenie
+5,PR-004,isup_grade,3,isup_grade: ISUP: 3+3→1; 3+4→2; 4+3→3; suma 8→4; suma 9–10→5.,spójność,ostrzezenie
+12,PR-101,risk_group,niskie,"risk_group: Najpierw wysokie: PSA >20 lub ISUP 4–5 lub cT2c–cT4 lub cN1. Następnie niskie: PSA <10, ISUP 1, cT1c–cT2a i cN0. Pozostałe: posrednie. Definicja uproszczona do ćwiczenia; M1 poza rejestrem.",spójność,ostrzezenie
+10,PR-009,adt,0,adt: adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.,spójność,ostrzezenie
+10,PR-009,adt_months,6,adt_months: adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.,spójność,ostrzezenie
+13,PR-102,bcr_phoenix,0,"bcr_phoenix: bcr_phoenix = 1, gdy PSA ostatnie >= nadir + 2 ng/ml; inaczej 0. Bez obu pomiarów: null.",spójność,ostrzezenie
+6,PR-005,death,1,death: death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.,spójność,ostrzezenie
+6,PR-005,death_date,,death_date: death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.,spójność,ostrzezenie

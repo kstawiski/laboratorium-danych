@@ -1,0 +1,106 @@
+{
+  "scenariusz": "PROSTATA-RT",
+  "seed": 20261011,
+  "seed_rozmieszczenia": 20261013,
+  "bledy_na_bloki": {
+    "1–20": 11,
+    "21–40": 8,
+    "41–60": 10,
+    "61–80": 8,
+    "81–100": 7,
+    "101–120": 11
+  },
+  "pulapki": [
+    {
+      "patient_id": "PR-058",
+      "wiersz_excel": 59,
+      "zmienna": "rt_dose_gy",
+      "wartosc": "36.25",
+      "uzasadnienie": "SBRT 36,25 Gy/5 fr., czyli 7,25 Gy/fr.; schemat dopuszczony protokołem."
+    },
+    {
+      "patient_id": "PR-090",
+      "wiersz_excel": 91,
+      "zmienna": "birth_date",
+      "wartosc": "1932-04-03",
+      "uzasadnienie": "Wiek dokładnie 89 lat przy RT 2021-04-03; nie usuwać jako odstającego."
+    },
+    {
+      "patient_id": "PR-075",
+      "wiersz_excel": 76,
+      "zmienna": "psa_dx_ng_ml",
+      "wartosc": "148",
+      "uzasadnienie": "PSA 148 ng/ml przy cN1; wysokie, ale możliwe; grupa wysokiego ryzyka."
+    },
+    {
+      "patient_id": "PR-003",
+      "wiersz_excel": 4,
+      "zmienna": "gu_toxicity_max",
+      "wartosc": "3",
+      "uzasadnienie": "Udokumentowane zatrzymanie moczu wymagające cewnikowania podczas RT; prawdziwy odczyn G3."
+    },
+    {
+      "patient_id": "PR-030",
+      "wiersz_excel": 31,
+      "zmienna": "testosterone_ng_dl",
+      "wartosc": "180",
+      "uzasadnienie": "Pomiar 12 dni po pierwszym podaniu agonisty LHRH, w pierwszym miesiącu ADT; jednostka ng/dl potwierdzona w notes."
+    }
+  ],
+  "rekordy_czyste": 120,
+  "rekordy_brudne": 121,
+  "zmienne": 34,
+  "bledy": 56,
+  "kategorie": {
+    "brak_danych": 6,
+    "duplikat": 2,
+    "format_daty": 6,
+    "identyfikator": 2,
+    "jednostka": 7,
+    "kategoria": 6,
+    "kodowanie": 4,
+    "liczba_jako_tekst": 4,
+    "logika_czasowa": 3,
+    "prywatnosc": 2,
+    "spojnosc_pol": 8,
+    "struktura": 2,
+    "zakres": 4
+  },
+  "bcr": 15,
+  "bcr_procent": 12.5,
+  "zgony": 5,
+  "dokumenty": 20,
+  "naruszenia_regul": 79,
+  "komorki_zgloszone": 63,
+  "bledy_wykryte_regulami": 56,
+  "dodatkowe_komorki_do_wyjasnienia": [
+    {
+      "wiersz_excel": 7,
+      "zmienna": "patient_id"
+    },
+    {
+      "wiersz_excel": 10,
+      "zmienna": "death_date"
+    },
+    {
+      "wiersz_excel": 12,
+      "zmienna": "adt_months"
+    },
+    {
+      "wiersz_excel": 21,
+      "zmienna": "psa_last_date"
+    },
+    {
+      "wiersz_excel": 22,
+      "zmienna": "rt_fractions"
+    },
+    {
+      "wiersz_excel": 53,
+      "zmienna": "rt_fractions"
+    },
+    {
+      "wiersz_excel": 75,
+      "zmienna": "death_date"
+    }
+  ]
+}

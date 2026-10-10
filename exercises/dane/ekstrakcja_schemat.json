@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PROSTATA-RT — ekstrakcja danych syntetycznych",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "patient_id",
+    "birth_date",
+    "rt_start_date",
+    "psa_dx_ng_ml",
+    "gleason_primary",
+    "gleason_secondary",
+    "isup_grade",
+    "ct_stage",
+    "cn_stage",
+    "risk_group",
+    "rt_technique",
+    "rt_dose_gy",
+    "rt_fractions",
+    "adt",
+    "adt_months",
+    "psa_nadir_ng_ml",
+    "psa_last_ng_ml",
+    "bcr_phoenix",
+    "gu_toxicity_max",
+    "gi_toxicity_max",
+    "creatinine_mg_dl",
+    "hemoglobin_g_dl",
+    "diabetes",
+    "hypertension",
+    "smoking"
+  ],
+  "properties": {
+    "patient_id": {
+      "description": "Kod pacjenta",
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^PR-(?:00[1-9]|0[1-9][0-9]|1[01][0-9]|120)$"
+    },
+    "birth_date": {
+      "description": "Data urodzenia",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "rt_start_date": {
+      "description": "Pierwsza frakcja RT",
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "psa_dx_ng_ml": {
+      "description": "PSA przy rozpoznaniu [ng/ml]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 500.0
+    },
+    "gleason_primary": {
+      "description": "Dominujący wzorzec Gleasona",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 3.0,
+      "maximum": 5.0
+    },
+    "gleason_secondary": {
+      "description": "Drugorzędny wzorzec Gleasona",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 3.0,
+      "maximum": 5.0
+    },
+    "isup_grade": {
+      "description": "Grupa stopnia ISUP",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1.0,
+      "maximum": 5.0
+    },
+    "ct_stage": {
+      "description": "Kliniczne T",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "T1c",
+        "T2a",
+        "T2b",
+        "T2c",
+        "T3a",
+        "T3b",
+        "T4",
+        null
+      ]
+    },
+    "cn_stage": {
+      "description": "Kliniczne N",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "N0",
+        "N1",
+        null
+      ]
+    },
+    "risk_group": {
+      "description": "Grupa ryzyka wg protokołu",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "niskie",
+        "posrednie",
+        "wysokie",
+        null
+      ]
+    },
+    "rt_technique": {
+      "description": "Technika RT",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "IMRT",
+        "VMAT",
+        "SBRT",
+        null
+      ]
+    },
+    "rt_dose_gy": {
+      "description": "Dawka na prostatę [Gy]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 1.0,
+      "maximum": 100.0
+    },
+    "rt_fractions": {
+      "description": "Liczba frakcji na prostatę [fr.]",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 1.0,
+      "maximum": 45.0
+    },
+    "adt": {
+      "description": "Stosowanie ADT",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "adt_months": {
+      "description": "Zaplanowany czas ADT [mies.]",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 36.0
+    },
+    "psa_nadir_ng_ml": {
+      "description": "Nadir PSA po RT [ng/ml]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 500.0
+    },
+    "psa_last_ng_ml": {
+      "description": "Ostatnie PSA [ng/ml]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 500.0
+    },
+    "bcr_phoenix": {
+      "description": "Nawrót wg Phoenix",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "gu_toxicity_max": {
+      "description": "Maksymalna toksyczność GU [CTCAE]",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 5.0
+    },
+    "gi_toxicity_max": {
+      "description": "Maksymalna toksyczność GI [CTCAE]",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0.0,
+      "maximum": 5.0
+    },
+    "creatinine_mg_dl": {
+      "description": "Kreatynina [mg/dl]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0.2,
+      "maximum": 15.0
+    },
+    "hemoglobin_g_dl": {
+      "description": "Hemoglobina [g/dl]",
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 5.0,
+      "maximum": 20.0
+    },
+    "diabetes": {
+      "description": "Cukrzyca",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "hypertension": {
+      "description": "Nadciśnienie tętnicze",
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "smoking": {
+      "description": "Palenie",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "never",
+        "former",
+        "current",
+        null
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+﻿dokument,patient_id,birth_date,rt_start_date,psa_dx_ng_ml,gleason_primary,gleason_secondary,isup_grade,ct_stage,cn_stage,risk_group,rt_technique,rt_dose_gy,rt_fractions,adt,adt_months,psa_nadir_ng_ml,psa_last_ng_ml,bcr_phoenix,gu_toxicity_max,gi_toxicity_max,creatinine_mg_dl,hemoglobin_g_dl,diabetes,hypertension,smoking
+DOK-01.txt,PR-101,1955-04-03,2021-04-03,12,3,4,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,0.2,0.3,0,1,0,1,13.5,0.0,1,former
+DOK-02.txt,PR-102,1955-04-03,2021-04-03,12,3,4,2,T2b,N0,posrednie,VMAT,60.0,20,1,6,0.2,0.3,0,1,0,1,13.5,,1,

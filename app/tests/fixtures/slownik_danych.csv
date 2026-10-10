@@ -1,0 +1,35 @@
+zmienna,etykieta,typ,jednostka,dozwolone_wartosci,zakres_min,zakres_max,kod_braku,regula_walidacyjna,uwagi
+patient_id,Kod pacjenta,tekst,,,,,pusta komórka; w ekstrakcji null,"PR-001..PR-120; unikalny, bez identyfikatora osobowego.",Dodatkowy duplikat pod PR-121 jest błędem struktury kohorty.
+sex,Płeć,kategoria,,M,,,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+birth_date,Data urodzenia,data,,RRRR-MM-DD,,,pusta komórka; w ekstrakcji null,Pełna data ISO; wiek w dniu RT 18–105 lat.,Typowa kohorta 55–85 lat; 89 lat jest dozwolone.
+diagnosis_date,Data rozpoznania,data,,RRRR-MM-DD,,,pusta komórka; w ekstrakcji null,Data ISO nie późniejsza niż rozpoczęcie RT.,Rozpoznanie przed leczeniem radykalnym.
+rt_start_date,Pierwsza frakcja RT,data,,RRRR-MM-DD,,,pusta komórka; w ekstrakcji null,Data pierwszej frakcji w ISO.,Nie mylić z datą kwalifikacji ani rozpoczęcia ADT.
+weight_kg,Masa ciała,liczba,kg,,35,220,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+psa_dx_ng_ml,PSA przy rozpoznaniu,liczba,ng/ml,,0,500,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+gleason_primary,Dominujący wzorzec Gleasona,liczba_calkowita,,,3,5,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+gleason_secondary,Drugorzędny wzorzec Gleasona,liczba_calkowita,,,3,5,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+gleason_score,Suma Gleasona,liczba_calkowita,,,6,10,pusta komórka; w ekstrakcji null,gleason_score = gleason_primary + gleason_secondary.,Autokonwersja 3-4 w datę nie jest wynikiem histopatologicznym.
+isup_grade,Grupa stopnia ISUP,liczba_calkowita,,,1,5,pusta komórka; w ekstrakcji null,3+3: 1; 3+4: 2; 4+3: 3; suma 8: 4; suma 9–10: 5.,Rozbieżność między opisem wzorców a ISUP wymaga weryfikacji preparatów lub aneksu.
+ct_stage,Kliniczne T,kategoria,,T1c|T2a|T2b|T2c|T3a|T3b|T4,,,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+cn_stage,Kliniczne N,kategoria,,N0|N1,,,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+risk_group,Grupa ryzyka wg protokołu,kategoria,,niskie|posrednie|wysokie,,,pusta komórka; w ekstrakcji null,"Najpierw wysokie: PSA >20 lub ISUP 4–5 lub cT2c–cT4 lub cN1. Następnie niskie: PSA <10, ISUP 1, cT1c–cT2a i cN0. Pozostałe: posrednie. Definicja uproszczona do ćwiczenia; M1 poza rejestrem.",Uproszczenie dydaktyczne; nie pełny algorytm EAU.
+rt_technique,Technika RT,kategoria,,IMRT|VMAT|SBRT,,,pusta komórka; w ekstrakcji null,"IMRT, VMAT lub SBRT; SBRT ⇔ 5 frakcji.",Nie normalizować nieznanej techniki bez źródła.
+rt_dose_gy,Dawka na prostatę,liczba,Gy,,1,100,pusta komórka; w ekstrakcji null,"78/39, 76/38, 60/20, 62/20, 70/28, 36,25/5 i 40/5 (Gy/fr.). SBRT wtedy i tylko wtedy, gdy 5 frakcji.","Dawka całkowita na prostatę, nie dawka na węzły. 36,25/5 jest poprawne."
+rt_fractions,Liczba frakcji na prostatę,liczba_calkowita,fr.,,1,45,pusta komórka; w ekstrakcji null,"78/39, 76/38, 60/20, 62/20, 70/28, 36,25/5 i 40/5 (Gy/fr.). SBRT wtedy i tylko wtedy, gdy 5 frakcji.",Pole nie obejmuje osobnej liczby frakcji obszaru węzłowego.
+adt,Stosowanie ADT,logiczna,,0|1,0,1,pusta komórka; w ekstrakcji null,adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.,0 oznacza udokumentowane niestosowanie; brak wzmianki to null.
+adt_months,Zaplanowany czas ADT,liczba_calkowita,mies.,,0,36,pusta komórka; w ekstrakcji null,adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.,"Czas zaplanowany, nie czas od pierwszego podania do pobrania krwi."
+testosterone_ng_dl,Testosteron,liczba,ng/dl,,0,1200,pusta komórka; w ekstrakcji null,"0–1200 ng/dl; nmol/l × 28,84.",180 ng/dl w pierwszym miesiącu ADT to dopuszczalna pułapka. Sama liczba nie identyfikuje jednostki.
+psa_nadir_ng_ml,Nadir PSA po RT,liczba,ng/ml,,0,500,pusta komórka; w ekstrakcji null,"Nadir ≤ ostatnie PSA; <0,01 wymaga jawnego sposobu kodowania wyników cenzorowanych.",Nie podstawiać zera ani połowy granicy oznaczalności.
+psa_last_ng_ml,Ostatnie PSA,liczba,ng/ml,,0,500,pusta komórka; w ekstrakcji null,"Wartość zgodna z typem, jednostką i zakresem słownika.","Próg kontroli jakości, nie próg rozpoznania klinicznego."
+psa_last_date,Data ostatniego PSA,data,,RRRR-MM-DD,,,pusta komórka; w ekstrakcji null,ISO; po rozpoczęciu RT i przed datą zgonu.,Phoenix nie rozstrzyga etiologii wzrostu PSA.
+bcr_phoenix,Nawrót wg Phoenix,logiczna,,0|1,0,1,pusta komórka; w ekstrakcji null,"bcr_phoenix = 1, gdy PSA ostatnie >= nadir + 2 ng/ml; inaczej 0. Bez obu pomiarów: null.",Definicja protokołu ćwiczeniowego.
+gu_toxicity_max,Maksymalna toksyczność GU,liczba_calkowita,CTCAE,,0,5,pusta komórka; w ekstrakcji null,Całkowite 0–5 CTCAE; maksimum całej obserwacji.,Pojedyncze G3 jest prawdziwe i nie podlega usunięciu.
+gi_toxicity_max,Maksymalna toksyczność GI,liczba_calkowita,CTCAE,,0,5,pusta komórka; w ekstrakcji null,Całkowite 0–5 CTCAE; maksimum całej obserwacji.,Brak wzmianki o toksyczności nie oznacza G0.
+creatinine_mg_dl,Kreatynina,liczba,mg/dl,,0.2,15,pusta komórka; w ekstrakcji null,"0,2–15 mg/dl; µmol/l ÷ 88,4.","Inną jednostkę potwierdzić, jeśli nie zapisano jej w komórce lub dokumencie."
+hemoglobin_g_dl,Hemoglobina,liczba,g/dl,,5,20,pusta komórka; w ekstrakcji null,"5–20 g/dl; mmol/l ÷ 0,6206.","8,4 może być prawdziwą anemią albo inną jednostką; sama liczba nie rozstrzyga."
+diabetes,Cukrzyca,logiczna,,0|1,0,1,pusta komórka; w ekstrakcji null,0/1 według udokumentowanego wywiadu.,"Brak informacji = null, nie 0."
+hypertension,Nadciśnienie tętnicze,logiczna,,0|1,0,1,pusta komórka; w ekstrakcji null,0/1 według udokumentowanego wywiadu.,Pojedynczy pomiar ciśnienia nie rozstrzyga rozpoznania.
+smoking,Palenie,kategoria,,never|former|current,,,pusta komórka; w ekstrakcji null,never/former/current.,Nie pali od 10 lat = former; samo nie pali nie rozstrzyga never/former.
+death,Zgon,logiczna,,0|1,0,1,pusta komórka; w ekstrakcji null,1 wymaga daty zgonu; 0 wymaga pustej daty.,Nie wolno ustalać statusu z samego braku daty.
+death_date,Data zgonu,data,,RRRR-MM-DD,,,pusta komórka; w ekstrakcji null,ISO; po rozpoczęciu RT i nie przed ostatnim PSA.,Pusta komórka poprawna wyłącznie przy death=0.
+notes,Uwagi,tekst,,,,,pusta komórka; w ekstrakcji null,Bez PESEL; rozproszone dane strukturalne przenieść po uzgodnieniu.,Nie rozpoznawać cukrzycy wyłącznie na podstawie nazwy leku.

@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Erazm Fikcyjny-05; kod rejestru: PR-105. PESEL fikcyjny, błędna cyfra kontrolna: 53121520415.
+Ur. 1953-12-15.
+
+Wywiad internistyczny
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+
+Konsultację przeprowadzono z udziałem osoby bliskiej na prośbę chorego. Omówiono możliwość leczenia operacyjnego i radioterapii oraz spodziewane następstwa ADT. Rozmowę o funkcji seksualnej udokumentowano osobno. W tej kopii pominięto część wywiadu internistycznego; brak zapisu nie oznacza wykluczenia danej choroby.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 19.10.2020. PSA przy rozpoznaniu: 4,47 ng/ml.
+Gleason 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 90,2 µmol/l; Hb 14,42 g/dl.
+Testosteron 11,196 nmol/l, pobranie przed leczeniem, bez ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 30/01/2021.
+Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+
+Kontrolne oznaczenie PSA z 2023.12.07.
+Najniższe PSA po RT (nadir): 0,39 ng/ml.
+Ostatnie PSA: 0,72 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

@@ -1,0 +1,34 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Mirosław Fikcyjny-13; kod rejestru: PR-113. PESEL fikcyjny, błędna cyfra kontrolna: 43071921219.
+Ur. 1943-07-19.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 08.09.2022. PSA przy rozpoznaniu: 13,98 ng/ml.
+Gs 5+4=9.
+ISUP 5.
+Stopień kliniczny: cT4 cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 18/11/2022.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Wypis zawiera dawkę na prostatę. Przy zajęciu regionalnych węzłów zakres napromieniania ustalano w planie osobno; pole dawki rejestru nie opisuje dawki na węzły. Chory otrzymał zalecenie dalszej współpracy z urologiem i przekazywania informacji o nietolerancji hormonoterapii oraz o zatrzymaniu moczu.
+
+Wyniki laboratoryjne: kreatynina 0,67 mg/dl; Hb 12,34 g/dl.
+Testosteron 7,3 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 2026.01.06.
+Najniższe PSA po RT (nadir): 0,2 ng/ml.
+Ostatnie PSA: 0,89 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

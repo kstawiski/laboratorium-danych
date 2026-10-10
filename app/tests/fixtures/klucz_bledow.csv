@@ -1,0 +1,17 @@
+﻿error_id,patient_id_w_pliku,wiersz_excel,zmienna,wartosc_w_pliku,wartosc_prawdziwa,kategoria,jak_wykryc,decyzja,uzasadnienie,wykrywalne_regula,trudnosc
+F-01,PR-001,2,rt_dose_gy,780,60.0,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-02,PR-002,3,psa_dx_ng_ml,-1,12,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-03,PR-003,4,creatinine_mg_dl,"88,4",1,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-04,PR-004,5,gleason_score,8,7,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-05,PR-004,5,isup_grade,3,2,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-06,PR-005,6,psa_last_date,2020-01-01,2025-04-03,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-07,PR-005,6,death,1,0,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-08,PR-006,7,hemoglobin_g_dl,-9,13.5,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-09,PR-006,7,psa_last_ng_ml,999,0.3,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-10,pr 007,8,patient_id,pr 007,PR-007,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-11,pr 007,8,sex,male,M,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-12,PR-009,10,adt,0,1,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-13,PR-009,10,weight_kg,nd,86,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-14,PR-010,11,notes,Fikcyjny PESEL 55040312340; NT; DM2; metformina,,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-15,PR-101,12,risk_group,niskie,posrednie,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy
+F-16,PR-102,13,psa_last_ng_ml,3.3,0.3,format,Słownik i protokół,zapytanie_do_osrodka,Celowa zmiana w syntetycznym zestawie próbnym.,1,latwy

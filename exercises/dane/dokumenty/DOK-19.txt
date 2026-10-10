@@ -1,0 +1,33 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Teodor Fikcyjny-19; kod rejestru: PR-119. PESEL fikcyjny, błędna cyfra kontrolna: 59121721818.
+Ur. na stronie 1: 17.12.1959; na stronie 2: 16.12.1960. Brak potwierdzenia daty urodzenia.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 2021.11.10. PSA przy rozpoznaniu: 19,87 ng/ml.
+Gs 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT2a cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.
+W PET-PSMA bez cech przerzutów odległych; obecne regionalne węzły oceniono jako cN1.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 2022-01-22.
+Technika IMRT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Na dwóch stronach kopii wpisano różne daty urodzenia. Nie ma dokumentu wskazującego, który zapis poprawiono. Numer PESEL jest fikcyjny i nie służy do odtwarzania daty. Rozbieżność wymaga uzgodnienia przed uzupełnieniem tej zmiennej; nie przeszkadza w odczytaniu jednoznacznie podanych parametrów leczenia.
+
+Wyniki laboratoryjne: kreatynina 0,78 mg/dl; Hb 9,2 mmol/l.
+Testosteron 20,5 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 13.02.2025.
+Najniższe PSA po RT (nadir): 0,28 ng/ml.
+Ostatnie PSA: 1 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G2.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

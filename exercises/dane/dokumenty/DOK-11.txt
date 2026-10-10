@@ -1,0 +1,33 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Kajetan Fikcyjny-11; kod rejestru: PR-111. PESEL fikcyjny, błędna cyfra kontrolna: 53061821012.
+Ur. 18/06/1953.
+
+Wywiad internistyczny
+Nie stwierdzono cukrzycy.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+
+Chory pytał o różnicę między oceną histopatologiczną a kliniczną grupą ryzyka. Wyjaśniono, że wynik biopsji, PSA i cTN wpływają na kwalifikację wspólnie. Decyzję terapeutyczną omówiono po przedstawieniu dostępnych opisów. Uzupełnienie po leczeniu zapisano na końcu tej samej karty, z podaniem źródła laboratoryjnego.
+
+Ocena urologiczna
+Rozpoznanie ca prostatae z biopsji z 2022.01.06. PSA przy rozpoznaniu: 5,9 ng/ml.
+Gleason 3+4=7.
+ISUP 2.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+Z wydruku laboratorium: kreatynina 84,0 µmol/l; Hb 7,9 mmol/l.
+Testosteron 19,962 nmol/l, pobranie przed leczeniem, bez ADT.
+
+Leczenie — dane z karty RT
+RT rozpoczęto: 2022-05-05.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT nie stosowano.
+
+Kontrolne oznaczenie PSA z 09.07.2025.
+Najniższe PSA po RT (nadir): 0,58 ng/ml.
+Ostatnie PSA: 0,64 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

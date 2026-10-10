@@ -1,0 +1,80 @@
+wiersz_excel,patient_id,zmienna,wartosc,regula,typ,powaga,opis
+15,pr 014,patient_id,pr 014,id_format,format,ostrzezenie,Kod pacjenta: PR-001..PR-120; bez numerów osobowych.
+112,53061810117,patient_id,53061810117,id_format,format,ostrzezenie,Kod pacjenta: PR-001..PR-120; bez numerów osobowych.
+122,PR-121,patient_id,PR-121,id_format,format,ostrzezenie,Kod pacjenta: PR-001..PR-120; bez numerów osobowych.
+7,PR-006,patient_id,PR-006,id_unikalny,unikalnosc,ostrzezenie,Każdy kod pacjenta ma być unikalny; wyjaśnić oba powtarzające się wpisy.
+55,PR-006,patient_id,PR-006,id_unikalny,unikalnosc,ostrzezenie,Każdy kod pacjenta ma być unikalny; wyjaśnić oba powtarzające się wpisy.
+122,PR-121,patient_id,PR-121,rekord_duplikat,unikalnosc,ostrzezenie,Dodatkowy rekord identyczny we wszystkich polach poza ID: podejrzenie duplikatu.
+34,PR-033,notes,Dane syntetyczne. Testosteron oznaczony w trzecim miesiącu ADT. PESEL: 45052510416,prywatnosc,format,ostrzezenie,Sekwencja 11 cyfr w ID lub notes wymaga usunięcia identyfikatora osobowego.
+90,PR-089,notes,Dane syntetyczne. Testosteron przed leczeniem; bez ADT. PESEL: 62111210313,prywatnosc,format,ostrzezenie,Sekwencja 11 cyfr w ID lub notes wymaga usunięcia identyfikatora osobowego.
+112,53061810117,patient_id,53061810117,prywatnosc,format,ostrzezenie,Sekwencja 11 cyfr w ID lub notes wymaga usunięcia identyfikatora osobowego.
+13,PR-012,hemoglobin_g_dl,-9,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+23,PR-022,gi_toxicity_max,-,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+43,PR-042,weight_kg,brak,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+88,PR-087,psa_last_ng_ml,999,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+96,PR-095,testosterone_ng_dl,nd,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+105,PR-104,creatinine_mg_dl,b.d.,brak,format,ostrzezenie,"Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9."
+18,PR-017,sex,male,kategoria_sex,format,ostrzezenie,Płeć: dokładnie M.
+25,PR-024,sex,mężczyzna,kategoria_sex,format,ostrzezenie,Płeć: dokładnie M.
+52,PR-051,sex,K,kategoria_sex,format,ostrzezenie,Płeć: dokładnie M.
+65,PR-064,sex,1,kategoria_sex,format,ostrzezenie,Płeć: dokładnie M.
+84,PR-083,weight_kg,9,zakres_weight_kg,zakres,ostrzezenie,Masa ciała: 35–220 kg; próg kontroli jakości.
+70,PR-069,psa_dx_ng_ml,-2,zakres_psa_dx_ng_ml,zakres,ostrzezenie,PSA przy rozpoznaniu: 0–500 ng/ml; próg kontroli jakości.
+33,PR-032,ct_stage,T2 b,kategoria_ct_stage,format,ostrzezenie,Kliniczne T: dokładnie T1c|T2a|T2b|T2c|T3a|T3b|T4.
+98,PR-097,rt_technique,vmat,kategoria_rt_technique,format,ostrzezenie,Technika RT: dokładnie IMRT|VMAT|SBRT.
+111,PR-110,rt_technique,IMRT ,kategoria_rt_technique,format,ostrzezenie,Technika RT: dokładnie IMRT|VMAT|SBRT.
+53,PR-052,rt_dose_gy,780,zakres_rt_dose_gy,zakres,ostrzezenie,Dawka na prostatę: 1–100 Gy; próg kontroli jakości.
+113,PR-112,gu_toxicity_max,7,zakres_gu_toxicity_max,zakres,ostrzezenie,Maksymalna toksyczność GU: 0–5 CTCAE; próg kontroli jakości.
+38,PR-037,creatinine_mg_dl,"70,7",zakres_creatinine_mg_dl,zakres,ostrzezenie,Kreatynina: 0.2–15 mg/dl; próg kontroli jakości.
+108,PR-107,creatinine_mg_dl,"106,1",zakres_creatinine_mg_dl,zakres,ostrzezenie,Kreatynina: 0.2–15 mg/dl; próg kontroli jakości.
+119,PR-118,creatinine_mg_dl,"88,4",zakres_creatinine_mg_dl,zakres,ostrzezenie,Kreatynina: 0.2–15 mg/dl; próg kontroli jakości.
+28,PR-027,smoking,okazjonalnie,kategoria_smoking,format,ostrzezenie,Palenie: dokładnie never|former|current.
+81,PR-080,smoking,tak,kategoria_smoking,format,ostrzezenie,Palenie: dokładnie never|former|current.
+115,PR-114,smoking,nie,kategoria_smoking,format,ostrzezenie,Palenie: dokładnie never|former|current.
+3,PR-002,rt_dose_gy,60/20,liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+16,PR-015,psa_dx_ng_ml,"12,4 ng/ml",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+17,PR-016,testosterone_ng_dl,"0,6 nmol/l",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+38,PR-037,creatinine_mg_dl,"70,7",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+44,PR-043,psa_last_ng_ml,"ok. 0,2",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+60,PR-059,hemoglobin_g_dl,"8,8 mmol/l",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+64,PR-063,rt_dose_gy,78 Gy,liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+69,PR-068,gleason_score,03.kwi,liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+79,PR-078,weight_kg,"180,7791 lb",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+94,PR-093,psa_nadir_ng_ml,"<0,01",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+108,PR-107,creatinine_mg_dl,"106,1",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+116,PR-115,hemoglobin_g_dl,"8,4 mmol/l",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+119,PR-118,creatinine_mg_dl,"88,4",liczba_format,format,ostrzezenie,"Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka."
+20,PR-019,diagnosis_date,03.04.2025,data_iso,format,ostrzezenie,"Data pełna, istniejąca, w formacie RRRR-MM-DD."
+27,PR-026,psa_last_date,45750,data_iso,format,ostrzezenie,"Data pełna, istniejąca, w formacie RRRR-MM-DD."
+50,PR-049,diagnosis_date,kwiecień 2025,data_iso,format,ostrzezenie,"Data pełna, istniejąca, w formacie RRRR-MM-DD."
+56,PR-055,psa_last_date,2025.04.03,data_iso,format,ostrzezenie,"Data pełna, istniejąca, w formacie RRRR-MM-DD."
+62,PR-061,rt_start_date,04/03/2025,data_iso,format,ostrzezenie,"Data pełna, istniejąca, w formacie RRRR-MM-DD."
+17,PR-016,testosterone_ng_dl,"0,6 nmol/l",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+38,PR-037,creatinine_mg_dl,"70,7",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+60,PR-059,hemoglobin_g_dl,"8,8 mmol/l",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+79,PR-078,weight_kg,"180,7791 lb",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+108,PR-107,creatinine_mg_dl,"106,1",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+116,PR-115,hemoglobin_g_dl,"8,4 mmol/l",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+119,PR-118,creatinine_mg_dl,"88,4",jednostka,format,ostrzezenie,"Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia. Jednostka jawna lub podejrzana; nie przeliczać wyłącznie na podstawie wartości."
+94,PR-093,psa_nadir_ng_ml,"<0,01",oznaczalnosc,format,ostrzezenie,PSA z zapisem < wymaga ustalenia kodowania wartości poniżej progu; nie podstawiać zera.
+69,PR-068,gleason_score,03.kwi,autokonwersja,format,ostrzezenie,Wynik Gleasona zamieniony przez Excel w datę (kwi/Apr) wymaga źródła.
+3,PR-002,rt_dose_gy,60/20,struktura,format,ostrzezenie,Dawka/frakcje w jednej komórce lub skróty chorób i leków w notes: rozdzielić po uzgodnieniu.
+51,PR-050,notes,NT; DM2; metformina 2x1000; ASA,struktura,format,ostrzezenie,Dawka/frakcje w jednej komórce lub skróty chorób i leków w notes: rozdzielić po uzgodnieniu.
+21,PR-020,death_date,2021-06-30,daty,czas,ostrzezenie,Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon. rt_start_date ma poprzedzać death_date.
+21,PR-020,psa_last_date,2024-09-16,daty,czas,ostrzezenie,Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon. psa_last_date ma poprzedzać death_date.
+102,PR-101,diagnosis_date,2021-05-08,daty,czas,ostrzezenie,Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon. diagnosis_date ma poprzedzać rt_start_date.
+120,PR-119,psa_last_date,2022-01-21,daty,czas,ostrzezenie,Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon. rt_start_date ma poprzedzać psa_last_date.
+110,PR-109,gleason_score,8,gleason,spojnosc,ostrzezenie,Suma Gleasona musi odpowiadać sumie obu wzorców.
+92,PR-091,isup_grade,2,isup,spojnosc,ostrzezenie,ISUP: 3+3→1; 3+4→2; 4+3→3; suma 8→4; suma 9–10→5.
+14,PR-013,risk_group,niskie,ryzyko,spojnosc,ostrzezenie,"Najpierw wysokie: PSA >20 lub ISUP 4–5 lub cT2c–cT4 lub cN1. Następnie niskie: PSA <10, ISUP 1, cT1c–cT2a i cN0. Pozostałe: posrednie. Definicja uproszczona do ćwiczenia; M1 poza rejestrem. Z wpisanych pól wynika wysokie."
+53,PR-052,rt_dose_gy,780,schemat_rt,spojnosc,ostrzezenie,Dawka na prostatę i frakcje muszą tworzyć jeden z siedmiu schematów protokołu.
+53,PR-052,rt_fractions,28,schemat_rt,spojnosc,ostrzezenie,Dawka na prostatę i frakcje muszą tworzyć jeden z siedmiu schematów protokołu.
+22,PR-021,rt_technique,SBRT,sbrt,spojnosc,ostrzezenie,"SBRT wtedy i tylko wtedy, gdy pięć frakcji. 36,25 Gy/5 fr. jest poprawne."
+22,PR-021,rt_fractions,39,sbrt,spojnosc,ostrzezenie,"SBRT wtedy i tylko wtedy, gdy pięć frakcji. 36,25 Gy/5 fr. jest poprawne."
+12,PR-011,adt,0,adt,spojnosc,ostrzezenie,adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.
+12,PR-011,adt_months,6,adt,spojnosc,ostrzezenie,adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.
+42,PR-041,bcr_phoenix,0,phoenix,spojnosc,ostrzezenie,"bcr_phoenix = 1, gdy PSA ostatnie >= nadir + 2 ng/ml; inaczej 0. Bez obu pomiarów: null."
+10,PR-009,death,0,zgon,spojnosc,ostrzezenie,death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.
+10,PR-009,death_date,2024-10-30,zgon,spojnosc,ostrzezenie,death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.
+75,PR-074,death,1,zgon,spojnosc,ostrzezenie,death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.
+75,PR-074,death_date,,zgon,spojnosc,ostrzezenie,death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.

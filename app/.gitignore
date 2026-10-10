@@ -1,0 +1,16 @@
+.venv/
+venv/
+logs/
+cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+.test_runtime/
+.dependency_cache/
+.dependency_tmp/
+*.key
+.env
+.env.*
+!.env.example
+.DS_Store

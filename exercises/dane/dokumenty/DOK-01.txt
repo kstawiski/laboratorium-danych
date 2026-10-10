@@ -1,0 +1,34 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Anzelm Fikcyjny-01; kod rejestru: PR-101. PESEL fikcyjny, błędna cyfra kontrolna: 59070820015.
+Ur. 1959-07-08.
+
+ROZPOZNANIE
+Rozpoznanie ca prostatae z biopsji z 12.01.2021. PSA przy rozpoznaniu: 4,73 ng/ml.
+Gs 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+PRZEBIEG RT
+Pierwsza frakcja RT: 08/04/2021.
+Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+
+Przed symulacją wykonano ocenę zalegania moczu. Chory otrzymał instrukcję przygotowania pęcherza i odbytnicy; powtórzył zalecenia własnymi słowami. Codzienną lokalizację prostaty prowadzono na obrazach CBCT. Omówiono możliwość przejściowego nasilenia częstomoczu i odróżnienie objawów infekcji od odczynu popromiennego.
+
+Wyniki laboratoryjne: kreatynina 0,60 mg/dl; Hb 14,76 g/dl.
+Testosteron 7,4 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nie pali od 10 lat.
+
+OBSERWACJA
+Kontrolne oznaczenie PSA z 2024.05.25.
+Najniższe PSA po RT (nadir): 0,44 ng/ml.
+Ostatnie PSA: 0,6 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

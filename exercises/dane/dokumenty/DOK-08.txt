@@ -1,0 +1,26 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Hieronim Fikcyjny-08; kod rejestru: PR-108. PESEL fikcyjny, błędna cyfra kontrolna: 60062220719.
+Ur. 1960.06.22.
+Wywiad i kwalifikacja
+Przy kwalifikacji oceniono sprawność ogólną, wywiad mikcyjny i możliwość dojazdów na leczenie. Pacjent był samodzielny. Opis rozsiewu oparto na badaniach obrazowych; nie wyciągano wniosków wyłącznie ze stężenia PSA. Ten wpis zawiera również datowane uzupełnienie z późniejszej obserwacji po zakończeniu RT.
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 2021-12-11. PSA przy rozpoznaniu: 17,66 ng/ml.
+Gleason 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 24.03.2022.
+Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.
+ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.
+Z wydruku laboratorium: Hb 14,22 g/dl.
+Testosteron 10,201 nmol/l, pobranie przed leczeniem, bez ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 19/01/2025.
+Najniższe PSA po RT (nadir): 0,63 ng/ml.
+Ostatnie PSA: 0,72 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

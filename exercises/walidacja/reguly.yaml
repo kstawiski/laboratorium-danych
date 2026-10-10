@@ -1,0 +1,708 @@
+{
+  "wersja": 2,
+  "scenariusz": "PROSTATA-RT",
+  "uwagi": "wyrazenie: naruszenie (True); zakres: dozwolone granice. Kontrole wielopolowe i formatowe mają jawny identyfikator kontrola oraz parametry. Walidator korzysta z tych parametrów i słownika, pomija wnioskowanie z brakujących lub niemożliwych pomiarów. Wyrażenia agregatowe są pomocnicze; pełne działanie jest opisane przez kontrola, zmienne i parametry.",
+  "reguly": [
+    {
+      "id": "id_format",
+      "opis": "Kod pacjenta: PR-001..PR-120; bez numerów osobowych.",
+      "typ": "format",
+      "zmienne": [
+        "patient_id"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "format_id",
+      "wyrazenie": "~patient_id.str.fullmatch('PR-(?:00[1-9]|0[1-9][0-9]|1[01][0-9]|120)')",
+      "wzorzec": "PR-(?:00[1-9]|0[1-9][0-9]|1[01][0-9]|120)"
+    },
+    {
+      "id": "id_unikalny",
+      "opis": "Każdy kod pacjenta ma być unikalny; wyjaśnić oba powtarzające się wpisy.",
+      "typ": "unikalnosc",
+      "zmienne": [
+        "patient_id"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "unikalny_id",
+      "wyrazenie": "patient_id.duplicated(keep=False)"
+    },
+    {
+      "id": "rekord_duplikat",
+      "opis": "Dodatkowy rekord identyczny we wszystkich polach poza ID: podejrzenie duplikatu.",
+      "typ": "unikalnosc",
+      "zmienne": [
+        "patient_id"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "duplikat_rekordu",
+      "wyrazenie": "patient_id.duplicated(keep=False)",
+      "uwagi": "Kontrola porównuje wszystkie kolumny poza patient_id; samo wyrażenie identyfikatora jest kontrolą pomocniczą."
+    },
+    {
+      "id": "prywatnosc",
+      "opis": "Sekwencja 11 cyfr w ID lub notes wymaga usunięcia identyfikatora osobowego.",
+      "typ": "format",
+      "zmienne": [
+        "patient_id",
+        "notes"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "prywatnosc",
+      "wyrazenie": "patient_id.str.contains(r'(?<!\\d)\\d{11}(?!\\d)') | notes.str.contains(r'(?<!\\d)\\d{11}(?!\\d)')"
+    },
+    {
+      "id": "brak",
+      "opis": "Puste wymagane pole albo ukryty brak: brak, nd, b.d., -, 999, -9.",
+      "typ": "format",
+      "zmienne": [
+        "*"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "brak",
+      "wyrazenie": "psa_last_ng_ml.isin(['', 'brak', 'nd', 'b.d.', '-', '999', '-9'])",
+      "uwagi": "Kontrola obejmuje wszystkie wymagane pola, nie tylko przykładową kolumnę wyrażenia."
+    },
+    {
+      "id": "kategoria_sex",
+      "opis": "Płeć: dokładnie M.",
+      "typ": "format",
+      "zmienne": [
+        "sex"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~sex.isin(['M'])"
+    },
+    {
+      "id": "zakres_weight_kg",
+      "opis": "Masa ciała: 35–220 kg; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "weight_kg"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 35,
+        "max": 220
+      }
+    },
+    {
+      "id": "zakres_psa_dx_ng_ml",
+      "opis": "PSA przy rozpoznaniu: 0–500 ng/ml; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "psa_dx_ng_ml"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 500
+      }
+    },
+    {
+      "id": "zakres_gleason_primary",
+      "opis": "Dominujący wzorzec Gleasona: 3–5 ; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "gleason_primary"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "zakres_gleason_secondary",
+      "opis": "Drugorzędny wzorzec Gleasona: 3–5 ; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "gleason_secondary"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 3,
+        "max": 5
+      }
+    },
+    {
+      "id": "zakres_gleason_score",
+      "opis": "Suma Gleasona: 6–10 ; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "gleason_score"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 6,
+        "max": 10
+      }
+    },
+    {
+      "id": "zakres_isup_grade",
+      "opis": "Grupa stopnia ISUP: 1–5 ; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "isup_grade"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 1,
+        "max": 5
+      }
+    },
+    {
+      "id": "kategoria_ct_stage",
+      "opis": "Kliniczne T: dokładnie T1c|T2a|T2b|T2c|T3a|T3b|T4.",
+      "typ": "format",
+      "zmienne": [
+        "ct_stage"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~ct_stage.isin(['T1c', 'T2a', 'T2b', 'T2c', 'T3a', 'T3b', 'T4'])"
+    },
+    {
+      "id": "kategoria_cn_stage",
+      "opis": "Kliniczne N: dokładnie N0|N1.",
+      "typ": "format",
+      "zmienne": [
+        "cn_stage"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~cn_stage.isin(['N0', 'N1'])"
+    },
+    {
+      "id": "kategoria_risk_group",
+      "opis": "Grupa ryzyka wg protokołu: dokładnie niskie|posrednie|wysokie.",
+      "typ": "format",
+      "zmienne": [
+        "risk_group"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~risk_group.isin(['niskie', 'posrednie', 'wysokie'])"
+    },
+    {
+      "id": "kategoria_rt_technique",
+      "opis": "Technika RT: dokładnie IMRT|VMAT|SBRT.",
+      "typ": "format",
+      "zmienne": [
+        "rt_technique"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~rt_technique.isin(['IMRT', 'VMAT', 'SBRT'])"
+    },
+    {
+      "id": "zakres_rt_dose_gy",
+      "opis": "Dawka na prostatę: 1–100 Gy; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "rt_dose_gy"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 1,
+        "max": 100
+      }
+    },
+    {
+      "id": "zakres_rt_fractions",
+      "opis": "Liczba frakcji na prostatę: 1–45 fr.; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "rt_fractions"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 1,
+        "max": 45
+      }
+    },
+    {
+      "id": "kategoria_adt",
+      "opis": "Stosowanie ADT: dokładnie 0|1.",
+      "typ": "format",
+      "zmienne": [
+        "adt"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~adt.isin(['0', '1'])"
+    },
+    {
+      "id": "zakres_adt_months",
+      "opis": "Zaplanowany czas ADT: 0–36 mies.; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "adt_months"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 36
+      }
+    },
+    {
+      "id": "zakres_testosterone_ng_dl",
+      "opis": "Testosteron: 0–1200 ng/dl; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "testosterone_ng_dl"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 1200
+      }
+    },
+    {
+      "id": "zakres_psa_nadir_ng_ml",
+      "opis": "Nadir PSA po RT: 0–500 ng/ml; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "psa_nadir_ng_ml"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 500
+      }
+    },
+    {
+      "id": "zakres_psa_last_ng_ml",
+      "opis": "Ostatnie PSA: 0–500 ng/ml; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "psa_last_ng_ml"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 500
+      }
+    },
+    {
+      "id": "kategoria_bcr_phoenix",
+      "opis": "Nawrót wg Phoenix: dokładnie 0|1.",
+      "typ": "format",
+      "zmienne": [
+        "bcr_phoenix"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~bcr_phoenix.isin(['0', '1'])"
+    },
+    {
+      "id": "zakres_gu_toxicity_max",
+      "opis": "Maksymalna toksyczność GU: 0–5 CTCAE; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "gu_toxicity_max"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 5
+      }
+    },
+    {
+      "id": "zakres_gi_toxicity_max",
+      "opis": "Maksymalna toksyczność GI: 0–5 CTCAE; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "gi_toxicity_max"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0,
+        "max": 5
+      }
+    },
+    {
+      "id": "zakres_creatinine_mg_dl",
+      "opis": "Kreatynina: 0.2–15 mg/dl; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "creatinine_mg_dl"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 0.2,
+        "max": 15
+      }
+    },
+    {
+      "id": "zakres_hemoglobin_g_dl",
+      "opis": "Hemoglobina: 5–20 g/dl; próg kontroli jakości.",
+      "typ": "zakres",
+      "zmienne": [
+        "hemoglobin_g_dl"
+      ],
+      "powaga": "ostrzezenie",
+      "zakres": {
+        "min": 5,
+        "max": 20
+      }
+    },
+    {
+      "id": "kategoria_diabetes",
+      "opis": "Cukrzyca: dokładnie 0|1.",
+      "typ": "format",
+      "zmienne": [
+        "diabetes"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~diabetes.isin(['0', '1'])"
+    },
+    {
+      "id": "kategoria_hypertension",
+      "opis": "Nadciśnienie tętnicze: dokładnie 0|1.",
+      "typ": "format",
+      "zmienne": [
+        "hypertension"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~hypertension.isin(['0', '1'])"
+    },
+    {
+      "id": "kategoria_smoking",
+      "opis": "Palenie: dokładnie never|former|current.",
+      "typ": "format",
+      "zmienne": [
+        "smoking"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~smoking.isin(['never', 'former', 'current'])"
+    },
+    {
+      "id": "kategoria_death",
+      "opis": "Zgon: dokładnie 0|1.",
+      "typ": "format",
+      "zmienne": [
+        "death"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "kategoria",
+      "wyrazenie": "~death.isin(['0', '1'])"
+    },
+    {
+      "id": "liczba_format",
+      "opis": "Liczba bez jednostki, dopisku, przedziału; separator dziesiętny: kropka.",
+      "typ": "format",
+      "zmienne": [
+        "weight_kg",
+        "psa_dx_ng_ml",
+        "gleason_primary",
+        "gleason_secondary",
+        "gleason_score",
+        "isup_grade",
+        "rt_dose_gy",
+        "rt_fractions",
+        "adt_months",
+        "testosterone_ng_dl",
+        "psa_nadir_ng_ml",
+        "psa_last_ng_ml",
+        "gu_toxicity_max",
+        "gi_toxicity_max",
+        "creatinine_mg_dl",
+        "hemoglobin_g_dl"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "liczba_format",
+      "wyrazenie": "~psa_last_ng_ml.str.fullmatch(r'[-+]?(?:\\d+(?:\\.\\d+)?|\\.\\d+)')",
+      "uwagi": "Ten sam wzorzec stosowany do wszystkich wymienionych pól liczbowych."
+    },
+    {
+      "id": "liczba_calkowita",
+      "opis": "Wzorce Gleasona, ISUP, frakcje, miesiące ADT i stopień CTCAE muszą być całkowite.",
+      "typ": "format",
+      "zmienne": [
+        "gleason_primary",
+        "gleason_secondary",
+        "gleason_score",
+        "isup_grade",
+        "rt_fractions",
+        "adt_months",
+        "gu_toxicity_max",
+        "gi_toxicity_max"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "calkowita",
+      "wyrazenie": "rt_fractions % 1 != 0"
+    },
+    {
+      "id": "data_iso",
+      "opis": "Data pełna, istniejąca, w formacie RRRR-MM-DD.",
+      "typ": "format",
+      "zmienne": [
+        "birth_date",
+        "diagnosis_date",
+        "rt_start_date",
+        "psa_last_date",
+        "death_date"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "data_iso",
+      "wyrazenie": "~rt_start_date.str.fullmatch(r'\\d{4}-\\d{2}-\\d{2}')",
+      "uwagi": "Kontrola dodatkowo sprawdza istnienie daty i każde pole datowe; death_date puste przy death=0 jest dopuszczalne."
+    },
+    {
+      "id": "jednostka",
+      "opis": "Jednostki inne niż w nazwie pola: kreatynina µmol/l, Hb mmol/l, testosteron nmol/l, masa lb; wynik bez jednostki wymaga potwierdzenia.",
+      "typ": "format",
+      "zmienne": [
+        "creatinine_mg_dl",
+        "hemoglobin_g_dl",
+        "testosterone_ng_dl",
+        "weight_kg"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "jednostka",
+      "wyrazenie": "creatinine_mg_dl > 15",
+      "uwagi": "Kontrola obejmuje jawne dopiski jednostek w każdym z wymienionych pól; Hb lub testosteron w innej jednostce bez dopisku mogą być niewykrywalne."
+    },
+    {
+      "id": "oznaczalnosc",
+      "opis": "PSA z zapisem < wymaga ustalenia kodowania wartości poniżej progu; nie podstawiać zera.",
+      "typ": "format",
+      "zmienne": [
+        "psa_nadir_ng_ml",
+        "psa_last_ng_ml"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "ponizej_oznaczalnosci",
+      "wyrazenie": "psa_nadir_ng_ml.str.startswith('<') | psa_last_ng_ml.str.startswith('<')"
+    },
+    {
+      "id": "autokonwersja",
+      "opis": "Wynik Gleasona zamieniony przez Excel w datę (kwi/Apr) wymaga źródła.",
+      "typ": "format",
+      "zmienne": [
+        "gleason_score"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "autokonwersja",
+      "wyrazenie": "gleason_score.str.contains('kwi|Apr', case=False)"
+    },
+    {
+      "id": "struktura",
+      "opis": "Dawka/frakcje w jednej komórce lub skróty chorób i leków w notes: rozdzielić po uzgodnieniu.",
+      "typ": "format",
+      "zmienne": [
+        "rt_dose_gy",
+        "notes"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "struktura",
+      "wyrazenie": "rt_dose_gy.str.contains('/') | notes.str.contains('NT;.*DM2;')"
+    },
+    {
+      "id": "wiek",
+      "opis": "Wiek w dniu pierwszej frakcji 18–105 lat. Wiek 89 lat jest dopuszczalny.",
+      "typ": "czas",
+      "zmienne": [
+        "birth_date"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "wiek",
+      "wyrazenie": "birth_date >= rt_start_date",
+      "min": 18,
+      "max": 105
+    },
+    {
+      "id": "daty",
+      "opis": "Rozpoznanie ≤ początek RT < ostatnie PSA ≤ zgon.",
+      "typ": "czas",
+      "zmienne": [
+        "diagnosis_date",
+        "rt_start_date",
+        "psa_last_date",
+        "death_date"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "daty",
+      "wyrazenie": "diagnosis_date > rt_start_date | psa_last_date <= rt_start_date | (death_date != '' & death_date < psa_last_date)",
+      "kolejnosc": [
+        [
+          "birth_date",
+          "diagnosis_date"
+        ],
+        [
+          "diagnosis_date",
+          "rt_start_date"
+        ],
+        [
+          "rt_start_date",
+          "psa_last_date"
+        ],
+        [
+          "rt_start_date",
+          "death_date"
+        ],
+        [
+          "psa_last_date",
+          "death_date"
+        ]
+      ]
+    },
+    {
+      "id": "gleason",
+      "opis": "Suma Gleasona musi odpowiadać sumie obu wzorców.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "gleason_score"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "gleason",
+      "wyrazenie": "gleason_score != gleason_primary + gleason_secondary"
+    },
+    {
+      "id": "isup",
+      "opis": "ISUP: 3+3→1; 3+4→2; 4+3→3; suma 8→4; suma 9–10→5.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "isup_grade"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "isup",
+      "wyrazenie": "(gleason_primary == 3 & gleason_secondary == 3 & isup_grade != 1) | (gleason_primary == 3 & gleason_secondary == 4 & isup_grade != 2) | (gleason_primary == 4 & gleason_secondary == 3 & isup_grade != 3) | (gleason_primary + gleason_secondary == 8 & isup_grade != 4) | (gleason_primary + gleason_secondary >= 9 & isup_grade != 5)"
+    },
+    {
+      "id": "ryzyko",
+      "opis": "Najpierw wysokie: PSA >20 lub ISUP 4–5 lub cT2c–cT4 lub cN1. Następnie niskie: PSA <10, ISUP 1, cT1c–cT2a i cN0. Pozostałe: posrednie. Definicja uproszczona do ćwiczenia; M1 poza rejestrem.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "risk_group"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "ryzyko",
+      "wyrazenie": "((psa_dx_ng_ml > 20 | isup_grade >= 4 | ct_stage.isin(['T2c','T3a','T3b','T4']) | cn_stage == 'N1') & risk_group != 'wysokie') | (~(psa_dx_ng_ml > 20 | isup_grade >= 4 | ct_stage.isin(['T2c','T3a','T3b','T4']) | cn_stage == 'N1') & (psa_dx_ng_ml < 10 & isup_grade == 1 & ct_stage.isin(['T1c','T2a']) & cn_stage == 'N0') & risk_group != 'niskie') | (~(psa_dx_ng_ml > 20 | isup_grade >= 4 | ct_stage.isin(['T2c','T3a','T3b','T4']) | cn_stage == 'N1') & ~(psa_dx_ng_ml < 10 & isup_grade == 1 & ct_stage.isin(['T1c','T2a']) & cn_stage == 'N0') & risk_group != 'posrednie')",
+      "ct_dozwolone": [
+        "T1c",
+        "T2a",
+        "T2b",
+        "T2c",
+        "T3a",
+        "T3b",
+        "T4"
+      ],
+      "ct_wysokie": [
+        "T2c",
+        "T3a",
+        "T3b",
+        "T4"
+      ]
+    },
+    {
+      "id": "schemat_rt",
+      "opis": "Dawka na prostatę i frakcje muszą tworzyć jeden z siedmiu schematów protokołu.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "rt_dose_gy",
+        "rt_fractions"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "schemat_rt",
+      "wyrazenie": "~((rt_dose_gy == 78 & rt_fractions == 39) | (rt_dose_gy == 76 & rt_fractions == 38) | (rt_dose_gy == 60 & rt_fractions == 20) | (rt_dose_gy == 62 & rt_fractions == 20) | (rt_dose_gy == 70 & rt_fractions == 28) | (rt_dose_gy == 36.25 & rt_fractions == 5) | (rt_dose_gy == 40 & rt_fractions == 5))",
+      "schematy": [
+        [
+          78,
+          39
+        ],
+        [
+          76,
+          38
+        ],
+        [
+          60,
+          20
+        ],
+        [
+          62,
+          20
+        ],
+        [
+          70,
+          28
+        ],
+        [
+          36.25,
+          5
+        ],
+        [
+          40,
+          5
+        ]
+      ]
+    },
+    {
+      "id": "sbrt",
+      "opis": "SBRT wtedy i tylko wtedy, gdy pięć frakcji. 36,25 Gy/5 fr. jest poprawne.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "rt_technique",
+        "rt_fractions"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "sbrt",
+      "wyrazenie": "(rt_technique == 'SBRT' & rt_fractions != 5) | (rt_technique != 'SBRT' & rt_fractions == 5)"
+    },
+    {
+      "id": "adt",
+      "opis": "adt=0 wymaga adt_months=0. ADT 6 mies. typowo w ryzyku pośrednim niekorzystnym; 18–36 mies. w wysokim. adt_months: całkowity zaplanowany czas ADT.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "adt",
+        "adt_months"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "adt",
+      "wyrazenie": "(adt == 0 & adt_months != 0) | (adt == 1 & adt_months == 0)",
+      "wysokie_min": 18,
+      "wysokie_max": 36,
+      "posrednie_typowo": 6
+    },
+    {
+      "id": "phoenix",
+      "opis": "bcr_phoenix = 1, gdy PSA ostatnie >= nadir + 2 ng/ml; inaczej 0. Bez obu pomiarów: null.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "bcr_phoenix"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "phoenix",
+      "wyrazenie": "(psa_last_ng_ml >= psa_nadir_ng_ml + 2 & bcr_phoenix != 1) | (psa_last_ng_ml < psa_nadir_ng_ml + 2 & bcr_phoenix != 0)",
+      "przyrost": 2
+    },
+    {
+      "id": "nadir",
+      "opis": "Nadir po RT nie może przekraczać ostatniego PSA.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "psa_nadir_ng_ml",
+        "psa_last_ng_ml"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "nadir",
+      "wyrazenie": "psa_nadir_ng_ml > psa_last_ng_ml"
+    },
+    {
+      "id": "zgon",
+      "opis": "death=1 wymaga daty; death=0 wymaga pustej daty. Wyjaśnić oba pola.",
+      "typ": "spojnosc",
+      "zmienne": [
+        "death",
+        "death_date"
+      ],
+      "powaga": "ostrzezenie",
+      "kontrola": "zgon",
+      "wyrazenie": "(death == 1 & death_date == '') | (death == 0 & death_date != '')"
+    }
+  ]
+}

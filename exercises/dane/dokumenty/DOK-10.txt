@@ -1,0 +1,25 @@
+KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Jarema Fikcyjny-10; kod rejestru: PR-110. PESEL fikcyjny, błędna cyfra kontrolna: 57011720918.
+Ur. 17.01.1957.
+Do planowania wykorzystano obrazy tomografii i rezonansu. Oceniono odtwarzalność wypełnienia pęcherza oraz obecność gazów w odbytnicy. Zalecenia przygotowania dopasowano do możliwości chorego. W dokumentacji pozostawiono oddzielnie technikę, dawkę całkowitą i liczbę frakcji, aby nie mylić schematu z dawką pojedynczej frakcji.
+Pierwsza frakcja RT: 2021.05.08.
+Technika IMRT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+Załącznik laboratoryjny
+Wyniki laboratoryjne: kreatynina 0,81 mg/dl; Hb 9,5 mmol/l.
+Testosteron 22,9 ng/dl, oznaczenie w trzecim miesiącu ADT.
+Rozpoznanie ca prostatae z biopsji z 25/02/2021. PSA przy rozpoznaniu: 12,49 ng/ml.
+Gs 5+4=9.
+ISUP 5.
+Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+Dopisek ambulatoryjny
+Kontrolne oznaczenie PSA z 2024-08-01.
+Ostatnie PSA: 0,81 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.
+Bez dolegliwości ze strony przewodu pokarmowego w udokumentowanym okresie obserwacji.
+DM t.2, leczona doustnie.
+Nie stwierdzono nadciśnienia tętniczego.
+Nie pali od 10 lat.
+Plan: kolejne oznaczenie PSA i konsultacja urologiczna według terminu z poradni.

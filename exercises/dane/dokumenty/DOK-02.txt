@@ -1,0 +1,25 @@
+Konsultacja urologiczna kwalifikacyjna — kopia z uzupełnieniem obserwacji
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Bogumił Fikcyjny-02; kod rejestru: PR-102. PESEL fikcyjny, błędna cyfra kontrolna: 47021920112.
+Ur. 19.02.1947.
+Wywiad i kwalifikacja
+Pacjent skierowany przez urologa po biopsji celowanej i systematycznej. Opis mpMR zestawiono z wynikiem histopatologicznym; nie przypisano wyższego stopnia z samego obrazu radiologicznego. Po omówieniu metod radykalnych chory wybrał napromienianie. Poniżej dopisano dane z zakończonego leczenia i późniejszej kontroli rejestru.
+DM t.2, leczona doustnie.
+NT w wywiadzie, leczenie przewlekłe.
+Nigdy nie palił.
+Rozpoznanie ca prostatae z biopsji z 21/09/2022. PSA przy rozpoznaniu: 11,93 ng/ml.
+Gleason 3+3=6.
+ISUP 1.
+Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+RT rozpoczęto: 2022.12.14.
+Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.
+Z wydruku laboratorium: kreatynina 107,8 µmol/l; Hb 9,7 mmol/l.
+Testosteron 0,576 nmol/l, oznaczenie w trzecim miesiącu ADT.
+Uzupełnienie z poradni po leczeniu
+Kontrolne oznaczenie PSA z 2025-10-19.
+Najniższe PSA po RT (nadir): 0,18 ng/ml.
+Ostatnie PSA: 1,13 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.
+Zalecenia przekazano choremu; dalsze wizyty w poradni radioterapii i urologicznej.

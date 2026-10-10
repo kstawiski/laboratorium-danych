@@ -1,0 +1,500 @@
+dokument,zmienna,wartosc_klucza,fragment,transformacja
+DOK-01.txt,patient_id,PR-101,"Anzelm Fikcyjny-01; kod rejestru: PR-101. PESEL fikcyjny, błędna cyfra kontrolna: 59070820015.",Wartość podana wprost.
+DOK-01.txt,birth_date,1959-07-08,Ur. 1959-07-08.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-01.txt,psa_dx_ng_ml,4.73,"Rozpoznanie ca prostatae z biopsji z 12.01.2021. PSA przy rozpoznaniu: 4,73 ng/ml.",Wartość podana wprost.
+DOK-01.txt,gleason_primary,3,Gs 3+3=6.,Wartość podana wprost.
+DOK-01.txt,gleason_secondary,3,Gs 3+3=6.,Wartość podana wprost.
+DOK-01.txt,isup_grade,1,ISUP 1.,Wartość podana wprost.
+DOK-01.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-01.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-01.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-01.txt,rt_start_date,2021-04-08,Pierwsza frakcja RT: 08/04/2021.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-01.txt,rt_technique,SBRT,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-01.txt,rt_dose_gy,40,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-01.txt,rt_fractions,5,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-01.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-01.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-01.txt,psa_nadir_ng_ml,0.44,"Najniższe PSA po RT (nadir): 0,44 ng/ml.",Wartość podana wprost.
+DOK-01.txt,psa_last_ng_ml,0.6,"Ostatnie PSA: 0,6 ng/ml.",Wartość podana wprost.
+DOK-01.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,44 ng/ml.
+Ostatnie PSA: 0,6 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-01.txt,gu_toxicity_max,2,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.",Wartość podana wprost.
+DOK-01.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.",Wartość podana wprost.
+DOK-01.txt,creatinine_mg_dl,0.6,"Wyniki laboratoryjne: kreatynina 0,60 mg/dl; Hb 14,76 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-01.txt,hemoglobin_g_dl,14.76,"Wyniki laboratoryjne: kreatynina 0,60 mg/dl; Hb 14,76 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-01.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-01.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-01.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-02.txt,patient_id,PR-102,"Bogumił Fikcyjny-02; kod rejestru: PR-102. PESEL fikcyjny, błędna cyfra kontrolna: 47021920112.",Wartość podana wprost.
+DOK-02.txt,birth_date,1947-02-19,Ur. 19.02.1947.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-02.txt,psa_dx_ng_ml,11.93,"Rozpoznanie ca prostatae z biopsji z 21/09/2022. PSA przy rozpoznaniu: 11,93 ng/ml.",Wartość podana wprost.
+DOK-02.txt,gleason_primary,3,Gleason 3+3=6.,Wartość podana wprost.
+DOK-02.txt,gleason_secondary,3,Gleason 3+3=6.,Wartość podana wprost.
+DOK-02.txt,isup_grade,1,ISUP 1.,Wartość podana wprost.
+DOK-02.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-02.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-02.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-02.txt,rt_start_date,2022-12-14,RT rozpoczęto: 2022.12.14.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-02.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-02.txt,rt_dose_gy,78,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-02.txt,rt_fractions,39,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-02.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-02.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-02.txt,psa_nadir_ng_ml,0.18,"Najniższe PSA po RT (nadir): 0,18 ng/ml.",Wartość podana wprost.
+DOK-02.txt,psa_last_ng_ml,1.13,"Ostatnie PSA: 1,13 ng/ml.",Wartość podana wprost.
+DOK-02.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,18 ng/ml.
+Ostatnie PSA: 1,13 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-02.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-02.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-02.txt,creatinine_mg_dl,1.22,"Z wydruku laboratorium: kreatynina 107,8 µmol/l; Hb 9,7 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-02.txt,hemoglobin_g_dl,15.63,"Z wydruku laboratorium: kreatynina 107,8 µmol/l; Hb 9,7 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-02.txt,diabetes,1,"DM t.2, leczona doustnie.","Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-02.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-02.txt,smoking,never,Nigdy nie palił.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-03.txt,patient_id,PR-103,"Cyprian Fikcyjny-03; kod rejestru: PR-103. PESEL fikcyjny, błędna cyfra kontrolna: 60070820219.",Wartość podana wprost.
+DOK-03.txt,birth_date,1960-07-08,Ur. 08/07/1960.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-03.txt,psa_dx_ng_ml,8.12,"Rozpoznanie ca prostatae z biopsji z 2021.11.01. PSA przy rozpoznaniu: 8,12 ng/ml.",Wartość podana wprost.
+DOK-03.txt,gleason_primary,3,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-03.txt,gleason_secondary,4,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-03.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-03.txt,ct_stage,T3a,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-03.txt,cn_stage,N0,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-03.txt,risk_group,wysokie,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-03.txt,rt_start_date,2022-03-09,Początek napromieniania: 2022-03-09.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-03.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-03.txt,rt_dose_gy,70,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-03.txt,rt_fractions,28,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-03.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-03.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-03.txt,psa_nadir_ng_ml,0.3,"Najniższe PSA po RT (nadir): 0,3 ng/ml.",Wartość podana wprost.
+DOK-03.txt,psa_last_ng_ml,1.13,"Ostatnie PSA: 1,13 ng/ml.",Wartość podana wprost.
+DOK-03.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,3 ng/ml.
+Ostatnie PSA: 1,13 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-03.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-03.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-03.txt,creatinine_mg_dl,0.76,"Badania uzupełniające: kreatynina 67,2 µmol/l; Hb 9,2 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-03.txt,hemoglobin_g_dl,14.82,"Badania uzupełniające: kreatynina 67,2 µmol/l; Hb 9,2 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-03.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-03.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-03.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-04.txt,patient_id,PR-104,"Dobromir Fikcyjny-04; kod rejestru: PR-104. PESEL fikcyjny, błędna cyfra kontrolna: 38062020318.",Wartość podana wprost.
+DOK-04.txt,psa_dx_ng_ml,13.2,"Rozpoznanie ca prostatae z biopsji z 2021-07-11. PSA przy rozpoznaniu: 13,2 ng/ml.",Wartość podana wprost.
+DOK-04.txt,gleason_primary,4,Gs 4+3=7.,Wartość podana wprost.
+DOK-04.txt,gleason_secondary,3,Gs 4+3=7.,Wartość podana wprost.
+DOK-04.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-04.txt,ct_stage,T3a,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-04.txt,cn_stage,N0,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-04.txt,risk_group,wysokie,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-04.txt,rt_start_date,2022-01-04,Pierwsza frakcja RT: 04.01.2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-04.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-04.txt,rt_dose_gy,78,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-04.txt,rt_fractions,39,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-04.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-04.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-04.txt,psa_nadir_ng_ml,0.29,"Najniższe PSA po RT (nadir): 0,29 ng/ml.",Wartość podana wprost.
+DOK-04.txt,psa_last_ng_ml,0.8,"Ostatnie PSA: 0,8 ng/ml.",Wartość podana wprost.
+DOK-04.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,29 ng/ml.
+Ostatnie PSA: 0,8 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-04.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-04.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-04.txt,creatinine_mg_dl,0.62,"Wyniki laboratoryjne: kreatynina 0,62 mg/dl; Hb 13,84 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-04.txt,hemoglobin_g_dl,13.84,"Wyniki laboratoryjne: kreatynina 0,62 mg/dl; Hb 13,84 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-04.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-04.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-04.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-05.txt,patient_id,PR-105,"Erazm Fikcyjny-05; kod rejestru: PR-105. PESEL fikcyjny, błędna cyfra kontrolna: 53121520415.",Wartość podana wprost.
+DOK-05.txt,birth_date,1953-12-15,Ur. 1953-12-15.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-05.txt,psa_dx_ng_ml,4.47,"Rozpoznanie ca prostatae z biopsji z 19.10.2020. PSA przy rozpoznaniu: 4,47 ng/ml.",Wartość podana wprost.
+DOK-05.txt,gleason_primary,4,Gleason 4+3=7.,Wartość podana wprost.
+DOK-05.txt,gleason_secondary,3,Gleason 4+3=7.,Wartość podana wprost.
+DOK-05.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-05.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-05.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-05.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-05.txt,rt_start_date,2021-01-30,RT rozpoczęto: 30/01/2021.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-05.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-05.txt,rt_dose_gy,62,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-05.txt,rt_fractions,20,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-05.txt,adt,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-05.txt,adt_months,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-05.txt,psa_nadir_ng_ml,0.39,"Najniższe PSA po RT (nadir): 0,39 ng/ml.",Wartość podana wprost.
+DOK-05.txt,psa_last_ng_ml,0.72,"Ostatnie PSA: 0,72 ng/ml.",Wartość podana wprost.
+DOK-05.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,39 ng/ml.
+Ostatnie PSA: 0,72 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-05.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-05.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-05.txt,creatinine_mg_dl,1.02,"Z wydruku laboratorium: kreatynina 90,2 µmol/l; Hb 14,42 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-05.txt,hemoglobin_g_dl,14.42,"Z wydruku laboratorium: kreatynina 90,2 µmol/l; Hb 14,42 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-05.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-05.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-06.txt,patient_id,PR-106,"Feliks Fikcyjny-06; kod rejestru: PR-106. PESEL fikcyjny, błędna cyfra kontrolna: 60011720512.",Wartość podana wprost.
+DOK-06.txt,birth_date,1960-01-17,Ur. 17.01.1960.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-06.txt,psa_dx_ng_ml,5.27,"Rozpoznanie ca prostatae z biopsji z 26/08/2022. PSA przy rozpoznaniu: 5,27 ng/ml.",Wartość podana wprost.
+DOK-06.txt,gleason_primary,3,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-06.txt,gleason_secondary,4,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-06.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-06.txt,ct_stage,T3a,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-06.txt,cn_stage,N0,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-06.txt,risk_group,wysokie,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-06.txt,rt_start_date,2022-11-01,Początek napromieniania: 2022.11.01.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-06.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-06.txt,rt_dose_gy,78,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-06.txt,rt_fractions,39,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-06.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-06.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-06.txt,psa_nadir_ng_ml,0.18,"Najniższe PSA po RT (nadir): 0,18 ng/ml.",Wartość podana wprost.
+DOK-06.txt,psa_last_ng_ml,1.01,"Ostatnie PSA: 1,01 ng/ml.",Wartość podana wprost.
+DOK-06.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,18 ng/ml.
+Ostatnie PSA: 1,01 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-06.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-06.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-06.txt,creatinine_mg_dl,1.01,"Badania uzupełniające: kreatynina 89,3 µmol/l; Hb 9,4 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-06.txt,hemoglobin_g_dl,15.15,"Badania uzupełniające: kreatynina 89,3 µmol/l; Hb 9,4 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-06.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-06.txt,smoking,current,Nadal pali papierosy.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-07.txt,patient_id,PR-107,"Gwidon Fikcyjny-07; kod rejestru: PR-107. PESEL fikcyjny, błędna cyfra kontrolna: 63021320615.",Wartość podana wprost.
+DOK-07.txt,birth_date,1963-02-13,Ur. 13/02/1963.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-07.txt,psa_dx_ng_ml,13.42,"Rozpoznanie ca prostatae z biopsji z 2021.06.05. PSA przy rozpoznaniu: 13,42 ng/ml.",Wartość podana wprost.
+DOK-07.txt,gleason_primary,4,Gs 4+3=7.,Wartość podana wprost.
+DOK-07.txt,gleason_secondary,3,Gs 4+3=7.,Wartość podana wprost.
+DOK-07.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-07.txt,ct_stage,T2a,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-07.txt,cn_stage,N0,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-07.txt,risk_group,posrednie,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-07.txt,rt_start_date,2021-11-06,Pierwsza frakcja RT: 2021-11-06.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-07.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-07.txt,rt_dose_gy,76,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-07.txt,rt_fractions,38,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-07.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-07.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-07.txt,psa_nadir_ng_ml,0.08,"Najniższe PSA po RT (nadir): 0,08 ng/ml.",Wartość podana wprost.
+DOK-07.txt,psa_last_ng_ml,0.36,"Ostatnie PSA: 0,36 ng/ml.",Wartość podana wprost.
+DOK-07.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,08 ng/ml.
+Ostatnie PSA: 0,36 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-07.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-07.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-07.txt,creatinine_mg_dl,1.2,"Wyniki laboratoryjne: kreatynina 1,20 mg/dl; Hb 7,8 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-07.txt,hemoglobin_g_dl,12.57,"Wyniki laboratoryjne: kreatynina 1,20 mg/dl; Hb 7,8 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-07.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-07.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-08.txt,patient_id,PR-108,"Hieronim Fikcyjny-08; kod rejestru: PR-108. PESEL fikcyjny, błędna cyfra kontrolna: 60062220719.",Wartość podana wprost.
+DOK-08.txt,birth_date,1960-06-22,Ur. 1960.06.22.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-08.txt,psa_dx_ng_ml,17.66,"Rozpoznanie ca prostatae z biopsji z 2021-12-11. PSA przy rozpoznaniu: 17,66 ng/ml.",Wartość podana wprost.
+DOK-08.txt,gleason_primary,3,Gleason 3+3=6.,Wartość podana wprost.
+DOK-08.txt,gleason_secondary,3,Gleason 3+3=6.,Wartość podana wprost.
+DOK-08.txt,isup_grade,1,ISUP 1.,Wartość podana wprost.
+DOK-08.txt,ct_stage,T1c,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-08.txt,cn_stage,N0,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-08.txt,risk_group,posrednie,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-08.txt,rt_start_date,2022-03-24,RT rozpoczęto: 24.03.2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-08.txt,rt_technique,SBRT,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-08.txt,rt_dose_gy,40,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-08.txt,rt_fractions,5,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-08.txt,adt,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-08.txt,adt_months,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-08.txt,psa_nadir_ng_ml,0.63,"Najniższe PSA po RT (nadir): 0,63 ng/ml.",Wartość podana wprost.
+DOK-08.txt,psa_last_ng_ml,0.72,"Ostatnie PSA: 0,72 ng/ml.",Wartość podana wprost.
+DOK-08.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,63 ng/ml.
+Ostatnie PSA: 0,72 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-08.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-08.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-08.txt,hemoglobin_g_dl,14.22,"Z wydruku laboratorium: Hb 14,22 g/dl.",Hb w g/dl.
+DOK-08.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-08.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-08.txt,smoking,never,Nigdy nie palił.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-09.txt,patient_id,PR-109,"Iwo Fikcyjny-09; kod rejestru: PR-109. PESEL fikcyjny, błędna cyfra kontrolna: 39080720813.",Wartość podana wprost.
+DOK-09.txt,birth_date,1939-08-07,Ur. 1939-08-07.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-09.txt,psa_dx_ng_ml,7.32,"Rozpoznanie ca prostatae z biopsji z 03.05.2022. PSA przy rozpoznaniu: 7,32 ng/ml.",Wartość podana wprost.
+DOK-09.txt,gleason_primary,4,Wynik biopsji: Gs 4+3=7.,Wartość podana wprost.
+DOK-09.txt,gleason_secondary,3,Wynik biopsji: Gs 4+3=7.,Wartość podana wprost.
+DOK-09.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-09.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-09.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-09.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-09.txt,rt_start_date,2022-08-30,Początek napromieniania: 30/08/2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-09.txt,rt_technique,SBRT,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-09.txt,rt_dose_gy,40,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-09.txt,rt_fractions,5,Technika SBRT; dawka na prostatę 40 Gy w 5 frakcjach.,Wartość podana wprost.
+DOK-09.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-09.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-09.txt,psa_nadir_ng_ml,0.34,"Najniższe PSA po RT (nadir): 0,34 ng/ml.",Wartość podana wprost.
+DOK-09.txt,psa_last_ng_ml,0.97,"Ostatnie PSA: 0,97 ng/ml.",Wartość podana wprost.
+DOK-09.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,34 ng/ml.
+Ostatnie PSA: 0,97 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-09.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-09.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-09.txt,creatinine_mg_dl,0.68,"Badania uzupełniające: kreatynina 60,1 µmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl."
+DOK-09.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-09.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-09.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-10.txt,patient_id,PR-110,"Jarema Fikcyjny-10; kod rejestru: PR-110. PESEL fikcyjny, błędna cyfra kontrolna: 57011720918.",Wartość podana wprost.
+DOK-10.txt,birth_date,1957-01-17,Ur. 17.01.1957.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-10.txt,psa_dx_ng_ml,12.49,"Rozpoznanie ca prostatae z biopsji z 25/02/2021. PSA przy rozpoznaniu: 12,49 ng/ml.",Wartość podana wprost.
+DOK-10.txt,gleason_primary,5,Gs 5+4=9.,Wartość podana wprost.
+DOK-10.txt,gleason_secondary,4,Gs 5+4=9.,Wartość podana wprost.
+DOK-10.txt,isup_grade,5,ISUP 5.,Wartość podana wprost.
+DOK-10.txt,ct_stage,T3a,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-10.txt,cn_stage,N0,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-10.txt,risk_group,wysokie,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-10.txt,rt_start_date,2021-05-08,Pierwsza frakcja RT: 2021.05.08.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-10.txt,rt_technique,IMRT,Technika IMRT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-10.txt,rt_dose_gy,76,Technika IMRT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-10.txt,rt_fractions,38,Technika IMRT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-10.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-10.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-10.txt,psa_last_ng_ml,0.81,"Ostatnie PSA: 0,81 ng/ml.",Wartość podana wprost.
+DOK-10.txt,gu_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.",Wartość podana wprost.
+DOK-10.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G0, GI G0.",Wartość podana wprost.
+DOK-10.txt,creatinine_mg_dl,0.81,"Wyniki laboratoryjne: kreatynina 0,81 mg/dl; Hb 9,5 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-10.txt,hemoglobin_g_dl,15.31,"Wyniki laboratoryjne: kreatynina 0,81 mg/dl; Hb 9,5 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-10.txt,diabetes,1,"DM t.2, leczona doustnie.","Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-10.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-10.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-11.txt,patient_id,PR-111,"Kajetan Fikcyjny-11; kod rejestru: PR-111. PESEL fikcyjny, błędna cyfra kontrolna: 53061821012.",Wartość podana wprost.
+DOK-11.txt,birth_date,1953-06-18,Ur. 18/06/1953.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-11.txt,psa_dx_ng_ml,5.9,"Rozpoznanie ca prostatae z biopsji z 2022.01.06. PSA przy rozpoznaniu: 5,9 ng/ml.",Wartość podana wprost.
+DOK-11.txt,gleason_primary,3,Gleason 3+4=7.,Wartość podana wprost.
+DOK-11.txt,gleason_secondary,4,Gleason 3+4=7.,Wartość podana wprost.
+DOK-11.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-11.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-11.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-11.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-11.txt,rt_start_date,2022-05-05,RT rozpoczęto: 2022-05-05.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-11.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-11.txt,rt_dose_gy,78,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-11.txt,rt_fractions,39,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-11.txt,adt,0,ADT nie stosowano.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-11.txt,psa_nadir_ng_ml,0.58,"Najniższe PSA po RT (nadir): 0,58 ng/ml.",Wartość podana wprost.
+DOK-11.txt,psa_last_ng_ml,0.64,"Ostatnie PSA: 0,64 ng/ml.",Wartość podana wprost.
+DOK-11.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,58 ng/ml.
+Ostatnie PSA: 0,64 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-11.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-11.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-11.txt,creatinine_mg_dl,0.95,"Z wydruku laboratorium: kreatynina 84,0 µmol/l; Hb 7,9 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-11.txt,hemoglobin_g_dl,12.73,"Z wydruku laboratorium: kreatynina 84,0 µmol/l; Hb 7,9 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-11.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-11.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-11.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-12.txt,patient_id,PR-112,"Lucjan Fikcyjny-12; kod rejestru: PR-112. PESEL fikcyjny, błędna cyfra kontrolna: 49072321119.",Wartość podana wprost.
+DOK-12.txt,birth_date,1949-07-23,Ur. 1949.07.23.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-12.txt,psa_dx_ng_ml,11.04,"Rozpoznanie ca prostatae z biopsji z 2021-08-18. PSA przy rozpoznaniu: 11,04 ng/ml.",Wartość podana wprost.
+DOK-12.txt,gleason_primary,3,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-12.txt,gleason_secondary,4,Wynik biopsji: Gs 3+4=7.,Wartość podana wprost.
+DOK-12.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-12.txt,ct_stage,T1c,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-12.txt,cn_stage,N0,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-12.txt,risk_group,posrednie,Stopień kliniczny: cT1c cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-12.txt,rt_start_date,2021-12-16,Początek napromieniania: 16.12.2021.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-12.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-12.txt,rt_dose_gy,76,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-12.txt,rt_fractions,38,Technika VMAT/IGRT; dawka na prostatę 76 Gy w 38 frakcjach.,Wartość podana wprost.
+DOK-12.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-12.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-12.txt,psa_nadir_ng_ml,0.35,"Najniższe PSA po RT (nadir): 0,35 ng/ml.",Wartość podana wprost.
+DOK-12.txt,psa_last_ng_ml,0.41,"Ostatnie PSA: 0,41 ng/ml.",Wartość podana wprost.
+DOK-12.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,35 ng/ml.
+Ostatnie PSA: 0,41 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-12.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GI G1.",Wartość podana wprost.
+DOK-12.txt,creatinine_mg_dl,0.98,"Badania uzupełniające: kreatynina 86,6 µmol/l; Hb 13,84 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-12.txt,hemoglobin_g_dl,13.84,"Badania uzupełniające: kreatynina 86,6 µmol/l; Hb 13,84 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-12.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-12.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-12.txt,smoking,never,Nigdy nie palił.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-13.txt,patient_id,PR-113,"Mirosław Fikcyjny-13; kod rejestru: PR-113. PESEL fikcyjny, błędna cyfra kontrolna: 43071921219.",Wartość podana wprost.
+DOK-13.txt,birth_date,1943-07-19,Ur. 1943-07-19.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-13.txt,psa_dx_ng_ml,13.98,"Rozpoznanie ca prostatae z biopsji z 08.09.2022. PSA przy rozpoznaniu: 13,98 ng/ml.",Wartość podana wprost.
+DOK-13.txt,gleason_primary,5,Gs 5+4=9.,Wartość podana wprost.
+DOK-13.txt,gleason_secondary,4,Gs 5+4=9.,Wartość podana wprost.
+DOK-13.txt,isup_grade,5,ISUP 5.,Wartość podana wprost.
+DOK-13.txt,ct_stage,T4,Stopień kliniczny: cT4 cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-13.txt,cn_stage,N0,Stopień kliniczny: cT4 cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-13.txt,risk_group,wysokie,Stopień kliniczny: cT4 cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-13.txt,rt_start_date,2022-11-18,Pierwsza frakcja RT: 18/11/2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-13.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-13.txt,rt_dose_gy,70,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-13.txt,rt_fractions,28,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-13.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-13.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-13.txt,psa_nadir_ng_ml,0.2,"Najniższe PSA po RT (nadir): 0,2 ng/ml.",Wartość podana wprost.
+DOK-13.txt,psa_last_ng_ml,0.89,"Ostatnie PSA: 0,89 ng/ml.",Wartość podana wprost.
+DOK-13.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,2 ng/ml.
+Ostatnie PSA: 0,89 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-13.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-13.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-13.txt,creatinine_mg_dl,0.67,"Wyniki laboratoryjne: kreatynina 0,67 mg/dl; Hb 12,34 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-13.txt,hemoglobin_g_dl,12.34,"Wyniki laboratoryjne: kreatynina 0,67 mg/dl; Hb 12,34 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-13.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-13.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-13.txt,smoking,never,Nigdy nie palił.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-14.txt,patient_id,PR-114,"Norbert Fikcyjny-14; kod rejestru: PR-114. PESEL fikcyjny, błędna cyfra kontrolna: 43101421319.",Wartość podana wprost.
+DOK-14.txt,birth_date,1943-10-14,Ur. 14.10.1943.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-14.txt,psa_dx_ng_ml,16.81,"Rozpoznanie ca prostatae z biopsji z 27/10/2021. PSA przy rozpoznaniu: 16,81 ng/ml.",Wartość podana wprost.
+DOK-14.txt,gleason_primary,3,Gleason 3+4=7.,Wartość podana wprost.
+DOK-14.txt,gleason_secondary,4,Gleason 3+4=7.,Wartość podana wprost.
+DOK-14.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-14.txt,ct_stage,T3b,Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-14.txt,cn_stage,N0,Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-14.txt,risk_group,wysokie,Stopień kliniczny: cT3b cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-14.txt,rt_start_date,2022-02-15,RT rozpoczęto: 2022.02.15.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-14.txt,rt_technique,IMRT,Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-14.txt,rt_dose_gy,70,Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-14.txt,rt_fractions,28,Technika IMRT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-14.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-14.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-14.txt,psa_nadir_ng_ml,0.12,"Najniższe PSA po RT (nadir): 0,12 ng/ml.",Wartość podana wprost.
+DOK-14.txt,psa_last_ng_ml,0.97,"Ostatnie PSA: 0,97 ng/ml.",Wartość podana wprost.
+DOK-14.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,12 ng/ml.
+Ostatnie PSA: 0,97 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-14.txt,gu_toxicity_max,2,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.",Wartość podana wprost.
+DOK-14.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G0.",Wartość podana wprost.
+DOK-14.txt,creatinine_mg_dl,1.1,"Z wydruku laboratorium: kreatynina 97,2 µmol/l; Hb 8,0 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-14.txt,hemoglobin_g_dl,12.89,"Z wydruku laboratorium: kreatynina 97,2 µmol/l; Hb 8,0 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-14.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-14.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-14.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-15.txt,patient_id,PR-115,"Olgierd Fikcyjny-15; kod rejestru: PR-115. PESEL fikcyjny, błędna cyfra kontrolna: 62082421413.",Wartość podana wprost.
+DOK-15.txt,birth_date,1962-08-24,Ur. 24/08/1962.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-15.txt,psa_dx_ng_ml,15.37,"Rozpoznanie ca prostatae z biopsji z 2021.07.06. PSA przy rozpoznaniu: 15,37 ng/ml.",Wartość podana wprost.
+DOK-15.txt,gleason_primary,4,Wynik biopsji: Gs 4+3=7.,Wartość podana wprost.
+DOK-15.txt,gleason_secondary,3,Wynik biopsji: Gs 4+3=7.,Wartość podana wprost.
+DOK-15.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-15.txt,ct_stage,T2c,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-15.txt,cn_stage,N0,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-15.txt,risk_group,wysokie,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-15.txt,rt_start_date,2021-12-10,Początek napromieniania: 2021-12-10.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-15.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-15.txt,rt_dose_gy,70,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-15.txt,rt_fractions,28,Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.,Wartość podana wprost.
+DOK-15.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-15.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-15.txt,psa_nadir_ng_ml,0.25,"Najniższe PSA po RT (nadir): 0,25 ng/ml.",Wartość podana wprost.
+DOK-15.txt,psa_last_ng_ml,0.92,"Ostatnie PSA: 0,92 ng/ml.",Wartość podana wprost.
+DOK-15.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,25 ng/ml.
+Ostatnie PSA: 0,92 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-15.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1.",Wartość podana wprost.
+DOK-15.txt,creatinine_mg_dl,0.97,"Badania uzupełniające: kreatynina 85,7 µmol/l; Hb 8,4 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-15.txt,hemoglobin_g_dl,13.54,"Badania uzupełniające: kreatynina 85,7 µmol/l; Hb 8,4 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-15.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-15.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-15.txt,smoking,current,Nadal pali papierosy.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-16.txt,patient_id,PR-116,"Przemysław Fikcyjny-16; kod rejestru: PR-116. PESEL fikcyjny, błędna cyfra kontrolna: 58070621510.",Wartość podana wprost.
+DOK-16.txt,birth_date,1958-07-06,Ur. 1958.07.06.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-16.txt,psa_dx_ng_ml,18.42,"Rozpoznanie ca prostatae z biopsji z 2021-06-26. PSA przy rozpoznaniu: 18,42 ng/ml.",Wartość podana wprost.
+DOK-16.txt,gleason_primary,4,Gs 4+3=7.,Wartość podana wprost.
+DOK-16.txt,gleason_secondary,3,Gs 4+3=7.,Wartość podana wprost.
+DOK-16.txt,isup_grade,3,"W karcie przekazanej przez urologa: ISUP 2. Aneks histopatologiczny, podpisany i potwierdzony: ISUP 3; koryguje wcześniejszy zapis.",Przyjąć ISUP 3 z potwierdzonego aneksu; nie pierwszy wynik 2.
+DOK-16.txt,ct_stage,T2b,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-16.txt,cn_stage,N0,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-16.txt,risk_group,posrednie,Stopień kliniczny: cT2b cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-16.txt,rt_start_date,2021-11-25,Pierwsza frakcja RT: 25.11.2021.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-16.txt,rt_technique,SBRT,"Technika SBRT; dawka na prostatę 36,25 Gy w 5 frakcjach.",Wartość podana wprost.
+DOK-16.txt,rt_dose_gy,36.25,"Technika SBRT; dawka na prostatę 36,25 Gy w 5 frakcjach.",Wartość podana wprost.
+DOK-16.txt,rt_fractions,5,"Technika SBRT; dawka na prostatę 36,25 Gy w 5 frakcjach.",Wartość podana wprost.
+DOK-16.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-16.txt,adt_months,6,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 6 mies.,Wartość podana wprost.
+DOK-16.txt,psa_nadir_ng_ml,0.1,"Najniższe PSA po RT (nadir): 0,1 ng/ml.",Wartość podana wprost.
+DOK-16.txt,psa_last_ng_ml,0.77,"Ostatnie PSA: 0,77 ng/ml.",Wartość podana wprost.
+DOK-16.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,1 ng/ml.
+Ostatnie PSA: 0,77 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-16.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-16.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-16.txt,creatinine_mg_dl,0.92,"Wyniki laboratoryjne: kreatynina 0,92 mg/dl; Hb 15,00 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-16.txt,hemoglobin_g_dl,15,"Wyniki laboratoryjne: kreatynina 0,92 mg/dl; Hb 15,00 g/dl.",Kreatynina w mg/dl. Hb w g/dl.
+DOK-16.txt,diabetes,1,"DM t.2, leczona doustnie.","Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-16.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-16.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-17.txt,patient_id,PR-117,"Radomir Fikcyjny-17; kod rejestru: PR-117. PESEL fikcyjny, błędna cyfra kontrolna: 42031121618.",Wartość podana wprost.
+DOK-17.txt,birth_date,1942-03-11,Ur. 1942-03-11.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-17.txt,psa_dx_ng_ml,8.97,"Rozpoznanie ca prostatae z biopsji z 26.05.2022. PSA przy rozpoznaniu: 8,97 ng/ml.",Wartość podana wprost.
+DOK-17.txt,gleason_primary,4,Gleason 4+3=7.,Wartość podana wprost.
+DOK-17.txt,gleason_secondary,3,Gleason 4+3=7.,Wartość podana wprost.
+DOK-17.txt,ct_stage,T2a,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-17.txt,cn_stage,N0,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-17.txt,risk_group,posrednie,Stopień kliniczny: cT2a cN0. Grupa ryzyka w karcie kwalifikacji: pośrednie.,Wartość podana wprost.
+DOK-17.txt,rt_start_date,2022-08-03,RT rozpoczęto: 03/08/2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-17.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-17.txt,rt_dose_gy,60,Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-17.txt,rt_fractions,20,Technika VMAT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-17.txt,adt,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-17.txt,adt_months,0,ADT nie stosowano. Zaplanowany łączny czas ADT: 0 mies.,Jawne niestosowanie ADT oznacza 0; brak planowanego czasu pozostawić null.
+DOK-17.txt,psa_nadir_ng_ml,0.3,"Najniższe PSA po RT (nadir): 0,3 ng/ml.",Wartość podana wprost.
+DOK-17.txt,psa_last_ng_ml,5.74,"Ostatnie PSA: 5,74 ng/ml.",Wartość podana wprost.
+DOK-17.txt,bcr_phoenix,1,"Najniższe PSA po RT (nadir): 0,3 ng/ml.
+Ostatnie PSA: 5,74 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-17.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-17.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G1.",Wartość podana wprost.
+DOK-17.txt,creatinine_mg_dl,0.78,"Z wydruku laboratorium: kreatynina 69,0 µmol/l; Hb 12,64 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-17.txt,hemoglobin_g_dl,12.64,"Z wydruku laboratorium: kreatynina 69,0 µmol/l; Hb 12,64 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-17.txt,diabetes,1,"DM t.2, leczona doustnie.","Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-17.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-17.txt,smoking,never,Nigdy nie palił.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-18.txt,patient_id,PR-118,"Seweryn Fikcyjny-18; kod rejestru: PR-118. PESEL fikcyjny, błędna cyfra kontrolna: 62072121718.",Wartość podana wprost.
+DOK-18.txt,birth_date,1962-07-21,Ur. 21.07.1962.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-18.txt,psa_dx_ng_ml,22.01,"Rozpoznanie ca prostatae z biopsji z 06/08/2022. PSA przy rozpoznaniu: 22,01 ng/ml.",Wartość podana wprost.
+DOK-18.txt,gleason_primary,4,Wynik biopsji: Gs 4+4=8.,Wartość podana wprost.
+DOK-18.txt,gleason_secondary,4,Wynik biopsji: Gs 4+4=8.,Wartość podana wprost.
+DOK-18.txt,isup_grade,4,ISUP 4.,Wartość podana wprost.
+DOK-18.txt,ct_stage,T2c,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-18.txt,cn_stage,N0,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-18.txt,risk_group,wysokie,Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-18.txt,rt_start_date,2022-11-12,Początek napromieniania: 2022.11.12.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-18.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-18.txt,rt_dose_gy,62,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-18.txt,rt_fractions,20,Technika VMAT/IGRT; dawka na prostatę 62 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-18.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-18.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-18.txt,psa_nadir_ng_ml,0.08,"Najniższe PSA po RT (nadir): 0,08 ng/ml.",Wartość podana wprost.
+DOK-18.txt,gu_toxicity_max,2,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.",Wartość podana wprost.
+DOK-18.txt,gi_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G2, GI G1.",Wartość podana wprost.
+DOK-18.txt,creatinine_mg_dl,1,"Badania uzupełniające: kreatynina 88,4 µmol/l; Hb 9,3 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-18.txt,hemoglobin_g_dl,14.99,"Badania uzupełniające: kreatynina 88,4 µmol/l; Hb 9,3 mmol/l.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-18.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-18.txt,hypertension,0,Nie stwierdzono nadciśnienia tętniczego.,"Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-18.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-19.txt,patient_id,PR-119,"Teodor Fikcyjny-19; kod rejestru: PR-119. PESEL fikcyjny, błędna cyfra kontrolna: 59121721818.",Wartość podana wprost.
+DOK-19.txt,psa_dx_ng_ml,19.87,"Rozpoznanie ca prostatae z biopsji z 2021.11.10. PSA przy rozpoznaniu: 19,87 ng/ml.",Wartość podana wprost.
+DOK-19.txt,gleason_primary,4,Gs 4+3=7.,Wartość podana wprost.
+DOK-19.txt,gleason_secondary,3,Gs 4+3=7.,Wartość podana wprost.
+DOK-19.txt,isup_grade,3,ISUP 3.,Wartość podana wprost.
+DOK-19.txt,ct_stage,T2a,Stopień kliniczny: cT2a cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-19.txt,cn_stage,N1,Stopień kliniczny: cT2a cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-19.txt,risk_group,wysokie,Stopień kliniczny: cT2a cN1. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-19.txt,rt_start_date,2022-01-22,Pierwsza frakcja RT: 2022-01-22.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-19.txt,rt_technique,IMRT,Technika IMRT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-19.txt,rt_dose_gy,60,Technika IMRT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-19.txt,rt_fractions,20,Technika IMRT/IGRT; dawka na prostatę 60 Gy w 20 frakcjach.,Wartość podana wprost.
+DOK-19.txt,adt,1,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-19.txt,adt_months,24,ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.,Wartość podana wprost.
+DOK-19.txt,psa_nadir_ng_ml,0.28,"Najniższe PSA po RT (nadir): 0,28 ng/ml.",Wartość podana wprost.
+DOK-19.txt,psa_last_ng_ml,1,Ostatnie PSA: 1 ng/ml.,Wartość podana wprost.
+DOK-19.txt,bcr_phoenix,0,"Najniższe PSA po RT (nadir): 0,28 ng/ml.
+Ostatnie PSA: 1 ng/ml.","1 gdy ostatnie PSA ≥ nadir + 2 ng/ml, inaczej 0."
+DOK-19.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G2.",Wartość podana wprost.
+DOK-19.txt,gi_toxicity_max,2,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G2.",Wartość podana wprost.
+DOK-19.txt,creatinine_mg_dl,0.78,"Wyniki laboratoryjne: kreatynina 0,78 mg/dl; Hb 9,2 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-19.txt,hemoglobin_g_dl,14.82,"Wyniki laboratoryjne: kreatynina 0,78 mg/dl; Hb 9,2 mmol/l.","Kreatynina w mg/dl. Hb: mmol/l ÷0,6206, do 0,01 g/dl."
+DOK-19.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-19.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-19.txt,smoking,former,Nie pali od 10 lat.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."
+DOK-20.txt,patient_id,PR-120,"Witold Fikcyjny-20; kod rejestru: PR-120. PESEL fikcyjny, błędna cyfra kontrolna: 39092021913.",Wartość podana wprost.
+DOK-20.txt,birth_date,1939-09-20,Ur. 1939.09.20.,Normalizacja daty do ISO. Ukośnik w dokumentach oznacza DD/MM/RRRR.
+DOK-20.txt,psa_dx_ng_ml,10.52,"Rozpoznanie ca prostatae z biopsji z 2022-07-13. PSA przy rozpoznaniu: 10,52 ng/ml.",Wartość podana wprost.
+DOK-20.txt,gleason_primary,3,Gleason 3+4=7.,Wartość podana wprost.
+DOK-20.txt,gleason_secondary,4,Gleason 3+4=7.,Wartość podana wprost.
+DOK-20.txt,isup_grade,2,ISUP 2.,Wartość podana wprost.
+DOK-20.txt,ct_stage,T3a,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-20.txt,cn_stage,N0,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-20.txt,risk_group,wysokie,Stopień kliniczny: cT3a cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.,Wartość podana wprost.
+DOK-20.txt,rt_start_date,2022-12-12,RT rozpoczęto: 12.12.2022.,Data pierwszej frakcji; nie data rozpoczęcia ADT.
+DOK-20.txt,rt_technique,VMAT,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-20.txt,rt_dose_gy,78,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-20.txt,rt_fractions,39,Technika VMAT/IGRT; dawka na prostatę 78 Gy w 39 frakcjach.,Wartość podana wprost.
+DOK-20.txt,adt,1,ADT zastosowano: agonista LHRH.,Wartość podana wprost.
+DOK-20.txt,psa_last_ng_ml,0.91,"Ostatnie PSA: 0,91 ng/ml.",Wartość podana wprost.
+DOK-20.txt,gu_toxicity_max,1,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-20.txt,gi_toxicity_max,0,"Maksymalny odczyn w całej obserwacji, CTCAE: GU G1, GI G0.",Wartość podana wprost.
+DOK-20.txt,creatinine_mg_dl,0.79,"Z wydruku laboratorium: kreatynina 69,8 µmol/l; Hb 13,02 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-20.txt,hemoglobin_g_dl,13.02,"Z wydruku laboratorium: kreatynina 69,8 µmol/l; Hb 13,02 g/dl.","Kreatynina: µmol/l ÷88,4, do 0,01 mg/dl. Hb w g/dl."
+DOK-20.txt,diabetes,0,Nie stwierdzono cukrzycy.,"Udokumentowana obecność=1, jawna negacja=0; bez wywiadu=null."
+DOK-20.txt,hypertension,1,"NT w wywiadzie, leczenie przewlekłe.","Wywiad, nie pojedynczy pomiar ciśnienia."
+DOK-20.txt,smoking,current,Nadal pali papierosy.,"Nie pali od 10 lat=former, nigdy nie palił=never, nadal pali=current."

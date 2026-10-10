@@ -1,0 +1,17 @@
+SYNTHETYCZNA KARTA INFORMACYJNA Z LECZENIA RADIOTERAPIĄ
+Pacjent: Fikcyjny Jan Próbny. Kod: PR-102. Fikcyjny PESEL: 55040312340.
+Data urodzenia 03.04.1955. Rozpoznanie: ca prostatae, PSA 12 ng/ml,
+Gs 3+4=7, ISUP 2, cT2b cN0. Uproszczona grupa ryzyka: pośrednia.
+Pierwsza frakcja RT 03.04.2021. VMAT 60 Gy w 20 frakcjach na prostatę.
+ADT zaplanowano łącznie na 6 miesięcy. Nie opisano zmian przerzutowych.
+Ostatnie PSA 0,3 ng/ml, nadir PSA po radioterapii 0,2 ng/ml; bez nawrotu
+biochemicznego według definicji Phoenix. Maksymalna toksyczność GU CTCAE G1,
+GI CTCAE G0 w całym okresie obserwacji. Kreatynina 88,4 µmol/l; hemoglobina
+13,5 g/dl. Nadciśnienie rozpoznane przed leczeniem. Brak wywiadu dotyczącego cukrzycy i palenia. Wizyta kontrolna odbyła się w kwietniu. Pacjent zgłasza dobry stan
+ogólny i przyjmuje zalecone leczenie. Bez dolegliwości ze strony przewodu
+pokarmowego na aktualnej wizycie. Omówiono dalszą obserwację PSA i postępowanie
+w razie nowych dolegliwości. Dokument służy wyłącznie ćwiczeniom. Każda wartość,
+identyfikator i informacja o leczeniu zostały wymyślone. Zapis aktualnego stanu
+nie zastępuje oceny maksymalnej toksyczności całego okresu leczenia. Wyniki należy
+przepisywać z podanych źródeł. Informacji nieobecnych w dokumencie nie wolno
+uzupełniać na podstawie typowego postępowania ani samego rozpoznania choroby.

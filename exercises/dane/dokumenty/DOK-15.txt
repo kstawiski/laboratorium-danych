@@ -1,0 +1,33 @@
+Wizyta kontrolna po radioterapii: PSA i toksyczność
+PROSTATA-RT | OŚRODEK FIKCYJNY | DOKUMENT SYNTETYCZNY DO ĆWICZEŃ
+Olgierd Fikcyjny-15; kod rejestru: PR-115. PESEL fikcyjny, błędna cyfra kontrolna: 62082421413.
+Ur. 24/08/1962.
+
+1. PSA i tolerancja
+Kontrolne oznaczenie PSA z 25.12.2024.
+Najniższe PSA po RT (nadir): 0,25 ng/ml.
+Ostatnie PSA: 0,92 ng/ml.
+Maksymalny odczyn w całej obserwacji, CTCAE: GU G1.
+
+Nie stwierdzono cukrzycy.
+NT w wywiadzie, leczenie przewlekłe.
+Nadal pali papierosy.
+
+Pacjent zgłasza się z segregatorem wyników. Zestawiono nadir z ostatnim oznaczeniem bez zaokrąglania różnicy do pełnych jednostek. W przypadku osiągnięcia progu Phoenix wynik rejestru oznacza spełnienie definicji biochemicznej. Dalsze postępowanie zależy od całego obrazu choroby; ta karta nie rozstrzyga miejsca ewentualnego nawrotu.
+
+2. Dane rozpoznania
+Rozpoznanie ca prostatae z biopsji z 2021.07.06. PSA przy rozpoznaniu: 15,37 ng/ml.
+Wynik biopsji: Gs 4+3=7.
+ISUP 3.
+Stopień kliniczny: cT2c cN0. Grupa ryzyka w karcie kwalifikacji: wysokie.
+Bez cech przerzutów w PET-PSMA; cN0 w ocenie regionalnych węzłów.
+
+3. Przebyte leczenie
+Początek napromieniania: 2021-12-10.
+Technika VMAT/IGRT; dawka na prostatę 70 Gy w 28 frakcjach.
+ADT zastosowano: agonista LHRH. Zaplanowany łączny czas ADT: 24 mies.
+
+Badania uzupełniające: kreatynina 85,7 µmol/l; Hb 8,4 mmol/l.
+Testosteron 25,3 ng/dl, oznaczenie w trzecim miesiącu ADT.
+
+Do kolejnej kontroli zabrać pełne wydruki badań i listę aktualnie stosowanych leków.

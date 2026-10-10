@@ -1,0 +1,15 @@
+.venv
+venv
+**/__pycache__
+.pytest_cache
+.pytest_tmp
+.test_runtime
+.dependency_cache
+.dependency_tmp
+logs
+cache
+*.key
+**/*.key
+.env
+.env.*
+.git
