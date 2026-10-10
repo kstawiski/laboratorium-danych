@@ -4,7 +4,7 @@
 - Prowadzący: dr n. med. Konrad Stawiski
 - Odbiorcy: lekarze, uczestnicy studiów podyplomowych Uniwersytetu Medycznego w Łodzi
 - Czas trwania: 120 minut
-- Adres aplikacji: https://cwiczenia.radioonkolog.pl
+- Adres aplikacji: https://cwiczenia.konsta.com.pl
 - Login: `student`
 - Hasło: przekaże prowadzący na początku zajęć
 
@@ -48,7 +48,7 @@ Wynik `CZY.LICZBA` = FAŁSZ w kolumnie liczbowej oznacza liczbę zapisaną jako 
 ## Przebieg ćwiczeń krok po kroku
 
 ### Start (0:00–0:05): Przygotowanie stanowiska
-1. Wejdź na stronę https://cwiczenia.radioonkolog.pl.
+1. Wejdź na stronę https://cwiczenia.konsta.com.pl.
 2. Zaloguj się loginem `student` i hasłem podanym przez prowadzącego.
 3. Wpisz nazwę swojej grupy w aplikacji.
 4. Przejdź do zakładki Start i pobierz pliki robocze: `rejestr_brudny.xlsx`, `slownik_danych.xlsx` (lub `.csv`) oraz `karta_znalezisk.xlsx`.
