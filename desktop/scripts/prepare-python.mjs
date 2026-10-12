@@ -56,7 +56,9 @@ if (await fs.readFile(stampFile, 'utf8').catch(() => '') === stamp) {
 }
 await fs.rm(runtime, { recursive: true, force: true });
 await fs.mkdir(runtime, { recursive: true });
-await run('tar', ['-xzf', archive, '-C', runtime]);
+// Na Windows GNU tar z Git Bash traktuje „D:” jako host zdalny; systemowy bsdtar obsługuje litery dysków.
+const tarCommand = process.platform === 'win32' ? path.join(process.env.SystemRoot || 'C:\\Windows', 'System32', 'tar.exe') : 'tar';
+await run(tarCommand, ['-xzf', archive, '-C', runtime]);
 const env = { ...process.env, PYTHONNOUSERSITE: '1', PYTHONPATH: '', PYTHONHOME: '',
   PIP_CACHE_DIR: path.join(cache, 'pip'), PIP_DISABLE_PIP_VERSION_CHECK: '1',
   TMPDIR: path.join(cache, 'pip/tmp'), TMP: path.join(cache, 'pip/tmp'), TEMP: path.join(cache, 'pip/tmp'),
