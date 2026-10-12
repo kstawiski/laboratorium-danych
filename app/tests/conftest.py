@@ -9,6 +9,10 @@ RUNTIME.mkdir(exist_ok=True)
 os.environ['TMPDIR'] = str(RUNTIME)
 tempfile.tempdir = str(RUNTIME)
 
+# Zależności UI wczytujemy przed limitem czasu AppTest, także na wolnym systemie plików.
+import plotly.express
+import openpyxl
+
 from lab.data import read_table, dictionary
 
 FIXTURE = Path(__file__).resolve().parent / 'fixtures'
@@ -30,5 +34,5 @@ def isolated_config(monkeypatch, tmp_path):
     monkeypatch.setenv('DATA_DIR', str(FIXTURE))
     monkeypatch.setenv('LOG_DIR', str(tmp_path / 'logs'))
     monkeypatch.setenv('CACHE_DIR', str(tmp_path / 'cache'))
-    for variable in ('ORNITH_API_KEY', 'ORNITH_API_KEY_FILE', 'QWEN_API_KEY', 'QWEN_API_KEY_FILE', 'ORNITH_BASE_URLS', 'ORNITH_MAX_CONCURRENCY_PER_SERVER'):
+    for variable in ('ORNITH_API_KEY', 'ORNITH_API_KEY_FILE', 'QWEN_API_KEY', 'QWEN_API_KEY_FILE', 'ORNITH_BASE_URLS', 'ORNITH_MAX_CONCURRENCY_PER_SERVER', 'OLLAMA_BASE_URL', 'ALLOW_CUSTOM_ENDPOINT'):
         monkeypatch.delenv(variable, raising=False)

@@ -1,9 +1,10 @@
 """Reguły z pakietu danych. Wyrażenia interpretowane przez listę dozwolonych operacji."""
 from __future__ import annotations
 import ast
-from dataclasses import dataclass, asdict, field
+from dataclasses import dataclass, asdict, field, replace
 from io import StringIO
 from pathlib import Path
+import json
 import operator
 import math
 import re
@@ -158,7 +159,8 @@ def validate_rule(raw: dict, columns: set[str]) -> Rule:
         raise ValueError('Podaj dozwolone wartości.')
     return Rule(str(raw.get('id', 'custom')), str(raw.get('description', 'Reguła własna')),
                 kind, str(variable), low, high, str(raw.get('expression', '')),
-                tuple(raw.get('values') or ()), str(raw.get('severity', 'ostrzezenie')))
+                tuple(raw.get('values') or ()), str(raw.get('severity', 'ostrzezenie')),
+                {'missing_policy': 'skip'} if raw.get('parameters', {}).get('missing_policy') == 'skip' else {})
 
 
 def default_rules(definitions, metadata=None):
@@ -270,12 +272,9 @@ def run_rules(frame, definitions, rules):
             values = category_values(spec.get('dozwolone_wartosci', ''))
             if values: valid[name] &= frame[name].astype(str).isin(values)
     results = []
+    rules, skipped = available_rules(rules, set(frame))
     for rule in rules:
         name, kind = rule.variable, rule.kind
-        if name not in frame:
-            results.append({'wiersz': 1, 'patient_id': '', 'zmienna': name, 'wartosc': 'brak kolumny',
-                            'regula': rule.description, 'typ': 'format', 'powaga': 'krytyczne'})
-            continue
         series = frame[name]
         present = ~missing_mask(series, missing_codes(specs.get(name, {}).get('kod_braku')))
         mask = pd.Series(False, index=frame.index)
@@ -336,6 +335,9 @@ def run_rules(frame, definitions, rules):
             query_frame = typed.copy()
             for column in string_columns: query_frame[column] = frame[column].astype(str)
             mask = query_mask(query_frame, rule.expression, package=package)
+            if rule.parameters.get('missing_policy') == 'skip':
+                for column in referenced:
+                    mask &= ~missing_mask(frame[column], missing_codes(specs.get(column, {}).get('kod_braku')))
             if rule.display_type == 'spójność':
                 empty_allowed = {n.left.id for n in ast.walk(tree) if isinstance(n, ast.Compare)
                                  and isinstance(n.left, ast.Name) and any(isinstance(c, ast.Constant) and c.value == '' for c in n.comparators)}
@@ -346,4 +348,104 @@ def run_rules(frame, definitions, rules):
             results.append({'wiersz': int(index) + 2, 'patient_id': str(frame.at[index, 'patient_id']) if 'patient_id' in frame else '',
                             'zmienna': name, 'wartosc': str(series.at[index]), 'regula': rule.description,
                             'typ': rule.category, 'powaga': rule.severity})
-    return pd.DataFrame(results, columns=RESULT_COLUMNS).drop_duplicates()
+    result = pd.DataFrame(results, columns=RESULT_COLUMNS).drop_duplicates()
+    result.attrs['skipped_rules'] = skipped
+    return result
+
+
+def rule_columns(rule):
+    columns = {rule.variable}
+    if rule.kind == 'query':
+        columns |= {n.id for n in ast.walk(_tree(rule.expression)) if isinstance(n, ast.Name)}
+    if rule.kind == 'age':
+        columns.add(rule.parameters.get('reference_date', ''))
+    if rule.kind == 'chronology':
+        columns |= {name for pair in rule.parameters.get('kolejnosc', []) for name in pair}
+    return columns
+
+
+def available_rules(rules, columns):
+    ready, skipped = [], []
+    for rule in rules:
+        missing = rule_columns(rule) - columns
+        if missing:
+            skipped.append(f"{rule.description} (brak: {', '.join(sorted(missing))})")
+        else:
+            ready.append(rule)
+    return ready, skipped
+
+
+def rule_label(rule):
+    name = rule.variable
+    if rule.kind == 'range':
+        terms = [f'{name} < {rule.minimum:g}' if rule.minimum is not None else '',
+                 f'{name} > {rule.maximum:g}' if rule.maximum is not None else '']
+        return 'Oznacz, gdy ' + ' lub '.join(t for t in terms if t) + ' (braki i nieczytelne liczby pomijane).'
+    if rule.kind == 'query':
+        suffix = ' (wiersze z brakami pomijane)' if rule.parameters.get('missing_policy') == 'skip' else ''
+        if rule.display_type == 'spójność':
+            suffix += ' (ocena tylko przy poprawnych wartościach zależnych; jawny pusty tekst jest wyjątkiem)'
+        return f'Oznacz, gdy {rule.expression}{suffix}.'
+    predicates = {
+        'required': f'{name} jest puste lub zawiera kod braku ze słownika',
+        'numeric': f'{name} nie jest pojedynczą liczbą w zapisie z kropką (braki pomijane)',
+        'integer': f'{name} jest liczbą niecałkowitą (braki i nieczytelne liczby pomijane)',
+        'category': f'{name} jest spoza listy {list(rule.values)} (braki pomijane)',
+        'date': f'{name} nie jest poprawną pełną datą ISO (braki pomijane)',
+        'id': f'{name} ma format lub zakres niezgodny ze słownikiem (braki pomijane)',
+        'unique': f'{name} powtarza się po ujednoliceniu ID (wszystkie wystąpienia; braki pomijane)',
+        'duplicate': 'rekord powtarza wcześniejszy rekord poza ID',
+        'unit': f'{name} ma dopisaną jednostkę inną niż w słowniku (braki pomijane)',
+        'age': f'wiek obliczony z {name} i {rule.parameters.get("reference_date", "")} jest poza zakresem {rule.minimum}–{rule.maximum} (brak poprawnej daty pomijany)',
+        'chronology': f'zachodzi naruszenie kolejności dat: {rule.expression or rule.parameters.get("kolejnosc", [])} (brak poprawnej daty pomijany)',
+    }
+    return 'Oznacz, gdy ' + predicates.get(rule.kind, rule.description) + '.'
+
+
+def custom_rule(raw, columns, correct=False):
+    raw = dict(raw)
+    if raw.get('kind') == 'query':
+        expression = raw.get('expression', '')
+        if correct:
+            expression = f'not ({expression})'
+        raw['expression'] = expression
+        raw['parameters'] = {'missing_policy': 'skip'}
+        raw['description'] = f'Oznacz, gdy {expression} (Własna: braki pomijane).'
+    else:
+        raw['description'] = rule_label(validate_rule(raw, columns)) + ' Własna: zakres.'
+    return validate_rule(raw, columns)
+
+
+def rule_preview(frame, definitions, rule):
+    results = run_rules(frame, definitions, [rule])
+    indices = sorted(set(results.wiersz - 2))
+    columns = [c for c in frame if c == 'patient_id' or c in rule_columns(rule)]
+    return len(indices), frame.iloc[indices[:10]][columns]
+
+
+def import_rules(text, frame, definitions, offset=0):
+    raw = json.loads(text)
+    if not isinstance(raw, list) or len(raw) > 200:
+        raise ValueError('JSON musi zawierać listę najwyżej 200 reguł.')
+    ready, rejected = [], []
+    for index, item in enumerate(raw):
+        try:
+            if not isinstance(item, dict) or item.get('kind') not in {'range', 'category', 'query'}:
+                raise ValueError('Własne reguły: range, category lub query.')
+            item = dict(item, id=f'import:{offset + len(ready)}')
+            rule = validate_rule(item, set(frame))
+            rule = replace(rule, description=rule_label(rule))
+            run_rules(frame, definitions, [rule])
+            ready.append(rule)
+        except (ValueError, TypeError, AttributeError) as exc:
+            rejected.append(f'Reguła {index + 1}: {exc}')
+    return ready, rejected
+
+
+def rule_summary(results, rules):
+    rows = []
+    for rule in rules:
+        flagged = results[results.regula == rule.description]
+        rows.append({'reguła': rule_label(rule), 'oznaczone wiersze': flagged.wiersz.nunique(),
+                     'różni pacjenci': flagged.patient_id[flagged.patient_id != ''].map(normalize_id).nunique()})
+    return pd.DataFrame(rows, columns=['reguła', 'oznaczone wiersze', 'różni pacjenci'])

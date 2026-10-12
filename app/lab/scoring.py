@@ -77,12 +77,16 @@ def restrict_to_rows(key: pd.DataFrame, sources: dict[str, pd.DataFrame], traps:
 
 
 def null_value(value) -> bool:
+    if isinstance(value, (list, dict)):
+        return False
     return is_missing(value, {"", "null", "nan", "none"})
 
 
 def equivalent(actual, expected, variable: str) -> bool:
     if null_value(actual) or null_value(expected):
         return null_value(actual) and null_value(expected)
+    if isinstance(actual, (list, dict)) or isinstance(expected, (list, dict)):
+        return type(actual) is type(expected) and actual == expected
     if variable == "patient_id":
         return normalize_id(actual) == normalize_id(expected)
     a, b = numeric_value(actual, set()), numeric_value(expected, set())
@@ -94,6 +98,8 @@ def equivalent(actual, expected, variable: str) -> bool:
 def discrepancy(actual, expected, variable: str, factors=None) -> str:
     if null_value(actual): return "pominięcie"
     if null_value(expected): return "halucynacja"
+    if isinstance(actual, (list, dict)) or isinstance(expected, (list, dict)):
+        return "błędna wartość"
     for factor in (factors or {}).get(variable, []):
         a, b = numeric_value(actual, set()), numeric_value(expected, set())
         if factor and not math.isnan(a) and not math.isnan(b) and (math.isclose(a / factor, b, abs_tol=0.02, rel_tol=.01) or math.isclose(a * factor, b, abs_tol=0.02, rel_tol=.01)):
@@ -106,6 +112,7 @@ def compare_extraction(results: dict[str, dict], gold: pd.DataFrame, fields: lis
     if document_column is None:
         raise ValueError("Klucz ekstrakcji musi zawierać kolumnę dokument.")
     lookup = {str(row[document_column]).removesuffix(".txt"): row for _, row in gold.iterrows()}
+    fields = [field for field in fields if field in gold]
     rows, documents = [], []
     for document, result in results.items():
         expected = lookup.get(document.removesuffix(".txt"))
@@ -114,14 +121,12 @@ def compare_extraction(results: dict[str, dict], gold: pd.DataFrame, fields: lis
             continue
         correct = 0
         for variable in fields:
-            if variable not in expected:
-                raise ValueError(f"W kluczu ekstrakcji brakuje pola {variable}.")
             actual, target = result.get(variable), expected[variable]
             ok = equivalent(actual, target, variable)
             correct += int(ok)
             rows.append({"dokument": document, "zmienna": variable, "wynik AI": actual, "klucz": None if null_value(target) else target,
                          "zgodność": ok, "typ rozbieżności": "" if ok else discrepancy(actual, target, variable, factors)})
-        documents.append({"dokument": document, "zgodne": correct, "pola": len(fields), "dokładność %": 100 * correct / len(fields), "uwaga": ""})
+        documents.append({"dokument": document, "zgodne": correct, "pola": len(fields), "dokładność %": 100 * correct / len(fields) if fields else None, "uwaga": ""})
     comparisons = pd.DataFrame(rows, columns=["dokument", "zmienna", "wynik AI", "klucz", "zgodność", "typ rozbieżności"])
     per_doc = pd.DataFrame(documents)
     total_fields = sum(d["pola"] for d in documents)

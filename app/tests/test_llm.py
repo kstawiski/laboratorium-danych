@@ -68,7 +68,7 @@ def test_busy_server_error_polish():
     def action(arguments):
         raise RateLimitError('busy',response=httpx.Response(429,request=httpx.Request('POST','http://test/v1')),body={})
     with pytest.raises(ModelError, match='Serwer modelu jest zajęty'):
-        call_model(ModelConfig('t','t','http://test/v1',''),[],TEXT_SCHEMA,client_factory=lambda **kw: FakeClient(action,**kw))
+        call_model(ModelConfig('t','t','http://test/v1','',timeout=.01),[],TEXT_SCHEMA,client_factory=lambda **kw: FakeClient(action,**kw))
 
 
 def test_semaphore_is_shared_and_queue_reported():

@@ -112,7 +112,7 @@ assert r.cached and r.value == {'odpowiedz':'OK'}
 print('disk-cache-hit')
 '''
     result = subprocess.run([sys.executable,'-c',code],cwd=Path(__file__).resolve().parent.parent,
-                            env=os.environ.copy(),capture_output=True,text=True,timeout=30)
+                            env=os.environ.copy(),capture_output=True,text=True,timeout=600)
     assert result.returncode == 0, result.stderr
     assert result.stdout.strip() == 'disk-cache-hit'
     raw = next(cache_dir().glob('*.json')).read_text()

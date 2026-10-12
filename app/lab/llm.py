@@ -1,6 +1,8 @@
 """Klient OpenAI: JSON, globalne limity w procesie, cache i log bez treści."""
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
+import math
 import hashlib
 import json
 import re
@@ -229,6 +231,23 @@ def _unsupported(exc) -> bool:
     return any(word in text for word in ("response_format", "response format", "json_schema", "json schema", "json_object", "json object", "structured output"))
 
 
+def retry_delay(exc, attempt):
+    header = getattr(exc, 'response', None)
+    header = header.headers.get('Retry-After') if header is not None else None
+    if header:
+        try:
+            delay = float(header)
+            if math.isfinite(delay):
+                return max(0.1, delay)
+        except ValueError:
+            try:
+                at = parsedate_to_datetime(header)
+                return max(0.1, (at - datetime.now(timezone.utc)).total_seconds())
+            except (ValueError, TypeError, OverflowError):
+                pass
+    return min(5.0 * 2 ** min(attempt, 6), 60.0)
+
+
 def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperature=.2,
                bypass_cache=False, group="", tab="", on_queue: Callable | None = None,
                client_factory=None, score_extraction=False, max_tokens=700) -> ModelResult:
@@ -282,12 +301,26 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
                     if response_format: arguments["response_format"] = response_format
                     # Parametr rozumowania wysyłamy tylko, gdy konfiguracja go ustawia (np. "minimal" dla Gemma).
                     if config.reasoning_effort: arguments["reasoning_effort"] = config.reasoning_effort
-                    try:
-                        response = client.chat.completions.create(**arguments)
-                        break
-                    except APIError as exc:
-                        if response_format and _unsupported(exc): continue
-                        raise
+                    retry = 0
+                    while True:
+                        remaining = deadline - time.monotonic()
+                        if remaining <= 0: raise ModelError(BUSY_MESSAGE)
+                        arguments['timeout'] = remaining
+                        try:
+                            response = client.chat.completions.create(**arguments)
+                            break
+                        except APIError as exc:
+                            if getattr(exc, 'status_code', None) == 429:
+                                if on_queue: on_queue()
+                                delay = retry_delay(exc, retry)
+                                remaining = deadline - time.monotonic()
+                                if delay >= remaining: raise ModelError(BUSY_MESSAGE) from exc
+                                time.sleep(delay)
+                                retry += 1
+                                continue
+                            if response_format and _unsupported(exc): break
+                            raise
+                    if response is not None: break
                 break
             except APIConnectionError:
                 excluded.add(url)

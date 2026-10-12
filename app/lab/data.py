@@ -76,9 +76,6 @@ def package_problem(path: Path) -> str | None:
             return "Słownik musi mieć unikalne zmienne i pole patient_id."
         scenario(path)
         registry_file(path)
-        for name in ("reguly.yaml", "ekstrakcja_prompt.txt", "ekstrakcja_schemat.json"):
-            if not (path / name).is_file():
-                return f"Brak {name} w DATA_DIR."
     except (OSError, ValueError, UnicodeError) as exc:
         return f"Nie można odczytać pakietu DATA_DIR: {exc}"
     return None

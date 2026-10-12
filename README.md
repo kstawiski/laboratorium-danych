@@ -13,7 +13,7 @@ Repozytorium zawiera:
 ## Szybki start (lokalnie)
 
 1. Zainstaluj [Ollama](https://ollama.com) i uruchom `ollama run ornith-1.5:9b` (albo w [LM Studio](https://lmstudio.ai) pobierz `ornith-ai/Ornith-1.5-9B-GGUF`, wariant Q4_K_M).
-2. W katalogu `app/`: `pip install -r requirements.txt`, potem ustaw `ORNITH_BASE_URL=http://localhost:11434/v1` i `ORNITH_MODEL=ornith-1.5:9b`.
+2. W katalogu `app/`: `pip install -r requirements.txt`, potem ustaw `OLLAMA_BASE_URL=http://localhost:11434`. Zainstalowane modele pojawią się w panelu.
 3. `streamlit run app.py` — aplikacja sama znajdzie pakiet w `../exercises/dane`.
 
 Model: [ornith-ai/Ornith-1.5-9B](https://huggingface.co/ornith-ai/Ornith-1.5-9B), licencja MIT.
@@ -21,3 +21,5 @@ Model: [ornith-ai/Ornith-1.5-9B](https://huggingface.co/ornith-ai/Ornith-1.5-9B)
 ## English summary
 
 Teaching materials for a data hygiene workshop for physicians: a Streamlit app (EDA, validation rules, local-LLM extraction from clinical notes, AI plausibility checks, scoring against an answer key), a fully synthetic prostate cancer radiotherapy registry with 56 injected errors and 20 synthetic clinical notes, and Polish handouts. Runs with any OpenAI-compatible local server (Ollama, LM Studio). Synthetic data only; not a medical device. MIT licence.
+
+Samodzielną instalację przez Docker Compose z Ollama, własne serwery OpenAI API, słowniki, reguły i dokumenty opisano w [app/README.md](app/README.md#samodzielna-instalacja-z-ollama). Własne materiały pozostają w sesji; klucz pakietu ocenia tylko materiały, do których się odnosi.

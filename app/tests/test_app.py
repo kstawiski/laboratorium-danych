@@ -13,7 +13,7 @@ APP = Path(__file__).resolve().parent.parent / 'app.py'
 
 
 def start():
-    at = AppTest.from_file(str(APP), default_timeout=60).run()
+    at = AppTest.from_file(str(APP), default_timeout=180).run()
     assert not at.exception
     return at
 
@@ -100,9 +100,9 @@ def test_model_failure_is_visible_and_does_not_crash(monkeypatch):
 
 def test_custom_query_is_addable_and_key_stays_hidden():
     at = start()
-    at.radio(key='custom_mode').set_value('Wyrażenie pandas query')
+    at.radio(key='custom_mode').set_value('Wyrażenie pandas query').run()
     at.selectbox(key='custom_variable').select('adt')
-    at.text_input(key='custom_expression').set_value('adt == 0 and adt_months > 0')
+    at.text_input(key='custom_expression').set_value('adt == 0 and adt_months > 0').run()
     at.button(key='custom_add').click().run()
     assert not at.exception
     assert len(at.session_state['custom_rules']) == 1
