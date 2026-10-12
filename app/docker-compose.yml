@@ -6,13 +6,14 @@ services:
     environment:
       DATA_DIR: /data
       OLLAMA_BASE_URL: http://ollama:11434
-      ALLOW_CUSTOM_ENDPOINT: "1"
+      LAB_USER_DIR: /app/user
       CACHE_DIR: /app/cache
       LOG_DIR: /app/logs
     volumes:
       - ${DATA_DIR:-../exercises/dane}:/data:ro
       - app-cache:/app/cache
       - app-logs:/app/logs
+      - app-user:/app/user
     depends_on:
       - ollama
     restart: unless-stopped
@@ -33,3 +34,4 @@ volumes:
   ollama-models:
   app-cache:
   app-logs:
+  app-user:

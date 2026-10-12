@@ -13,19 +13,20 @@ if [[ ! -f "$DATA_PATH/slownik_danych.csv" || ! -f "$DATA_PATH/scenariusz.json" 
     printf '%s\n' 'Brak pakietu danych. Ustaw DATA_DIR na kompletny katalog dane.' >&2
     exit 1
 fi
-mkdir -p "$LOG_PATH" "$CACHE_PATH"
+USER_PATH="${LAB_USER_DIR:-$APP_PATH/user}"
+mkdir -p "$LOG_PATH" "$CACHE_PATH" "$USER_PATH"
 args=(--detach --name "$CONTAINER_NAME" --restart unless-stopped
       --user "$(id -u):$(id -g)" --network host
       --mount "type=bind,src=$(cd -- "$DATA_PATH" && pwd),dst=/data,readonly"
       --mount "type=bind,src=$(cd -- "$LOG_PATH" && pwd),dst=/app/logs"
       --mount "type=bind,src=$(cd -- "$CACHE_PATH" && pwd),dst=/app/cache"
-      --env "ORNITH_BASE_URL=${ORNITH_BASE_URL:-http://localhost:11434/v1}"
-      --env "QWEN_BASE_URL=${QWEN_BASE_URL:-http://localhost:4000/v1}")
+      --mount "type=bind,src=$(cd -- "$USER_PATH" && pwd),dst=/app/user"
+)
 if [[ -n "${ENV_FILE:-}" ]]; then args+=(--env-file "$ENV_FILE"); fi
-args+=(--env DATA_DIR=/data --env LOG_DIR=/app/logs --env CACHE_DIR=/app/cache
+args+=(--env LAB_USER_DIR=/app/user --env DATA_DIR=/data --env LOG_DIR=/app/logs --env CACHE_DIR=/app/cache
        --env "STREAMLIT_SERVER_ADDRESS=$BIND_ADDRESS")
 for variable in ORNITH_BASE_URL ORNITH_BASE_URLS ORNITH_API_KEY ORNITH_MODEL ORNITH_MAX_CONCURRENCY_PER_SERVER ORNITH_LABEL ORNITH_REASONING_EFFORT \
-                QWEN_BASE_URL QWEN_API_KEY QWEN_MODEL QWEN_LABEL QWEN_REASONING_EFFORT OLLAMA_BASE_URL ALLOW_CUSTOM_ENDPOINT; do
+                QWEN_BASE_URL QWEN_API_KEY QWEN_MODEL QWEN_LABEL QWEN_REASONING_EFFORT OLLAMA_BASE_URL LAB_PUBLIC_SERVER; do
     if [[ -v "$variable" ]]; then args+=(--env "$variable=${!variable}"); fi
 done
 # Pliki hosta z kluczami są montowane tylko do odczytu; treść nie trafia do obrazu.

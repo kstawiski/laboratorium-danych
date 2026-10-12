@@ -61,7 +61,7 @@ def test_ollama_tags_cache_fallback_and_failure(monkeypatch):
     http_client(monkeypatch, handler)
     configs, note = endpoints.ollama_models('http://ollama:11434')
     assert list(configs) == ['Ollama: qwen2.5:7b', 'Ollama: gemma3:4b'] and note is None
-    assert all(c.base_url == 'http://ollama:11434/v1' and not c.api_key for c in configs.values())
+    assert all(c.base_url == 'http://ollama:11434' and c.transport == 'ollama' and not c.api_key for c in configs.values())
     assert endpoints.ollama_models('http://ollama:11434')[0] == configs and len(calls) == 1
     endpoints._CACHE['http://ollama:11434'] = (0, configs, None)
     endpoints.ollama_models('http://ollama:11434')
@@ -320,20 +320,22 @@ def test_ui_missing_documents_schema_and_own_registry_dictionary(monkeypatch, tm
     assert at.multiselect(key='selected_docs').value == ['własny:dokument.txt']
 
 
-def test_ui_custom_endpoint_opt_in_ollama_and_unreachable(monkeypatch):
+def test_ui_local_custom_endpoint_ollama_and_unreachable(monkeypatch):
+    import lab.model_ui as ui
     at = start()
     assert not any(e.label == 'Własny serwer modelu' for e in at.expander)
     monkeypatch.setenv('OLLAMA_BASE_URL', 'http://ollama')
-    monkeypatch.setattr(endpoints, 'ollama_models', lambda _: ({'Ollama: local': ModelConfig('Ollama: local', 'local', 'http://ollama/v1', '')}, None))
-    monkeypatch.setenv('ALLOW_CUSTOM_ENDPOINT', '1')
+    monkeypatch.setattr(ui, '_discover_ollama', lambda _: ({'Ollama: local': ModelConfig('Ollama: local', 'local', 'http://ollama/v1', '')}, None))
     at = start()
     assert 'Ollama: local' in at.selectbox(key='chosen_model').options
     monkeypatch.setattr(endpoints, 'endpoint_models', lambda url, key: ['installed'])
+    at.radio(key='ai_provider').set_value(ui.CUSTOM).run()
+    monkeypatch.setattr(ui, 'test_connection', lambda _: True)
     at.text_input(key='endpoint_url').set_value('http://test')
     at.text_input(key='endpoint_key').set_value('fixture-secret')
     at.button(key='endpoint_fetch').click().run()
     at.button(key='endpoint_use').click().run()
-    at.selectbox(key='chosen_model').select('Własny serwer').run()
+    at.selectbox(key='chosen_model').select('Własny serwer: installed').run()
     calls = []
     def mock(config, messages, schema, **kwargs):
         calls.append((config, kwargs))
@@ -342,8 +344,9 @@ def test_ui_custom_endpoint_opt_in_ollama_and_unreachable(monkeypatch):
     at.chat_input(key='chat_question').set_value('Test').run()
     assert calls[0][0].api_key == 'fixture-secret' and calls[0][0].base_url == 'http://test/v1' and calls[0][1]['bypass_cache']
     assert 'fixture-secret' not in str([e.value for e in at.markdown])
-    monkeypatch.setattr(endpoints, 'ollama_models', lambda _: ({}, 'Ollama jest niedostępna.'))
+    monkeypatch.setattr(ui, '_discover_ollama', lambda _: ({}, 'Ollama jest niedostępna.'))
     at = start()
+    at.radio(key='ai_provider').set_value(ui.OLLAMA).run()
     assert len([e for e in at.info if 'Ollama' in e.value]) == 1
     assert {'Ornith', 'Qwen'}.issubset(at.selectbox(key='chosen_model').options)
 
@@ -362,11 +365,12 @@ def test_compose_and_env_documentation():
     app = APP.parent
     compose = yaml.safe_load((app / 'docker-compose.yml').read_text())
     assert compose['services']['app']['environment']['OLLAMA_BASE_URL'] == 'http://ollama:11434'
-    assert compose['services']['app']['environment']['ALLOW_CUSTOM_ENDPOINT'] == '1'
+    assert 'ALLOW_CUSTOM_ENDPOINT' not in compose['services']['app']['environment']
+    assert compose['services']['app']['environment']['LAB_USER_DIR'] == '/app/user'
     assert any(v.endswith(':/data:ro') for v in compose['services']['app']['volumes'])
     assert compose['services']['ollama']['image'] == 'ollama/ollama'
     assert 'ollama-models' in compose['volumes']
-    for name in ('OLLAMA_BASE_URL', 'ALLOW_CUSTOM_ENDPOINT'):
+    for name in ('OLLAMA_BASE_URL', 'LAB_PUBLIC_SERVER', 'LAB_USER_DIR'):
         assert name in (app / '.env.example').read_text() and name in (app / 'README.md').read_text()
 
 

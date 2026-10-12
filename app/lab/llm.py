@@ -8,6 +8,9 @@ import json
 import re
 import os
 import tempfile
+import httpx
+from types import SimpleNamespace
+from .local_models import context_size
 import threading
 import time
 from typing import Callable
@@ -122,7 +125,7 @@ def validate_json(value, schema: dict, path: str = "wynik"):
             try:
                 date.fromisoformat(value)
             except ValueError as exc:
-                raise ModelError(f"Pole {path} nie jest poprawną datą.") from exc
+                raise ModelError(f"Pole {path} nie jest poprawną datą.") from None
 
 
 def structural_schema(schema):
@@ -159,7 +162,7 @@ def _read_cache(key, validation_schema, start):
         # Niepełny lub niezgodny wpis nie blokuje nowego zapytania.
         return None
     except OSError as exc:
-        raise ModelError("Nie można odczytać pamięci podręcznej. Sprawdź uprawnienia CACHE_DIR.") from exc
+        raise ModelError("Nie można odczytać pamięci podręcznej. Sprawdź uprawnienia katalogu pamięci podręcznej.") from None
 
 
 def _write_cache(key, result):
@@ -176,7 +179,7 @@ def _write_cache(key, result):
             os.fsync(handle.fileno())
         os.replace(temporary, directory / (key + ".json"))
     except OSError as exc:
-        raise ModelError("Nie można zapisać pamięci podręcznej. Sprawdź uprawnienia CACHE_DIR.") from exc
+        raise ModelError("Nie można zapisać pamięci podręcznej. Sprawdź uprawnienia katalogu pamięci podręcznej.") from None
     finally:
         if temporary and os.path.exists(temporary): os.unlink(temporary)
 
@@ -186,9 +189,9 @@ def _reserve_server(config, deadline, excluded, on_queue):
     with _CONDITION:
         while True:
             candidates = [u for u in config.servers if u not in excluded]
-            candidates.sort(key=lambda u: _ACTIVE.get((u, config.model), 0))
+            candidates.sort(key=lambda u: _ACTIVE.get((u, 'ollama' if config.transport == 'ollama' else config.model), 0))
             for url in candidates:
-                key = (url, config.model)
+                key = (url, 'ollama' if config.transport == 'ollama' else config.model)
                 sem = _SERVER_SEMAPHORES.setdefault(key, threading.BoundedSemaphore(config.per_server_concurrency))
                 if sem.acquire(blocking=False):
                     _ACTIVE[key] = _ACTIVE.get(key, 0) + 1
@@ -203,15 +206,16 @@ def _reserve_server(config, deadline, excluded, on_queue):
 
 def _release_server(config, url, semaphore):
     with _CONDITION:
-        _ACTIVE[(url, config.model)] -= 1
+        _ACTIVE[(url, 'ollama' if config.transport == 'ollama' else config.model)] -= 1
         semaphore.release()
         _CONDITION.notify_all()
 
 
 def _log(config, group, tab, result=None, status="ok", elapsed=0):
     now = datetime.now(timezone.utc)
-    clean = lambda text: re.sub(r"[\r\n\x00-\x1f]", " ", str(text))[:80]
-    record = {"czas": now.isoformat(), "grupa": clean(group), "zakladka": clean(tab), "model": config.model,
+    scrub = lambda text: str(text).replace(config.api_key, '[klucz ukryty]') if config.api_key else str(text)
+    clean = lambda text: re.sub(r"[\r\n\x00-\x1f]", " ", scrub(text))[:80]
+    record = {"czas": now.isoformat(), "grupa": clean(group), "zakladka": clean(tab), "model": scrub(config.model),
               "liczba_tokenow": result.tokens if result and not result.cached else 0,
               "czas_odpowiedzi_s": round(result.elapsed if result else elapsed, 3),
               "cache": bool(result and result.cached), "status": status, "json_mode": result.json_mode if result else ""}
@@ -221,7 +225,7 @@ def _log(config, group, tab, result=None, status="ok", elapsed=0):
         with _LOG_LOCK, (directory / f"zapytania-{now:%Y-%m-%d}.jsonl").open("a", encoding="utf-8") as handle:
             handle.write(json.dumps(record, ensure_ascii=False) + "\n")
     except OSError as exc:
-        raise ModelError("Nie można zapisać logu zapytań. Sprawdź uprawnienia katalogu logs.") from exc
+        raise ModelError("Nie można zapisać logu zapytań. Sprawdź uprawnienia katalogu logów.") from None
 
 
 def _unsupported(exc) -> bool:
@@ -252,6 +256,7 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
                bypass_cache=False, group="", tab="", on_queue: Callable | None = None,
                client_factory=None, score_extraction=False, max_tokens=700) -> ModelResult:
     """Trwały cache; 6 zapytań/model, osobny limit/serwer, jeden retry połączenia."""
+    bypass_cache = bypass_cache or config.session_only
     start = time.monotonic()
     deadline = start + config.timeout
     prepared = prepared_messages(messages, schema)
@@ -276,7 +281,8 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
                     if on_queue: on_queue()
                     _CONDITION.wait(remaining)
         with _LOCK:
-            semaphore = _SEMAPHORES.setdefault(config.model, threading.BoundedSemaphore(min(6, config.concurrency)))
+            semaphore = _SEMAPHORES.setdefault(('ollama', config.base_url) if config.transport == 'ollama' else config.model,
+                                                  threading.BoundedSemaphore(1 if config.transport == 'ollama' else min(6, config.concurrency)))
         acquired = semaphore.acquire(blocking=False)
         if not acquired:
             if on_queue: on_queue()
@@ -289,38 +295,42 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
             try:
                 remaining = deadline - time.monotonic()
                 if remaining <= 0: raise ModelError(BUSY_MESSAGE)
-                client = (client_factory or OptionalAuthOpenAI)(base_url=url, api_key=config.api_key,
-                                                              timeout=remaining, max_retries=0)
-                formats = [("json_schema", {"type": "json_schema", "json_schema": {"name": "wynik", "strict": True, "schema": schema}}),
-                           ("json_object", {"type": "json_object"}), ("prompt_json", None)]
-                for mode, response_format in formats:
-                    remaining = deadline - time.monotonic()
-                    if remaining <= 0: raise ModelError(BUSY_MESSAGE)
-                    arguments = dict(model=config.model, messages=prepared, temperature=temperature,
-                                     max_tokens=max_tokens, timeout=remaining)
-                    if response_format: arguments["response_format"] = response_format
-                    # Parametr rozumowania wysyłamy tylko, gdy konfiguracja go ustawia (np. "minimal" dla Gemma).
-                    if config.reasoning_effort: arguments["reasoning_effort"] = config.reasoning_effort
-                    retry = 0
-                    while True:
+                if config.transport == 'ollama':
+                    mode = 'ollama_schema'
+                    response = _ollama_response(config, url, prepared, schema, temperature, max_tokens, remaining)
+                else:
+                    client = (client_factory or OptionalAuthOpenAI)(base_url=url, api_key=config.api_key,
+                                                                  timeout=remaining, max_retries=0)
+                    formats = [("json_schema", {"type": "json_schema", "json_schema": {"name": "wynik", "strict": True, "schema": schema}}),
+                               ("json_object", {"type": "json_object"}), ("prompt_json", None)]
+                    for mode, response_format in formats:
                         remaining = deadline - time.monotonic()
                         if remaining <= 0: raise ModelError(BUSY_MESSAGE)
-                        arguments['timeout'] = remaining
-                        try:
-                            response = client.chat.completions.create(**arguments)
-                            break
-                        except APIError as exc:
-                            if getattr(exc, 'status_code', None) == 429:
-                                if on_queue: on_queue()
-                                delay = retry_delay(exc, retry)
-                                remaining = deadline - time.monotonic()
-                                if delay >= remaining: raise ModelError(BUSY_MESSAGE) from exc
-                                time.sleep(delay)
-                                retry += 1
-                                continue
-                            if response_format and _unsupported(exc): break
-                            raise
-                    if response is not None: break
+                        arguments = dict(model=config.model, messages=prepared, temperature=temperature,
+                                         max_tokens=max_tokens, timeout=remaining)
+                        if response_format: arguments["response_format"] = response_format
+                        # Parametr rozumowania wysyłamy tylko, gdy konfiguracja go ustawia (np. "minimal" dla Gemma).
+                        if config.reasoning_effort: arguments["reasoning_effort"] = config.reasoning_effort
+                        retry = 0
+                        while True:
+                            remaining = deadline - time.monotonic()
+                            if remaining <= 0: raise ModelError(BUSY_MESSAGE)
+                            arguments['timeout'] = remaining
+                            try:
+                                response = client.chat.completions.create(**arguments)
+                                break
+                            except APIError as exc:
+                                if getattr(exc, 'status_code', None) == 429:
+                                    if on_queue: on_queue()
+                                    delay = retry_delay(exc, retry)
+                                    remaining = deadline - time.monotonic()
+                                    if delay >= remaining: raise ModelError(BUSY_MESSAGE) from None
+                                    time.sleep(delay)
+                                    retry += 1
+                                    continue
+                                if response_format and _unsupported(exc): break
+                                raise
+                        if response is not None: break
                 break
             except APIConnectionError:
                 excluded.add(url)
@@ -343,12 +353,14 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
         return result
     except (RateLimitError, APITimeoutError, APIConnectionError) as exc:
         _log(config, group, tab, status='serwer_niedostepny', elapsed=time.monotonic() - start)
-        raise ModelError(BUSY_MESSAGE) from exc
-    except APIError as exc:
+        raise ModelError(BUSY_MESSAGE) from None
+    except (APIError, ValueError, TypeError) as exc:
         _log(config, group, tab, status='blad_api', elapsed=time.monotonic() - start)
-        raise ModelError("Nie udało się wywołać modelu. Sprawdź adres i klucz lub wybierz drugi model w panelu.") from exc
-    except ModelError:
+        raise ModelError("Nie udało się wywołać modelu. Sprawdź adres i klucz lub wybierz drugi model w panelu.") from None
+    except ModelError as exc:
         _log(config, group, tab, status='blad', elapsed=time.monotonic() - start)
+        if config.api_key and config.api_key in str(exc):
+            raise ModelError(str(exc).replace(config.api_key, '[klucz ukryty]')) from None
         raise
     finally:
         if acquired: semaphore.release()
@@ -356,3 +368,22 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
             with _CONDITION:
                 _INFLIGHT.discard(key)
                 _CONDITION.notify_all()
+
+
+def _ollama_response(config, url, messages, schema, temperature, max_tokens, timeout):
+    body = {'model': config.model, 'messages': messages, 'stream': False, 'format': schema,
+            'think': False, 'keep_alive': '15m',
+            'options': {'num_ctx': context_size(messages, max_tokens), 'temperature': temperature,
+                        'num_predict': max_tokens}}
+    try:
+        with httpx.Client(timeout=timeout, follow_redirects=False, trust_env=False) as client:
+            response = client.post(url.rstrip('/') + '/api/chat', json=body)
+            response.raise_for_status()
+            data = response.json()
+        if data.get('error') or not data.get('done'):
+            raise ValueError
+        return SimpleNamespace(choices=[SimpleNamespace(finish_reason=data.get('done_reason'),
+                               message=SimpleNamespace(content=data['message']['content']))],
+                               usage=SimpleNamespace(total_tokens=int(data.get('prompt_eval_count', 0)) + int(data.get('eval_count', 0))))
+    except (httpx.HTTPError, ValueError, KeyError, TypeError, AttributeError):
+        raise ModelError('Ollama nie odpowiedziała poprawnie. Sprawdź, czy jest uruchomiona i czy komputer ma dość pamięci. Spróbuj ponownie lub wybierz mniejszy model.') from None

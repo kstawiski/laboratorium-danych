@@ -198,7 +198,6 @@ async function start() {
     stdio: ['ignore', 'pipe', 'pipe'],
     env: { ...process.env, LAB_DESKTOP: '1', LAB_USER_DIR: userDir,
       DATA_DIR: path.join(resources, 'dane'), LOG_DIR: path.join(userDir, 'logs'), CACHE_DIR: path.join(userDir, 'cache'),
-      OLLAMA_BASE_URL: 'http://127.0.0.1:11434', ALLOW_CUSTOM_ENDPOINT: '1',
       PYTHONNOUSERSITE: '1', PYTHONDONTWRITEBYTECODE: '1', PYTHONUNBUFFERED: '1', PYTHONHOME: '', PYTHONPATH: '',
       NO_PROXY: [process.env.NO_PROXY, '127.0.0.1', 'localhost', '::1'].filter(Boolean).join(','),
       no_proxy: [process.env.no_proxy, '127.0.0.1', 'localhost', '::1'].filter(Boolean).join(',') }

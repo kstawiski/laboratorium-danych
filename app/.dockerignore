@@ -13,3 +13,7 @@ cache
 .env
 .env.*
 .git
+
+user
+**/ustawienia.json
+**/.ustawienia-*

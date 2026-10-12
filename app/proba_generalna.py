@@ -17,9 +17,13 @@ from lab.prompts import DEFAULT_TEMPERATURE
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--model", default=next(iter(model_configs()))); args = ap.parse_args()
+    configs = model_configs()
+    if not configs:
+        print('Nie uruchomiono próby: administrator musi skonfigurować adres modelu ORNITH_BASE_URL lub QWEN_BASE_URL.')
+        return 1
+    ap = argparse.ArgumentParser(); ap.add_argument("--model", choices=list(configs), default=next(iter(configs))); args = ap.parse_args()
     path = data_dir(); out = log_dir() / "proba_generalna" / args.model.lower(); out.mkdir(parents=True, exist_ok=True)
-    config = model_configs()[args.model]
+    config = configs[args.model]
     definitions = dictionary(path); metadata = scenario(path); frame = read_table(registry_file(path))
     extraction, suspicions, failures, cached = {}, [], [], 0
     for job in default_jobs(path):
@@ -63,4 +67,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

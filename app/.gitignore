@@ -14,3 +14,8 @@ __pycache__/
 .env.*
 !.env.example
 .DS_Store
+
+# Ustawienia użytkownika zawierają klucze API.
+user/
+**/ustawienia.json
+**/.ustawienia-*

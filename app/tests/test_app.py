@@ -119,7 +119,7 @@ def test_incompatible_data_dir_shows_warning_and_uses_fixture(monkeypatch, tmp_p
     monkeypatch.setattr(lab.llm,'call_model',forbidden)
     at = start()
     assert len(at.get('tab')) == 7
-    assert any('Nie można odczytać pakietu DATA_DIR' in item.value for item in at.warning)
+    assert any('Nie można odczytać pakietu ćwiczeń' in item.value for item in at.warning)
     assert any('fixture' in item.value for item in at.warning)
     assert len(at.multiselect(key='selected_docs').options) == 2
 

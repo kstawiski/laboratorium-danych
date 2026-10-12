@@ -7,8 +7,9 @@ import json
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-from lab.config import APP_DIR, data_dir, model_configs, ModelConfig
-from lab.endpoints import ollama_models, endpoint_models, endpoint_url
+from lab.config import APP_DIR, data_dir
+from lab.model_ui import model_panel, first_run_guide
+from lab.settings import public_mode
 from lab.universal import (MINIMAL_SCHEMA, DEFAULT_PROMPT, own_dictionary, validate_extraction_schema,
                            schema_fields, add_document, MAX_DOCUMENTS, MAX_DOCUMENT_BYTES)
 from lab.data import (read_table, dictionary, excel_bytes, csv_bytes, document_zip,
@@ -43,51 +44,18 @@ st.markdown("""<style>.stApp {background:#fff} .block-container {padding-top:2re
 st.title("Laboratorium danych")
 st.warning("Dane są w pełni syntetyczne. Nie wolno tu wklejać ani wgrywać prawdziwych danych pacjentów.")
 
-try:
-    configs = model_configs()
-except (OSError, ValueError):
-    st.error("Nie można odczytać konfiguracji modelu. Sprawdź zmienne środowiskowe i plik klucza.")
-    st.stop()
 with st.sidebar:
     st.header("Ustawienia")
     group = st.text_input("Nazwa grupy", key="group", placeholder="np. Grupa 1", max_chars=80)
-    if os.getenv('OLLAMA_BASE_URL'):
-        try:
-            local_models, local_note = ollama_models(os.environ['OLLAMA_BASE_URL'])
-            configs.update(local_models)
-        except ValueError:
-            local_note = 'Ollama jest niedostępna. Sprawdź OLLAMA_BASE_URL.'
-        if local_note:
-            st.info(local_note)
-    if os.getenv('ALLOW_CUSTOM_ENDPOINT') == '1':
-        with st.expander("Własny serwer modelu"):
-            custom_url = st.text_input("Adres OpenAI API", key="endpoint_url", placeholder="http://localhost:1234/v1")
-            custom_key = st.text_input("Klucz API (opcjonalny)", type="password", key="endpoint_key")
-            custom_name = st.text_input("Nazwa modelu", key="endpoint_model")
-            if st.button("Pobierz listę modeli", key="endpoint_fetch"):
-                try:
-                    st.session_state.endpoint_models = endpoint_models(custom_url, custom_key)
-                    st.session_state.endpoint_models_url = custom_url
-                except ValueError as exc:
-                    st.session_state.endpoint_models = []
-                    st.error(str(exc))
-            if st.session_state.get('endpoint_models') and st.session_state.get('endpoint_models_url') == custom_url:
-                def select_endpoint_model():
-                    st.session_state.endpoint_model = st.session_state.endpoint_pick
-                st.selectbox("Modele na serwerze", st.session_state.endpoint_models, key="endpoint_pick", on_change=select_endpoint_model)
-                st.button("Użyj wybranego modelu", key="endpoint_use", on_click=select_endpoint_model)
-            if custom_url and custom_name.strip():
-                try:
-                    configs['Własny serwer'] = ModelConfig('Własny serwer', custom_name.strip(), endpoint_url(custom_url), custom_key)
-                except ValueError as exc:
-                    st.error(str(exc))
-            st.caption("Klucz pozostaje tylko w sesji. Zapytania do własnego serwera pomijają trwały cache.")
-    if st.session_state.get('chosen_model') not in configs:
-        st.session_state.chosen_model = next(iter(configs))
-    chosen_model = st.selectbox("Model", list(configs), key="chosen_model")
+    configs, chosen_model, ollama_root, ollama_note = model_panel()
     temperature = st.slider("Temperatura", 0.0, 1.0, 0.2, 0.05, key="temperature")
     bypass_cache = st.checkbox("Nie używaj pamięci podręcznej (nowe zapytanie do modelu)", key="bypass_cache")
-    st.caption(f"{configs[chosen_model].model} · limit czasu 180 s · {configs[chosen_model].concurrency} zapytań naraz")
+    if chosen_model:
+        config = configs[chosen_model]
+        if config.transport == 'ollama':
+            st.caption('Model działa na tym komputerze. Odpowiedź może potrwać minutę. Limit oczekiwania wynosi 10 minut; zapytania są wykonywane kolejno.')
+        else:
+            st.caption(f"{config.model} · limit czasu {config.timeout:.0f} s.")
     uploaded = st.file_uploader("Własny rejestr (xlsx / csv)", type=["xlsx", "csv"], key="registry_upload", max_upload_size=10)
     dictionary_upload = st.file_uploader("Własny słownik danych (xlsx / csv)", type=["xlsx", "csv"], key="dictionary_upload", max_upload_size=5)
     st.download_button("Pobierz wzór słownika", csv_bytes(pd.DataFrame([dict(zmienna='patient_id', typ='tekst')], columns=DICTIONARY_COLUMNS).fillna('')),
@@ -96,14 +64,24 @@ with st.sidebar:
 
 path = data_dir()
 extraction_path = path
-empty_package = not path.exists() or not any(path.iterdir())
+try:
+    empty_package = not path.is_dir() or not any(path.iterdir())
+except OSError:
+    empty_package = True
 problem = package_problem(path)
+desktop_package_error = 'Nie można otworzyć pakietu ćwiczeń. Zamknij aplikację i zainstaluj ponownie Laboratorium danych z pobranego instalatora. Jeśli problem pozostanie, skontaktuj się z prowadzącym zajęcia.'
 if problem:
+    if os.getenv('LAB_DESKTOP') == '1':
+        st.error(desktop_package_error)
+        st.stop()
     path = APP_DIR / "tests" / "fixtures"
     if not empty_package:
         extraction_path = path
-    st.warning(problem + " Używany jest mały syntetyczny zestaw próbny (fixture).")
-st.sidebar.caption(f"Katalog danych: {path}")
+    st.warning("Nie można odczytać pakietu ćwiczeń. Używany jest mały syntetyczny zestaw próbny (fixture).")
+    with st.expander("Informacje techniczne o pakiecie"):
+        st.caption(problem)
+with st.sidebar.expander("Informacje techniczne"):
+    st.caption(f"Katalog danych: {path}")
 try:
     if dictionary_upload is not None and dictionary_upload.size > 5_000_000:
         raise ValueError("Słownik może mieć najwyżej 5 MB.")
@@ -120,7 +98,14 @@ try:
     if len(frame) > 10000:
         raise ValueError("Zestaw ćwiczeniowy może mieć najwyżej 10 000 wierszy.")
 except (OSError, ValueError, StopIteration, UnicodeError) as exc:
-    st.error(f"Nie można wczytać danych: {exc}")
+    if os.getenv('LAB_DESKTOP') == '1' and uploaded is None and dictionary_upload is None:
+        st.error(desktop_package_error)
+    elif isinstance(exc, ValueError) and not isinstance(exc, UnicodeError):
+        st.error(f'Nie można wczytać danych: {exc}')
+    else:
+        st.error('Nie można wczytać danych. Sprawdź format pliku i wymagane kolumny.')
+    with st.expander('Informacje techniczne o danych'):
+        st.caption(str(exc))
     st.stop()
 
 st.caption(f"{metadata['nazwa']} · Przygotowanie i higiena danych · UM w Łodzi")
@@ -137,11 +122,14 @@ specs = definitions.set_index("zmienna").to_dict("index")
 
 
 def ask(messages, schema, tab, max_tokens=700, session_only=False):
+    if not chosen_model:
+        st.info('Najpierw skonfiguruj model. Otwórz Model AI w panelu po lewej.')
+        return None
     queued = st.empty()
     try:
-        with st.spinner("Model analizuje dane…"):
+        with st.spinner('Model pracuje na tym komputerze. Odpowiedź może potrwać minutę.' if configs[chosen_model].transport == 'ollama' else 'Model analizuje dane.'):
             result = call_model(configs[chosen_model], messages, schema, temperature=temperature,
-                                bypass_cache=bypass_cache or session_only or uploaded is not None or dictionary_upload is not None or chosen_model == 'Własny serwer', group=group, tab=tab, max_tokens=max_tokens,
+                                bypass_cache=bypass_cache or session_only or uploaded is not None or dictionary_upload is not None or configs[chosen_model].session_only, group=group, tab=tab, max_tokens=max_tokens,
                                 score_extraction=tab == "AI: ekstrakcja z dokumentów",
                                 on_queue=lambda: queued.info("Zapytanie czeka. Serwer obsługuje inne zapytania lub ogranicza ich liczbę."))
         queued.empty()
@@ -182,6 +170,11 @@ tabs = st.tabs(["Start", "EDA", "Reguły walidacyjne", "AI: ekstrakcja z dokumen
                 "AI: wiarygodność kliniczna", "Porównanie z kluczem", "Czat z modelem"])
 
 with tabs[0]:
+    if not configs:
+        first_run_guide(ollama_root, ollama_note)
+    st.info('Ustawienia modelu są zapamiętywane na tym komputerze.' if not public_mode() else
+            'Ustawienia modelu na serwerze zajęć pozostają tylko w tej sesji.')
+    st.write('Wgrane pliki, wyniki, własne dokumenty i własne reguły znikają po zamknięciu sesji. Pobierz wyniki i wyeksportuj reguły, aby je zachować.')
     st.caption("1. Wpisz nazwę grupy. 2. Przeczytaj protokół. 3. Pobierz materiały.")
     st.header(metadata["nazwa"])
     st.write(metadata.get("opis", ""))

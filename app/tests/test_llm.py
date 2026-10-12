@@ -7,7 +7,7 @@ import httpx
 import pytest
 from openai import BadRequestError, RateLimitError
 from lab.config import ModelConfig, model_configs
-from lab.llm import call_model, ModelError, _SEMAPHORES, _SERVER_SEMAPHORES, _ACTIVE, _INFLIGHT
+from lab.llm import call_model, ModelError, OptionalAuthOpenAI, _SEMAPHORES, _SERVER_SEMAPHORES, _ACTIVE, _INFLIGHT
 from lab.prompts import TEXT_SCHEMA, clinical_messages
 
 @pytest.fixture(autouse=True)
@@ -133,38 +133,23 @@ def test_extraction_preserves_unit_error_for_scoring():
         call_model(cfg,[],schema,client_factory=factory)
 
 
-def test_real_sdk_request_to_mock_local_server_without_auth():
-    from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-    from threading import Thread
+def test_real_sdk_request_with_mock_transport_without_auth():
     requests = []
-    class Handler(BaseHTTPRequestHandler):
-        def log_message(self,*args): pass
-        def do_POST(self):
-            body = json.loads(self.rfile.read(int(self.headers['Content-Length'])))
-            requests.append((self.path,self.headers.get('Authorization'),body))
-            payload = {'id':'fixture','object':'chat.completion','created':1700000000,'model':'fixture-model',
-                       'choices':[{'index':0,'message':{'role':'assistant','content':'{"odpowiedz":"OK"}'},'finish_reason':'stop'}],
-                       'usage':{'prompt_tokens':8,'completion_tokens':4,'total_tokens':12}}
-            encoded = json.dumps(payload).encode()
-            self.send_response(200)
-            self.send_header('Content-Type','application/json')
-            self.send_header('Content-Length',str(len(encoded)))
-            self.end_headers()
-            self.wfile.write(encoded)
-    server = ThreadingHTTPServer(('127.0.0.1',0),Handler)
-    thread = Thread(target=server.serve_forever,daemon=True)
-    thread.start()
-    try:
-        cfg = ModelConfig('t','fixture-model',f'http://127.0.0.1:{server.server_port}/v1','',timeout=10)
-        result = call_model(cfg,[{'role':'user','content':'Pytanie testowe'}],TEXT_SCHEMA)
-        assert result.value == {'odpowiedz':'OK'} and result.tokens == 12
-        assert requests[0][0] == '/v1/chat/completions'
-        assert requests[0][1] is None
-        assert requests[0][2]['response_format']['type'] == 'json_schema'
-    finally:
-        server.shutdown()
-        server.server_close()
-        thread.join(timeout=3)
+    def handler(request):
+        body = json.loads(request.content)
+        requests.append((request.url.path, request.headers.get('Authorization'), body))
+        payload = {'id': 'fixture', 'object': 'chat.completion', 'created': 1700000000, 'model': 'fixture-model',
+                   'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': '{"odpowiedz":"OK"}'}, 'finish_reason': 'stop'}],
+                   'usage': {'prompt_tokens': 8, 'completion_tokens': 4, 'total_tokens': 12}}
+        return httpx.Response(200, json=payload)
+    def factory(**kwargs):
+        return OptionalAuthOpenAI(http_client=httpx.Client(transport=httpx.MockTransport(handler), trust_env=False), **kwargs)
+    cfg = ModelConfig('t', 'fixture-model', 'http://test/v1', '', timeout=10)
+    result = call_model(cfg, [{'role': 'user', 'content': 'Pytanie testowe'}], TEXT_SCHEMA, client_factory=factory)
+    assert result.value == {'odpowiedz': 'OK'} and result.tokens == 12
+    assert requests[0][0] == '/v1/chat/completions'
+    assert requests[0][1] is None
+    assert requests[0][2]['response_format']['type'] == 'json_schema'
 
 
 def test_label_and_reasoning_effort_from_environment(monkeypatch):
