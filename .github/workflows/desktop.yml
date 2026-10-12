@@ -1,0 +1,150 @@
+name: Desktop — Laboratorium danych
+
+on:
+  workflow_dispatch: {}
+  push:
+    tags: ['desktop-v*']
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.target }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: windows-latest
+            target: win-x64
+            platform: win
+            arch: x64
+          - runner: macos-14
+            target: mac-arm64
+            platform: mac
+            arch: arm64
+          - runner: macos-15-intel
+            target: mac-x64
+            platform: mac
+            arch: x64
+          - runner: ubuntu-latest
+            target: linux-x64
+            platform: linux
+            arch: x64
+    defaults:
+      run:
+        shell: bash
+        working-directory: desktop
+    env:
+      npm_config_cache: ${{ github.workspace }}/desktop/.cache/npm
+      ELECTRON_CACHE: ${{ github.workspace }}/desktop/.cache/electron
+      ELECTRON_BUILDER_CACHE: ${{ github.workspace }}/desktop/.cache/electron-builder
+      CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: desktop/package-lock.json
+      - name: Version from desktop tag
+        if: startsWith(github.ref, 'refs/tags/desktop-v')
+        env:
+          DESKTOP_TAG: ${{ github.ref_name }}
+        run: node scripts/set-version.mjs
+      - name: Install build tools
+        run: npm ci
+      - name: Verify native runner architecture
+        env:
+          EXPECTED_ARCH: ${{ matrix.arch }}
+        run: node -e "if (process.arch !== process.env.EXPECTED_ARCH) throw new Error('Runner architecture ' + process.arch + ' does not match ' + process.env.EXPECTED_ARCH)"
+      - name: Validate workflow YAML
+        run: npm run validate:workflow
+      - name: Prepare verified Python runtime and dependencies
+        run: npm run prepare:python
+      - name: Linux display dependencies
+        if: matrix.platform == 'linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb libgtk-3-0 libnss3 libasound2t64 libgbm1 libnotify4 libxss1 libxtst6
+      - name: Build Windows / Linux packages
+        if: matrix.platform != 'mac'
+        run: npm run build -- --${{ matrix.platform }} --${{ matrix.arch }}
+      - name: Build macOS application
+        if: matrix.platform == 'mac'
+        run: npm run build -- --mac --${{ matrix.arch }} --dir
+      - name: Ad-hoc sign whole macOS bundle and create DMG
+        if: matrix.platform == 'mac'
+        run: |
+          APP_BUNDLE=$(find dist -maxdepth 2 -name '*.app' -type d -print -quit)
+          test -n "$APP_BUNDLE"
+          codesign --force --deep --sign - "$APP_BUNDLE"
+          codesign --verify --deep --strict --verbose=2 "$APP_BUNDLE"
+          npx electron-builder --mac dmg --${{ matrix.arch }} --prepackaged "$APP_BUNDLE" --publish never
+      - name: Linux packaged smoke test
+        if: matrix.platform == 'linux'
+        run: xvfb-run -a dist/linux-unpacked/laboratorium-danych --no-sandbox --smoke-test="$PWD/smoke_linux.png"
+      - name: macOS packaged smoke test
+        if: matrix.platform == 'mac'
+        run: |
+          APP_BUNDLE=$(find dist -maxdepth 2 -name '*.app' -type d -print -quit)
+          APP_BINARY=$(find "$APP_BUNDLE/Contents/MacOS" -maxdepth 1 -type f -print -quit)
+          "$APP_BINARY" --smoke-test="$PWD/smoke_${{ matrix.target }}.png"
+      - name: Windows packaged smoke test
+        if: matrix.platform == 'win'
+        shell: pwsh
+        run: |
+          $png = Join-Path $PWD 'smoke_win-x64.png'
+          $process = Start-Process -FilePath '.\dist\win-unpacked\laboratorium-danych.exe' -ArgumentList ('--smoke-test="{0}"' -f $png) -Wait -PassThru
+          if ($process.ExitCode -ne 0) { throw "Smoke test exited with $($process.ExitCode)" }
+          if (-not (Test-Path $png)) { throw 'Missing smoke-test PNG' }
+      - name: Upload installers and portable packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-build-${{ matrix.target }}
+          if-no-files-found: error
+          path: |
+            desktop/dist/*.exe
+            desktop/dist/*.zip
+            desktop/dist/*.dmg
+            desktop/dist/*.AppImage
+      - name: Upload bounded smoke evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-evidence-${{ matrix.target }}
+          path: |
+            desktop/smoke_*.png
+            desktop/smoke-user-data/logs/serwer.log*
+            desktop/staged/manifest.json
+            desktop/scripts/python-lock.json
+            desktop/dist/builder-effective-config.yaml
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/desktop-v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: desktop-build-*
+          path: packages
+          merge-multiple: true
+      - name: Create draft release with all packages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          DESKTOP_TAG: ${{ github.ref_name }}
+        run: |
+          cat > release-notes.md <<'EOF'
+          Wersja na komputer — bez instalowania Pythona.
+
+          Pobierz pakiet dla swojego systemu i procesora. Windows: instalator setup.exe lub ZIP. macOS: DMG (arm64 — Apple Silicon, x64 — Intel). Linux: AppImage.
+
+          Pakiety nie mają podpisu wydawcy ani notaryzacji. macOS ma lokalny podpis ad-hoc. Instrukcje pierwszego uruchomienia: desktop/README_uzytkownik.md.
+          EOF
+          gh release create "$DESKTOP_TAG" packages/* --draft --verify-tag --title "Laboratorium danych ${DESKTOP_TAG#desktop-v}" --notes-file release-notes.md

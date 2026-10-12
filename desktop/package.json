@@ -1,0 +1,50 @@
+{
+  "name": "laboratorium-danych-desktop",
+  "version": "0.1.0",
+  "description": "Laboratorium danych — aplikacja dydaktyczna na komputer",
+  "productName": "Laboratorium danych",
+  "author": "Konrad Stawiski",
+  "license": "MIT",
+  "private": true,
+  "allowScripts": { "electron": true, "electron-winstaller": true },
+  "main": "main.cjs",
+  "scripts": {
+    "prepare:python": "node scripts/prepare-python.mjs",
+    "stage": "node scripts/stage-resources.mjs",
+    "start": "electron .",
+    "build": "npm run stage && node scripts/build.mjs",
+    "build:dir": "npm run build -- --dir",
+    "validate:workflow": "node scripts/validate-workflow.mjs"
+  },
+  "devDependencies": {
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3",
+    "yaml": "2.9.1"
+  },
+  "build": {
+    "appId": "pl.konsta.laboratorium-danych",
+    "productName": "Laboratorium danych",
+    "executableName": "laboratorium-danych",
+    "directories": { "output": "dist", "buildResources": "assets" },
+    "artifactName": "Laboratorium-danych-${version}-${os}-${arch}.${ext}",
+    "asar": true,
+    "files": ["main.cjs", "splash.html", "assets/icon.svg", "package.json"],
+    "extraResources": [
+      { "from": "runtime/${os}-${arch}/python", "to": "python", "filter": ["**/*"] },
+      { "from": "staged/app", "to": "app", "filter": ["**/*"] },
+      { "from": "staged/dane", "to": "dane", "filter": ["**/*"] },
+      { "from": "scripts/watchdog.py", "to": "watchdog.py" }
+    ],
+    "win": { "target": ["nsis", "zip"] },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowElevation": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "artifactName": "Laboratorium-danych-${version}-win-${arch}-setup.exe"
+    },
+    "mac": { "target": "dmg", "identity": null, "category": "public.app-category.education" },
+    "linux": { "target": "AppImage", "category": "Education", "icon": "assets/icon.svg" }
+  }
+}

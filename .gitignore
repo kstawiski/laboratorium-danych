@@ -4,6 +4,12 @@ __pycache__/
 .pytest_cache/
 app/logs/
 app/cache/
+desktop/node_modules/
+desktop/.cache/
+desktop/runtime/
+desktop/staged/
+desktop/dist/
+desktop/smoke-*/
 *.key
 .env
 .pytest_tmp/
