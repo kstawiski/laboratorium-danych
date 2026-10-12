@@ -63,6 +63,8 @@ Wyniki modelu są domyślnie zapisywane w trwałej pamięci podręcznej. UI poka
 | `ORNITH_API_KEY`, `ORNITH_API_KEY_FILE` | Klucz w środowisku albo ścieżka do pliku; środowisko ma pierwszeństwo |
 | `ORNITH_MAX_CONCURRENCY_PER_SERVER` | Domyślnie 4; wspólny limit na model wynosi 6 |
 | `QWEN_BASE_URL`, `QWEN_MODEL`, `QWEN_API_KEY` | Model zapasowy; domyślna nazwa `umed-qwen`, klucz opcjonalny |
+| `ORNITH_LABEL`, `QWEN_LABEL` | Nazwy modeli w panelu; domyślnie `Ornith` i `Qwen` |
+| `ORNITH_REASONING_EFFORT`, `QWEN_REASONING_EFFORT` | Wartość parametru `reasoning_effort`; bez ustawienia parametr nie jest wysyłany. Dla Gemma 4 w Gemini API ustaw `minimal` |
 | `CACHE_DIR`, `LOG_DIR` | Domyślnie `cache/` i `logs/` w katalogu aplikacji |
 
 `.env.example` jest wzorem konfiguracji; aplikacja nie wczytuje automatycznie pliku `.env`. Szczegółowe polecenia Docker i prewarm są w [README_app.md](README_app.md). Adresy sieci zajęć są domyślną konfiguracją wyłącznie w `run_docker.sh`.

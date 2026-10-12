@@ -24,7 +24,8 @@ args=(--detach --name "$CONTAINER_NAME" --restart unless-stopped
 if [[ -n "${ENV_FILE:-}" ]]; then args+=(--env-file "$ENV_FILE"); fi
 args+=(--env DATA_DIR=/data --env LOG_DIR=/app/logs --env CACHE_DIR=/app/cache
        --env "STREAMLIT_SERVER_ADDRESS=$BIND_ADDRESS")
-for variable in ORNITH_BASE_URL ORNITH_BASE_URLS ORNITH_API_KEY ORNITH_MODEL ORNITH_MAX_CONCURRENCY_PER_SERVER QWEN_BASE_URL QWEN_API_KEY QWEN_MODEL; do
+for variable in ORNITH_BASE_URL ORNITH_BASE_URLS ORNITH_API_KEY ORNITH_MODEL ORNITH_MAX_CONCURRENCY_PER_SERVER ORNITH_LABEL ORNITH_REASONING_EFFORT \
+                QWEN_BASE_URL QWEN_API_KEY QWEN_MODEL QWEN_LABEL QWEN_REASONING_EFFORT; do
     if [[ -v "$variable" ]]; then args+=(--env "$variable=${!variable}"); fi
 done
 # Pliki hosta z kluczami są montowane tylko do odczytu; treść nie trafia do obrazu.

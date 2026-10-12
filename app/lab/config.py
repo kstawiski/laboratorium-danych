@@ -14,6 +14,7 @@ class ModelConfig:
     concurrency: int = 6
     base_urls: tuple[str, ...] = ()
     per_server_concurrency: int = 4
+    reasoning_effort: str = ''
 
     @property
     def servers(self):
@@ -34,13 +35,17 @@ def model_configs() -> dict[str, ModelConfig]:
     limit = int(os.getenv('ORNITH_MAX_CONCURRENCY_PER_SERVER', '4'))
     if limit < 1:
         raise ValueError('Limit na serwer musi być dodatni.')
+    # Nazwy w panelu i tryb rozumowania można zmienić bez przebudowy, np. przy przejściu na publiczne API.
+    ornith, qwen = os.getenv('ORNITH_LABEL', 'Ornith'), os.getenv('QWEN_LABEL', 'Qwen')
     return {
-        'Ornith': ModelConfig('Ornith', os.getenv('ORNITH_MODEL', 'ornith-1.5-9b'),
-                              urls[0] if urls else base, secret('ORNITH_API_KEY'),
-                              base_urls=urls, per_server_concurrency=limit),
-        'Qwen': ModelConfig('Qwen', os.getenv('QWEN_MODEL', 'umed-qwen'),
-                            os.getenv('QWEN_BASE_URL', 'http://localhost:4000/v1').rstrip('/'),
-                            secret('QWEN_API_KEY'), per_server_concurrency=6),
+        ornith: ModelConfig(ornith, os.getenv('ORNITH_MODEL', 'ornith-1.5-9b'),
+                            urls[0] if urls else base, secret('ORNITH_API_KEY'),
+                            base_urls=urls, per_server_concurrency=limit,
+                            reasoning_effort=os.getenv('ORNITH_REASONING_EFFORT', '')),
+        qwen: ModelConfig(qwen, os.getenv('QWEN_MODEL', 'umed-qwen'),
+                          os.getenv('QWEN_BASE_URL', 'http://localhost:4000/v1').rstrip('/'),
+                          secret('QWEN_API_KEY'), per_server_concurrency=6,
+                          reasoning_effort=os.getenv('QWEN_REASONING_EFFORT', '')),
     }
 
 

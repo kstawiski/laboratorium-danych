@@ -203,3 +203,4 @@ def test_keep_decision_is_not_an_alarm(decision, kept):
     card = pd.DataFrame({'patient_id': ['PR-058'], 'zmienna': ['rt_dose_gy'], 'decyzja': [decision]})
     flags, left = split_kept(card)
     assert len(left) == int(kept) and len(flags) == int(not kept)
+

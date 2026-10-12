@@ -42,7 +42,7 @@ _SEMAPHORES = {}  # Jeden limit globalny dla modelu, również przy kilku serwer
 _SERVER_SEMAPHORES = {}
 _ACTIVE = {}
 _INFLIGHT = set()
-BUSY_MESSAGE = "Serwer modelu jest zajęty, spróbuj za chwilę lub wybierz model zapasowy Qwen w panelu."
+BUSY_MESSAGE = "Serwer modelu jest zajęty, spróbuj za chwilę lub wybierz drugi model w panelu."
 
 
 def _remove_trailing_commas(text):
@@ -60,7 +60,7 @@ def _remove_trailing_commas(text):
 def parse_json(text: str):
     if not isinstance(text, str) or len(text) > 1_000_000:
         raise ModelError("Odpowiedź modelu jest pusta albo zbyt długa.")
-    text = re.sub(r"<think>.*?</think>", "", text, flags=re.S | re.I).strip().lstrip("\ufeff")
+    text = re.sub(r"<(think|thought)>.*?</\1>", "", text, flags=re.S | re.I).strip().lstrip("\ufeff")
     def reject(value):
         raise ValueError("Niefinitywna liczba w JSON")
     decoder = json.JSONDecoder(parse_constant=reject)
@@ -280,7 +280,8 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
                     arguments = dict(model=config.model, messages=prepared, temperature=temperature,
                                      max_tokens=max_tokens, timeout=remaining)
                     if response_format: arguments["response_format"] = response_format
-                    # Nie wysyłamy parametrów włączających rozumowanie.
+                    # Parametr rozumowania wysyłamy tylko, gdy konfiguracja go ustawia (np. "minimal" dla Gemma).
+                    if config.reasoning_effort: arguments["reasoning_effort"] = config.reasoning_effort
                     try:
                         response = client.chat.completions.create(**arguments)
                         break
@@ -312,7 +313,7 @@ def call_model(config: ModelConfig, messages: list[dict], schema: dict, temperat
         raise ModelError(BUSY_MESSAGE) from exc
     except APIError as exc:
         _log(config, group, tab, status='blad_api', elapsed=time.monotonic() - start)
-        raise ModelError("Nie udało się wywołać modelu. Sprawdź adres i klucz lub wybierz model zapasowy Qwen.") from exc
+        raise ModelError("Nie udało się wywołać modelu. Sprawdź adres i klucz lub wybierz drugi model w panelu.") from exc
     except ModelError:
         _log(config, group, tab, status='blad', elapsed=time.monotonic() - start)
         raise

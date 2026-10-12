@@ -56,7 +56,7 @@ def test_connection_retries_once_on_distinct_server():
         return FakeClient(action)
     from lab.llm import ModelError
     servers.clear()
-    with pytest.raises(ModelError,match='Qwen'):
+    with pytest.raises(ModelError,match='drugi model'):
         call_model(cfg,[{'role':'user','content':'inne'}],TEXT_SCHEMA,client_factory=failing)
     assert len(servers) == len(set(servers)) == 2
 
@@ -168,8 +168,8 @@ def test_real_package_prewarm_plan_without_model():
     path = Path(__file__).resolve().parent.parent.parent/'exercises'/'dane'
     if not path.exists(): pytest.skip('Zewnętrzny pakiet opcjonalny.')
     jobs = default_jobs(path)
-    assert len(jobs) == 32  # 20 dokumentów, 12 paczek po 10 wierszy.
-    assert sum(j.score_extraction for j in jobs) == 20
+    assert len(jobs) == 72  # 60 dokumentów, 12 paczek po 10 wierszy.
+    assert sum(j.score_extraction for j in jobs) == 60
     clinical = [j for j in jobs if not j.score_extraction]
     assert all(len(json.loads(j.messages[-1]['content'])['wiersze']) == 10 for j in clinical)
     assert all(j.max_tokens == 900 for j in clinical)

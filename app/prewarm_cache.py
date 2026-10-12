@@ -35,7 +35,7 @@ def run_prewarm(path, config, temperature=DEFAULT_TEMPERATURE, caller=call_model
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--model', choices=['Ornith', 'Qwen'], default='Ornith')
+    parser.add_argument('--model', choices=list(model_configs()), default=next(iter(model_configs())))
     parser.add_argument('--temperature', type=float, default=DEFAULT_TEMPERATURE)
     parser.add_argument('--dry-run', action='store_true', help='Lista zapytań i hashy; bez kontaktu z modelem.')
     args = parser.parse_args()

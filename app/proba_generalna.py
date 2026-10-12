@@ -17,7 +17,7 @@ from lab.prompts import DEFAULT_TEMPERATURE
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--model", default="Ornith"); args = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--model", default=next(iter(model_configs()))); args = ap.parse_args()
     path = data_dir(); out = log_dir() / "proba_generalna" / args.model.lower(); out.mkdir(parents=True, exist_ok=True)
     config = model_configs()[args.model]
     definitions = dictionary(path); metadata = scenario(path); frame = read_table(registry_file(path))

@@ -165,3 +165,19 @@ def test_real_sdk_request_to_mock_local_server_without_auth():
         server.shutdown()
         server.server_close()
         thread.join(timeout=3)
+
+
+def test_label_and_reasoning_effort_from_environment(monkeypatch):
+    monkeypatch.setenv('ORNITH_LABEL','Gemma 4 31B')
+    monkeypatch.setenv('ORNITH_REASONING_EFFORT','minimal')
+    configs = model_configs()
+    assert list(configs) == ['Gemma 4 31B','Qwen']
+    assert configs['Gemma 4 31B'].reasoning_effort == 'minimal' and configs['Qwen'].reasoning_effort == ''
+    calls = []
+    def action(arguments):
+        calls.append(arguments)
+        return response('<thought>{"odpowiedz":"szkic"}</thought>{"odpowiedz":"OK"}')
+    factory = lambda **kw: FakeClient(action,**kw)
+    cfg = ModelConfig('t','reasoning-minimal','http://test/v1','',reasoning_effort='minimal')
+    assert call_model(cfg,[],TEXT_SCHEMA,client_factory=factory,bypass_cache=True).value == {'odpowiedz':'OK'}
+    assert calls[0]['reasoning_effort'] == 'minimal'
